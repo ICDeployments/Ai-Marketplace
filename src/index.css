@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@import "./styles/tokens.css";
+@import "./styles/gradients.css";
+
+/* Gallix enforced globally */
+@font-face {
+  font-family: "Gallix";
+  src: url("/fonts/Gallix/Gallix-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gallix";
+  src: url("/fonts/Gallix/Gallix-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gallix";
+  src: url("/fonts/Gallix/Gallix-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gallix";
+  src: url("/fonts/Gallix/Gallix-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html, body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Gallix", system-ui, sans-serif;
+}
+
+:root{
+  --page-gutter: 180px; /* desktop */
+}
+
+@media (max-width: 1279px) {
+  :root { --page-gutter: 110px; }
+}
+@media (max-width: 1023px) {
+  :root { --page-gutter: 40px; }
+}
+@media (max-width: 639px) {
+  :root { --page-gutter: 16px; }
+}
+/* Diagonal cut on the right edge of the image */
+.clip-diagonal-right {
+  /* More pointed than 92% */
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}

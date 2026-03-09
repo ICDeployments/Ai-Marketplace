@@ -36,7 +36,7 @@ html, body {
 }
 
 :root{
-  --page-gutter: 180px; /* desktop */
+  --page-gutter: 200px; /* desktop */
 }
 
 @media (max-width: 1279px) {

@@ -1,17 +1,17 @@
 export default function SolutionDetailsModal({ solution }) {
   const handleEmailRequest = () => {
     const subject = encodeURIComponent(`Lab Demo Request - ${solution.title}`);
-    const body = encodeURIComponent(`Hello,
+    const body = encodeURIComponent(`Hello Team,
 
-I would like to request a lab demo for: ${solution.title}
 
+I would like to request access to view the: ${solution.title}
 ${solution.description}
+Please provide the necessary permissions or share the demo details so I can proceed further. 
 
-Please let me know the available time slots.
 
 Thank you!`);
     
-    window.location.href = `mailto:Farheen.Sulthana@cognizant.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:SyedHidayatullah.Aneef@cognizant.com?subject=${subject}&body=${body}`;
   };
 
   const handleWatchDemo = () => {

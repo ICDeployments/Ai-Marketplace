@@ -12,6 +12,7 @@ export default function RightArrow({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      style={{ display: "block" }}
       aria-hidden="true"
     >
       <path

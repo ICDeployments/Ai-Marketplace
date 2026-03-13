@@ -35,10 +35,10 @@ export default function ReadyToBuildSection() {
 
             <a
               href="#build-agent"
-              className="inline-flex items-center gap-[6px] text-[#00E8D6] text-[16px] font-semibold hover:gap-[10px] transition-all"
+              className="flex items-center gap-[6px] text-[#00E8D6] text-[16px] font-semibold hover:gap-[10px] transition-all"
             >
-              Build Your Own Agent
-              <RightArrow width={8} height={14} color="#00E8D6" />
+              <span className="leading-none">Build Your Own Agent</span>
+              <RightArrow width={8} height={14} color="#00E8D6" className="translate-y-[1.5px]" />
             </a>
           </div>
         </div>

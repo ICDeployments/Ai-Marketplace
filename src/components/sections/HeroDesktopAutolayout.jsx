@@ -24,9 +24,10 @@ export default function Hero() {
 
           {/* Grey overlay box at the bottom */}
           <div 
-            className="absolute bottom-0 bg-[#D9D9D9]/95 max-w-[900px] px-[32px] py-[24px]"
+            className="absolute bottom-0 bg-[#D9D9D9]/95 px-[48px] py-[24px]"
             style={{
-              left: "var(--page-gutter)"
+              left: "var(--page-gutter)",
+              right: "var(--page-gutter)",
             }}
           >
             <p className="text-[24px] leading-[30px] text-[#000048]">

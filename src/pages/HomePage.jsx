@@ -1,5 +1,6 @@
 import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
+import SecondaryNavBar from "../components/layout/SecondaryNavBar";
 import Hero from "../components/sections/HeroDesktopAutolayout";
 import EmpowerSection from "../components/sections/EmpowerSection";
 import EmpowerCardsSection from "../components/sections/EmpowerCardsSection";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <TopHeader />
       <DarkMarketplaceNav isHomePage={true} />
       <Hero />
+      <SecondaryNavBar />
       <EmpowerSection />
       <EmpowerCardsSection />
       <ReadyToBuildSection />

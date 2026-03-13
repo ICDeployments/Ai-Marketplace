@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
-import SecondaryNavBar from "../components/layout/SecondaryNavBar";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
 import RightArrow from "../components/ui/RightArrow";
@@ -287,7 +286,6 @@ export default function CategorySolutionsPage() {
       <div className="w-full">
         <TopHeader />
         <DarkMarketplaceNav />
-        <SecondaryNavBar />
         <section className="w-full bg-white py-[60px]">
           <PageContainer>
             <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px]">
@@ -304,7 +302,6 @@ export default function CategorySolutionsPage() {
     <div className="w-full">
       <TopHeader />
       <DarkMarketplaceNav />
-      <SecondaryNavBar />
       <section className="w-full bg-white py-[60px]">
         <PageContainer>
           <div className="mb-[40px] inline-block">

@@ -1,6 +1,5 @@
 import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
-import SecondaryNavBar from "../components/layout/SecondaryNavBar";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
 
@@ -9,7 +8,6 @@ export default function AgentInteractionPage() {
     <div className="w-full">
       <TopHeader />
       <DarkMarketplaceNav />
-      <SecondaryNavBar />
       
       <section className="w-full bg-white py-[100px]">
         <PageContainer>

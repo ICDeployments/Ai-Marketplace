@@ -157,7 +157,7 @@ export default function EmpowerCardsSection() {
   return (
     <section className="w-full bg-white py-[60px]">
       <PageContainer>
-        <h2 className="text-[#2F78C4] font-normal text-[34px] leading-[42px] mb-[40px]">
+        <h2 className="text-[#00005A] font-normal text-[34px] leading-[42px] mb-[40px]">
           Empower Your Workflow With End-To-End Agentic AI
         </h2>
 
@@ -167,17 +167,17 @@ export default function EmpowerCardsSection() {
             <div
               key={index}
               onClick={() => handleCardClick(card.slug)}
-              className="border-1 border-[#D0D0CE] p-[32px] flex flex-col h-full min-h-[220px] hover:shadow-lg transition-shadow cursor-pointer"
+              className="group border-1 border-[#D0D0CE] p-[24px] flex flex-col h-[260px] hover:shadow-lg transition-shadow cursor-pointer"
             >
-              <h3 className="text-[#2F78C4] font-semibold text-[20px] leading-[26px] mb-[12px]">
+              <h3 className="text-[#2F78C4] group-hover:text-[#000048] font-semibold text-[20px] leading-[26px] mb-[12px] transition-colors">
                 {card.title}
               </h3>
-              <p className="text-[#000048] text-[17px] leading-[20px] mb-[16px] flex-grow">
+              <p className="text-[#000048] text-[17px] leading-[20px] flex-grow">
                 {card.description}
               </p>
-              <span className="inline-flex items-center gap-[6px] text-[#2F78C4] text-[14px] font-semibold hover:gap-[10px] transition-all">
-                Know more
-                <RightArrow width={8} height={12} color="#2F78C4" />
+              <span className="flex items-center gap-[6px] text-[#2F78C4] text-[14px] font-semibold hover:gap-[10px] transition-all mt-[16px]">
+                <span className="leading-none">Know more</span>
+                <RightArrow width={8} height={12} color="#2F78C4" className="translate-y-[1.5px]" />
               </span>
             </div>
           ))}

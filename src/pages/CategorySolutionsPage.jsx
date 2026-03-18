@@ -148,6 +148,36 @@ const SOLUTION_DETAILS = {
       "Customer will choose one option and based on choices, they would see the balanced scorecard.",
       "Customer can view how they have performed and how to improve."
     ]
+  },
+  "Portfolio Rebalancing": {
+    fullDescription: "Designed for high-net-worth complexity, this platform continuously evaluates portfolio drift against institutional-grade market outlooks and individual investor profiles. It empowers advisors with intelligent, automated recommendations that justify every trade through the lens of long-term investment goals and historical performance patterns."
+  },
+  "Commercial Banking - Client Onboarding - Compliance Checks": {
+    fullDescription: "Explore the future of regulatory compliance and client intake with a comprehensive Agentic AI framework designed to handle complex legal document screening, UBO identification, and global PEP/Sanctions monitoring for the corporate customer. Featuring an \"AI-First\" workflow, the solution ensures 95% data accuracy and provides stakeholders with transparent, real-time dashboards to manage corporate risk with unprecedented precision."
+  },
+  "User Personalization for Asset & Wealth Management": {
+    fullDescription: "This solution unifies fragmented market and client data into a trusted 360-degree view to generate hyper-personalized insights and next best actions. By automating life-event-driven engagements with human-in-the-loop validation, it empowers advisors to deliver scalable, compliant, and deeply resonant client experiences."
+  },
+  "Portfolio Exception Monitor": {
+    fullDescription: "The solution engine monitors concentration risks and market sentiment in near real-time to prevent breach scenarios. It combines rules-based controls with domain-aware generative insights to deliver client-specific alerts, contextual explanations, and recommended actions for advisors. The platform streamlines the advisor's response through automated explanations and direct order management connectivity for rapid, compliant portfolio adjustments."
+  },
+  "Wealth Management - Life Stage Simulator (POV: Clients and Financial Advisor)": {
+    fullDescription: "A modern, interactive platform enabling clients and RMs to model different life stage goals with real-time validation delivering personalized preparedness scores, guided inputs, saved scenarios, and professional reports—empowering Advisors and clients to co-create informed financial decisions through a beautifully designed, seamless digital journey."
+  },
+  "KYC Processing": {
+    fullDescription: "This solution eliminates fragmented, labor-intensive workflows by deploying intelligent agents that autonomously verify documentation and unify disparate data in real-time. By automating the end-to-end lifecycle, it slashes processing times and removes manual bottlenecks, ensuring a frictionless customer experience without compromising rigorous regulatory standards."
+  },
+  "Fraud and Dispute Management": {
+    fullDescription: "By reimagining dispute management through agentification, this solution enables banks to offer rapid, intelligent, and transparent fraud resolution journeys. It combines specialized agents for evidence gathering and risk assessment with human-in-the-loop validation, ensuring every dispute is handled with both operational efficiency and the precision required for regulatory compliance."
+  },
+  "Invisible Payment Solution": {
+    fullDescription: "SmartPay is an invisible payment solution that enables customers to shop and pay seamlessly without traditional checkouts. Using biometric authentication and a wallet-based payment model, purchases are completed automatically without scanning items, swiping cards, or using mobile devices. The solution includes a User App for onboarding and wallet management, and a Shopping App for real-time authentication and instant payment during checkout."
+  },
+  "Trade Reconciliation and Exception Management": {
+    fullDescription: "By agentifying the trade reconciliation journey, this solution bridges the gap between middle-office silos through automated error clustering and predictive outlier detection. The system intelligently learns from past resolutions to execute autonomous remedial actions, ensuring post-trade confirmations and settlements remain compliant, efficient, and free from manual handoff delays."
+  },
+  "Synthetic Data Generation": {
+    fullDescription: "This agentic solution streamlines the creation of synthetic financial datasets to provide a rich foundation for training highly accurate anti-money laundering models. By intelligently increasing the sample size of fraudulent transactions, the platform ensures that machine learning assets are rigorously prepared to defend the bank's ecosystem against evolving financial crimes."
   }
 };
 
@@ -166,6 +196,12 @@ const CATEGORY_SOLUTIONS = {
         title: "AI Powered Smart Fund Lending Platform",
         description: "",
         image: "rb02.png"
+      },
+      {
+        title: "KYC Processing",
+        description: "",
+        image: "Orchestrating Seamless Compliance via Autonomous Agentic KYC Transformation.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/33.%20Agentic%20Solution%20-%20KYC%20Processes/Automated%20KYC%20Processes.mp4?csf=1&web=1&e=ZeqOwy&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
   },
@@ -182,6 +218,12 @@ const CATEGORY_SOLUTIONS = {
         title: "AI Powered Smart Fund Lending Platform",
         description: "",
         image: "cb02.png"
+      },
+      {
+        title: "Commercial Banking - Client Onboarding - Compliance Checks",
+        description: "",
+        image: "Intelligent Automation Corporate Banking Next-Gen KYB through Agentic AI.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/13.%20Commercial%20Banking%20-%20Client%20Onboarding/13_Commercial%20Banking_Client%20Onboarding.mp4?csf=1&web=1&e=W4NHua&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
   },
@@ -214,6 +256,18 @@ const CATEGORY_SOLUTIONS = {
         title: "Credit card transaction fraud detection agent",
         description: "",
         image: "cap02.png"
+      },
+      {
+        title: "Fraud and Dispute Management",
+        description: "",
+        image: "Transforming Fraud and Dispute Resolution Through Agentic Intelligence.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/34.%20Agentic%20Solution%20-%20Fraud%20%26%20Dispute%20Management/Fraud%20and%20Dispute%20Management.mp4?csf=1&web=1&e=wQEaPa&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      },
+      {
+        title: "Invisible Payment Solution",
+        description: "",
+        image: "InvisiblePaymentSolutions.png",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/2101809_cognizant_com/Documents/Microsoft%20Teams%20Chat%20Files/SmartPay_Shopping_App_Demo.mp4?csf=1&web=1&e=xQe3fE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
   },
@@ -252,6 +306,52 @@ const CATEGORY_SOLUTIONS = {
         description: "",
         image: "awm02.png",
         link: "https://hk9pjj82vm.us-west-2.awsapprunner.com/signin"
+      },
+      {
+        title: "Portfolio Rebalancing",
+        description: "",
+        image: "Next-Gen Agentic Engine for Context-Aware HNW Portfolio Optimization.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/01.%20Portfolio%20Rebalancing/Portfolio%20Rebalancing%20-%20Demo.mp4?csf=1&web=1&e=1hSqdk&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      },
+      {
+        title: "User Personalization for Asset & Wealth Management",
+        description: "",
+        image: "Driving Hyper-Personalized Wealth Journeys via Autonomous Agents.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/22.%20Vibe%20Coding_User%20Personalization%20Solution/Vibe%20Coding%20User%20Personalization%20Demo%20Final%20-%20Video%20(1).mp4?csf=1&web=1&e=lKqpBU&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      },
+      {
+        title: "Portfolio Exception Monitor",
+        description: "",
+        image: "Proactive Portfolio Resilience with Agentic Exception Monitoring.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/23.%20Vibe%20Coding_Portfolio%20Exception%20Monitor/23_Demo%20Video_Vibe%20Coding_Portfolio%20Exception%20Monitor_Rajdeep.mp4?csf=1&web=1&e=l7Iwbf&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      },
+      {
+        title: "Wealth Management - Life Stage Simulator (POV: Clients and Financial Advisor)",
+        description: "",
+        image: "Empowering Financial Preparedness Through Agentic Goal Modeling.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/24.%20Wealth%20Management%20Life%20Stage%20Simulator%20(POV%20Clients%20and%20Financial%20Advisor).mp4?csf=1&web=1&e=ObvatY&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      }
+    ]
+  },
+  "capital-market": {
+    title: "Capital Market",
+    solutions: [
+      {
+        title: "Trade Reconciliation and Exception Management",
+        description: "",
+        image: "Transforming Post-Trade Integrity Through Agentic Reconciliation Orchestration.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/43%20Trade%20Reconciliation%20and%20Exception%20Management/Exception%20Management%20Demo.mp4?csf=1&web=1&e=LdTO5C&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      }
+    ]
+  },
+  "data-management": {
+    title: "Data Management",
+    solutions: [
+      {
+        title: "Synthetic Data Generation",
+        description: "",
+        image: "Empowering Advanced Fraud Detection via Automated Synthetic Data Generation.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/46.%20Synthetic%20Data%20Generation/Synthetic%20Data%20Generation%20for%20Fraud%20Detection%20Demo.mp4?csf=1&web=1&e=JHhscM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
   }
@@ -269,6 +369,7 @@ export default function CategorySolutionsPage() {
       setSelectedSolution({
         title: solution.title,
         description: solution.description,
+        link: solution.link || null,
         ...solutionDetails
       });
       setIsModalOpen(true);

@@ -1,7 +1,17 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function SolutionDetailsModal({ solution }) {
   const [showNoLinkPopup, setShowNoLinkPopup] = useState(false);
+  const [showPopupBlockedPopup, setShowPopupBlockedPopup] = useState(false);
+  const popupCloseWatcherRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (popupCloseWatcherRef.current) {
+        clearInterval(popupCloseWatcherRef.current);
+      }
+    };
+  }, []);
 
   const handleEmailRequest = () => {
     const subject = encodeURIComponent(`Lab Demo Request - ${solution.title}`);
@@ -20,7 +30,35 @@ Thank you!`);
 
   const handleWatchDemo = () => {
     if (solution.link) {
-      window.open(solution.link, "_blank", "noopener,noreferrer");
+      const popupWidth = 1280;
+      const popupHeight = 800;
+      const left = Math.max((window.screen.width - popupWidth) / 2, 0);
+      const top = Math.max((window.screen.height - popupHeight) / 2, 0);
+
+      const popup = window.open(
+        solution.link,
+        "demoWindow",
+        `popup=yes,width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`
+      );
+
+      if (popup) {
+        popup.focus();
+
+        if (popupCloseWatcherRef.current) {
+          clearInterval(popupCloseWatcherRef.current);
+        }
+
+        popupCloseWatcherRef.current = setInterval(() => {
+          if (popup.closed) {
+            clearInterval(popupCloseWatcherRef.current);
+            popupCloseWatcherRef.current = null;
+
+            window.focus();
+          }
+        }, 500);
+      } else {
+        setShowPopupBlockedPopup(true);
+      }
     } else {
       setShowNoLinkPopup(true);
     }
@@ -130,6 +168,35 @@ Thank you!`);
               <button
                 type="button"
                 onClick={() => setShowNoLinkPopup(false)}
+                className="bg-[#2F78C4] text-white font-semibold text-[14px] px-[20px] py-[10px] rounded-[20px] hover:bg-[#1a5a9b] transition-colors"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showPopupBlockedPopup && (
+        <div
+          className="fixed inset-0 z-[80] bg-black/40 flex items-center justify-center px-[16px]"
+          onClick={() => setShowPopupBlockedPopup(false)}
+        >
+          <div
+            className="w-full max-w-[420px] bg-white border border-[#D0D0CE] rounded-[12px] p-[24px]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <h4 className="text-[#00005A] font-semibold text-[20px] leading-[26px] mb-[8px]">
+              Popup blocked
+            </h4>
+            <p className="text-[#000048] text-[14px] leading-[22px]">
+              Your browser blocked opening the demo window. Please allow popups for this site and try again.
+            </p>
+
+            <div className="mt-[20px] flex justify-end">
+              <button
+                type="button"
+                onClick={() => setShowPopupBlockedPopup(false)}
                 className="bg-[#2F78C4] text-white font-semibold text-[14px] px-[20px] py-[10px] rounded-[20px] hover:bg-[#1a5a9b] transition-colors"
               >
                 OK

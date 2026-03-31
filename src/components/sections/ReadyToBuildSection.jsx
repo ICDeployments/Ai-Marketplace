@@ -1,48 +1,54 @@
-import PageContainer from "../layout/PageContainer";
-import RightArrow from "../ui/RightArrow";
-
 export default function ReadyToBuildSection() {
   return (
-    <section className="w-full bg-[#000048]">
-      <PageContainer>
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch h-[360px]">
-          {/* LEFT: Image with diagonal mask */}
-          <div className="relative h-full overflow-hidden rounded-[8px] clip-diagonal-right">
-            <img
-              src="/assets/images/midImageHome.png"
-              alt="Team collaboration"
-              className="absolute inset-0 w-full h-full object-cover object-right"
-            />
-          </div>
+    <section
+      className="w-full flex items-stretch overflow-hidden"
+      style={{ minHeight: "320px", backgroundColor: "#7373D8" }}
+    >
+      {/* Left padding — matches PageContainer gutter */}
+      <div className="flex-shrink-0" style={{ width: "var(--page-gutter)" }} />
 
-          {/* RIGHT: Text */}
-          <div className="flex flex-col justify-center px-[24px] lg:px-[48px]">
-            <h3 className="text-white font-semibold text-[36px] leading-[42px] mb-[20px]">
-              Ready to build
-              <br />
-              your agent?
-            </h3>
+      {/* Left — clipped image */}
+      <div
+        className="flex-shrink-0 w-[50%] relative"
+        style={{
+          clipPath: "polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%)",
+        }}
+      >
+        <img
+          src="/assets/images/midImageHome.png"
+          alt="Team collaboration"
+          className="w-full h-full object-cover"
+          style={{ minHeight: "320px" }}
+        />
+      </div>
 
-            <p className="text-white text-[18px] leading-[26px] mb-[24px] max-w-[420px]">
-              Bring your ideas—big or small.
-              <br />
-              We&apos;re pushing into new
-              <br />
-              possibilities, and together we
-              <br />
-              can define what&apos;s next.
-            </p>
+      {/* Right — text content, padded to match page gutter on both sides */}
+      <div
+        className="flex flex-col justify-center flex-1 py-[48px]"
+        style={{ paddingLeft: "60px", paddingRight: "var(--page-gutter)" }}
+      >
+        <h2 className="text-white font-bold text-[36px] leading-[44px] mb-[20px]">
+          Ready to build<br />your agent?
+        </h2>
 
-            <a
-              href="#build-agent"
-              className="flex items-center gap-[6px] text-[#00E8D6] text-[16px] font-semibold hover:gap-[10px] transition-all"
-            >
-              <span className="leading-none">Build Your Own Agent</span>
-              <RightArrow width={8} height={14} color="#00E8D6" className="translate-y-[1.5px]" />
-            </a>
-          </div>
-        </div>
-      </PageContainer>
+        <p className="text-white text-[16px] leading-[26px] mb-[28px]">
+          Bring your ideas—big or small.<br />
+          We're pushing into new<br />
+          possibilities, and together we<br />
+          can define what's next.
+        </p>
+
+        <a
+          href="#build-agent"
+          className="flex items-center gap-[8px] text-[15px] font-semibold hover:gap-[12px] transition-all w-fit"
+          style={{ color: "#ffffff" }}
+        >
+          <span>Build Your Own Agent</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="3,2 11,7 3,12" stroke="white" strokeWidth="1.2" fill="none" strokeLinejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </section>
   );
 }

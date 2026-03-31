@@ -7,13 +7,13 @@ export default function IntroAndFormSection() {
   const mailToHref = `mailto:${EMAIL_ADDRESS}`;
 
   return (
-    <section className="w-full bg-white">
-      <PageContainer className="py-[48px]">
+    <section className="w-full" style={{ backgroundColor: "#F0F8FF" }}>
+      <PageContainer className="py-[48px] flex flex-col items-center text-center">
         <h2 className="text-[#000048] font-bold text-[36px] leading-[44px] mb-[24px]">
           Get In Touch
         </h2>
 
-        <p className="text-[16px] leading-[26px] text-[#333333] max-w-[780px]">
+        <p className="text-[19px] leading-[26px] text-[#333333] max-w-[780px]">
           We welcome innovative ideas and thoughtful suggestions that can help drive meaningful impact.
           {" "}Connect with us to share your insights and collaborate on innovation initiatives.
         </p>

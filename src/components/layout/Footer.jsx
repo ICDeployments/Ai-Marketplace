@@ -5,9 +5,16 @@ function Col({ title, items }) {
     <div>
       <h3 className="text-[15px] font-semibold mb-3">{title}</h3>
       <ul className="space-y-0 text-[15px] text-white/80">
-        {items.map((x) => (
-          <li key={x} className="hover:underline cursor-pointer">
-            {x}
+        {items.map(({ label, href }) => (
+          <li key={label}>
+            <a
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noreferrer" : undefined}
+              className="hover:underline cursor-pointer"
+            >
+              {label}
+            </a>
           </li>
         ))}
       </ul>
@@ -120,39 +127,50 @@ export default function Footer() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[50px]">
-            <Col title="What we do" items={["Industries", "Services", "Insights"]} />
-            <Col
-              title="Who we are"
-              items={["About Cognizant", "Locations", "Annual Report", "Board of Directors", "Awards and accolades"]}
-            />
-            <Col title="AI and innovation" items={["AI Lab", "Engineering AI for impact", "New minds, new markets"]} />
+            <Col title="What we do" items={[
+              { label: "Industries", href: "https://www.cognizant.com/us/en/industries" },
+              { label: "Services",   href: "https://www.cognizant.com/us/en/services" },
+              { label: "Insights",   href: "https://www.cognizant.com/us/en/insights" },
+            ]} />
+            <Col title="Who we are" items={[
+              { label: "About Cognizant",    href: "https://www.cognizant.com/us/en/about-cognizant" },
+              { label: "Locations",          href: "https://www.cognizant.com/us/en/about-cognizant/global-locations" },
+              { label: "Annual Report",      href: "https://www.cognizant.com/us/en/about-cognizant/2023-annual-report" },
+              { label: "Board of Directors", href: "https://www.cognizant.com/us/en/about-cognizant/corporate-governance/board-of-directors" },
+              { label: "Awards and accolades", href: "https://www.cognizant.com/us/en/industry-analyst-recognition" },
+            ]} />
+            <Col title="AI and innovation" items={[
+              { label: "AI Lab",                    href: "https://www.cognizant.com/us/en/services/ai" },
+              { label: "Engineering AI for impact", href: "https://www.cognizant.com/us/en/services/engineering-research-development" },
+              { label: "New minds, new markets",    href: "https://www.cognizant.com/us/en/insights" },
+            ]} />
           </div>
         </div>
 
         <div className="mt-[28px] text-[15px] pl-[260px]">
           <h4 className="font-semibold mb-2">Resources</h4>
           <div className="text-white/80 space-y-0">
-            <div>Contact Us</div>
-            <div>Careers</div>
-            <div>Information for Suppliers</div>
-            <div>Glossary</div>
+            <div><a href="https://www.cognizant.com/us/en/about-cognizant/contact-cognizant" target="_blank" rel="noreferrer" className="hover:underline">Contact Us</a></div>
+            <div><a href="https://www.cognizant.com/us/en/careers" target="_blank" rel="noreferrer" className="hover:underline">Careers</a></div>
+            <div><a href="https://www.cognizant.com/us/en/about-cognizant/supplier-information" target="_blank" rel="noreferrer" className="hover:underline">Information for Suppliers</a></div>
+            <div><a href="https://www.cognizant.com/us/en/glossary" target="_blank" rel="noreferrer" className="hover:underline">Glossary</a></div>
           </div>
         </div>
 
         <div className="mt-[24px] pt-[16px] border-t border-white/80 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[12px] text-white/100">
           <div className="flex items-center gap-3">
-            <IconLinkedIn className="w-[28px] h-[22px]" />
-            <IconX className="w-[28px] h-[22px]" />
-            <IconFacebook className="w-[28px] h-[22px]" />
-            <IconInstagram className="w-[28px] h-[22px]" />
-            <IconYouTube className="w-[28px] h-[22px]" />
+            <a href="https://www.linkedin.com/company/cognizant" target="_blank" rel="noreferrer" aria-label="LinkedIn"><IconLinkedIn className="w-[28px] h-[22px]" /></a>
+            <a href="https://twitter.com/cognizant" target="_blank" rel="noreferrer" aria-label="Twitter"><IconX className="w-[28px] h-[22px]" /></a>
+            <a href="https://www.facebook.com/Cognizant" target="_blank" rel="noreferrer" aria-label="Facebook"><IconFacebook className="w-[28px] h-[22px]" /></a>
+            <a href="https://www.instagram.com/cognizant" target="_blank" rel="noreferrer" aria-label="Instagram"><IconInstagram className="w-[28px] h-[22px]" /></a>
+            <a href="https://www.youtube.com/cognizant" target="_blank" rel="noreferrer" aria-label="YouTube"><IconYouTube className="w-[28px] h-[22px]" /></a>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <span className="hover:underline cursor-pointer">Sitemap</span>
-            <span className="hover:underline cursor-pointer">Terms</span>
-            <span className="hover:underline cursor-pointer">Privacy Notice</span>
-            <span className="hover:underline cursor-pointer">Cookie Notice</span>
+            <a href="https://www.cognizant.com/us/en/sitemap" target="_blank" rel="noreferrer" className="hover:underline">Sitemap</a>
+            <a href="https://www.cognizant.com/us/en/terms-conditions" target="_blank" rel="noreferrer" className="hover:underline">Terms</a>
+            <a href="https://www.cognizant.com/us/en/privacy-notice" target="_blank" rel="noreferrer" className="hover:underline">Privacy Notice</a>
+            <a href="https://www.cognizant.com/us/en/cookie-notice" target="_blank" rel="noreferrer" className="hover:underline">Cookie Notice</a>
             <span>©2026 Cognizant, all rights reserved</span>
           </div>
         </div>

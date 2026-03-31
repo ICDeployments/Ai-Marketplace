@@ -1,10 +1,9 @@
-import PageContainer from "../layout/PageContainer";
 
 export default function Hero() {
   return (
     <section className="w-full bg-white">
       <div
-        className="w-full relative overflow-hidden h-[520px]"
+        className="w-full relative overflow-hidden h-[520px] flex items-center justify-center"
         style={{
           backgroundImage: "url('/assets/images/hero-bg.png')",
           backgroundSize: "cover",
@@ -12,31 +11,17 @@ export default function Hero() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <PageContainer className="relative h-full">
-          {/* Title positioned on the left */}
-          <div className="absolute left-0 top-[80px]">
-            <h1 className="text-[#000048] font-bold text-[62px] leading-[70px] pl-[110px]">
-              BFSI
-              <br />
-              AI Marketplace
-            </h1>
-          </div>
-
-          {/* Grey overlay box at the bottom */}
-          <div 
-            className="absolute bottom-0 bg-[#D9D9D9]/95 px-[48px] py-[24px]"
-            style={{
-              left: "var(--page-gutter)",
-              right: "var(--page-gutter)",
-            }}
-          >
-            <p className="text-[24px] leading-[30px] text-[#000048]">
-              Our <span className="font-semibold">AI Marketplace</span> offers a centralized hub for exploring and integrating 
-              cutting-edge AI capabilities. From ready-to-use models to powerful analytics 
-              tools, everything you need to scale your AI journey is right here.
-            </p>
-          </div>
-        </PageContainer>
+        <div className="flex flex-col items-center text-center px-8 max-w-[700px]">
+          <h1 className="font-semibold text-[85px] leading-[104px] text-[#000048]">
+            BFSI
+            <br />
+            AI Marketplace
+          </h1>
+          <p className="mt-6 text-[19px] font-normal leading-none text-[#000048]">
+            A centralized AI Marketplace to discover ready-to-use models and powerful
+            analytics—everything you need to scale and accelerate your AI journey.
+          </p>
+        </div>
       </div>
     </section>
   );

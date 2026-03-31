@@ -5,7 +5,7 @@ export default function DarkMarketplaceNav({ isHomePage = false }) {
   const navigate = useNavigate();
 
   return (
-    <div className={`w-full bg-[#000048] text-white ${isHomePage ? 'py-[10px]' : 'py-[8px]'}`}>
+    <div className={`w-full bg-[#000048] text-white ${isHomePage ? 'py-[11px]' : 'py-[12px]'}`}>
       <PageContainer>
         {/* Breadcrumb */}
         <div className="text-[12px] font-medium leading-[14px] text-[#6AA2DC] mb-[6px]">

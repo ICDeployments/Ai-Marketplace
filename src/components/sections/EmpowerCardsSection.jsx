@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PageContainer from "../layout/PageContainer";
-import RightArrow from "../ui/RightArrow";
+
 
 const CARDS = [
   {
     title: "Retail Banking",
-    description: "Provides Everyday Financial Services To Individuals, Including Accounts, Loans, And Personal Banking Solutions.",
+    description: "Offers Businesses Tailored Financial Products Such As Credit, Treasury Services, And Cash-Management Solutions.",
+    image: "/assets/images/RetailBanking.jpg",
     slug: "retail-banking",
     idea: [
       "Problem statement/opportunity: Increase in the cases of fraud and financial crime.",
@@ -27,6 +28,7 @@ const CARDS = [
   {
     title: "Commercial Banking",
     description: "Offers Businesses Tailored Financial Products Such As Credit, Treasury Services, And Cash-Management Solutions.",
+    image: "/assets/images/CommercialBanking.jpg",
     slug: "commercial-banking",
     idea: [
       "Problem statement/opportunity: Customers are sold unwanted banking products. They are not offered the needed products.",
@@ -52,8 +54,9 @@ const CARDS = [
     ]
   },
   {
-    title: "Investment Banking:",
-    description: "Delivers Advisory And Capital-Raising Services, Including Mergers, Acquisitions, And Underwriting.",
+    title: "Investment Banking",
+    description: "Offers Businesses Tailored Financial Products Such As Credit, Treasury Services, And Cash-Management Solutions.",
+    image: "/assets/images/InvestmentBanking.jpg",
     slug: "investment-banking",
     idea: [
       "Problem statement/opportunity: The Integrated Payment Command Center is a real-time, AI-powered dashboard that serves as a centralized space to monitor and control critical payment operations.",
@@ -147,40 +150,108 @@ const CARDS = [
   }
 ];
 
+const CARDS_PER_PAGE = 3;
+
 export default function EmpowerCardsSection() {
   const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = Math.ceil(CARDS.length / CARDS_PER_PAGE);
+  const visibleCards = CARDS.slice(currentPage * CARDS_PER_PAGE, (currentPage + 1) * CARDS_PER_PAGE);
 
   const handleCardClick = (slug) => {
     navigate(`/category/${slug}`);
   };
 
   return (
-    <section className="w-full bg-white py-[60px]">
+    <section className="w-full py-[60px] bg-white">
       <PageContainer>
-        <h2 className="text-[#00005A] font-normal text-[34px] leading-[42px] mb-[40px]">
-          Empower Your Workflow With End-To-End Agentic AI
+        {/* Centered heading */}
+        <h2 className="text-[#000048] font-bold text-[40px] leading-[50px] mb-[20px] text-center">
+          Empower Your Workflow With<br />End-To-End Agentic AI
         </h2>
 
-        {/* Cards Grid - 3 columns on large screens */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[38px]">
-          {CARDS.map((card, index) => (
-            <div
-              key={index}
-              onClick={() => handleCardClick(card.slug)}
-              className="group border-1 border-[#D0D0CE] p-[24px] flex flex-col h-[260px] hover:shadow-lg transition-shadow cursor-pointer"
-            >
-              <h3 className="text-[#2F78C4] group-hover:text-[#000048] font-semibold text-[20px] leading-[26px] mb-[12px] transition-colors">
-                {card.title}
-              </h3>
-              <p className="text-[#000048] text-[17px] leading-[20px] flex-grow">
-                {card.description}
-              </p>
-              <span className="flex items-center gap-[6px] text-[#2F78C4] text-[14px] font-semibold hover:gap-[10px] transition-all mt-[16px]">
-                <span className="leading-none">Know more</span>
-                <RightArrow width={8} height={12} color="#2F78C4" className="translate-y-[1.5px]" />
-              </span>
-            </div>
-          ))}
+        {/* Centered subtitle */}
+        <p className="text-[#000048] text-[18px] leading-[28px] text-center max-w-[860px] mx-auto mb-[48px]">
+          Our service offerings span the full AI lifecycle—from ready-to-deploy models and agentic
+          orchestration to seamless integration and advanced analytics.
+        </p>
+
+        {/* Cards with side arrows */}
+        <div className="relative">
+
+          {/* Left arrow — absolutely positioned outside cards */}
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 0))}
+            disabled={currentPage === 0}
+            className="absolute left-[-48px] top-1/2 -translate-y-1/2 disabled:opacity-30 transition-opacity hover:opacity-70"
+            aria-label="Previous page"
+          >
+            <svg width="32" height="32" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="15,2 5,10 15,18" stroke="#000048" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+            </svg>
+          </button>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-3 gap-[24px]">
+            {visibleCards.map((card, index) => (
+              <div
+                key={index}
+                onClick={() => handleCardClick(card.slug)}
+                className="relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
+                style={{
+                  height: "265px",
+                  borderRadius: "12px",
+                  border: "0.8px solid rgba(255,255,255,0.12)",
+                }}
+              >
+                {card.image ? (
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="absolute w-full h-full object-cover"
+                    style={{ top: "-79px", opacity: 1 }}
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[#000216]" />
+                )}
+
+                <div
+                  className="absolute bottom-0 left-0 right-0 p-[20px] flex flex-col gap-[8px]"
+                  style={{
+                    background: "linear-gradient(180deg, rgba(0, 2, 22, 0.82) 36.49%, rgba(0, 0, 25, 0.95) 100%)",
+                    backdropFilter: "blur(4px)",
+                    WebkitBackdropFilter: "blur(4px)",
+                  }}
+                >
+                  <h3 className="text-white font-semibold text-[18px] leading-[24px]">
+                    {card.title}
+                  </h3>
+                  <p className="text-[#C8D4E8] text-[13px] leading-[20px]">
+                    {card.description}
+                  </p>
+                  <div className="flex items-center gap-[8px] mt-[4px]">
+                    <span className="text-white text-[13px] font-normal">Explore Usecases</span>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="3,2 11,7 3,12" stroke="white" strokeWidth="1.2" fill="none" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right arrow — absolutely positioned outside cards */}
+          <button
+            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1))}
+            disabled={currentPage === totalPages - 1}
+            className="absolute right-[-48px] top-1/2 -translate-y-1/2 disabled:opacity-30 transition-opacity hover:opacity-70"
+            aria-label="Next page"
+          >
+            <svg width="32" height="32" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="5,2 15,10 5,18" stroke="#000048" strokeWidth="1.5" fill="none" strokeLinejoin="round"/>
+            </svg>
+          </button>
+
         </div>
       </PageContainer>
     </section>

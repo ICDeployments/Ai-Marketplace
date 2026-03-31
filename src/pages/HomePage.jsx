@@ -16,11 +16,10 @@ export default function HomePage() {
       <DarkMarketplaceNav isHomePage={true} />
       <Hero />
       <SecondaryNavBar />
-      <EmpowerSection />
-      <EmpowerCardsSection />
-      <ReadyToBuildSection />
-      <ServiceOfferingsSection />
-      <IntroAndFormSection />
+      <div id="sub-vertical"><EmpowerSection /><EmpowerCardsSection /></div>
+      <div id="build-agent"><ReadyToBuildSection /></div>
+      <div id="service-offerings"><ServiceOfferingsSection /></div>
+      <div id="contact"><IntroAndFormSection /></div>
       <Footer />
     </div>
   );

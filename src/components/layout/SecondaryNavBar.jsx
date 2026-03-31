@@ -1,63 +1,57 @@
-import { Link, useLocation } from "react-router-dom";
-import PageContainer from "./PageContainer";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NAV_ITEMS = [
-  { label: "Overview", href: "/" },
-  { label: "Sub Vertical", href: "/agentic-solutions" },
-  { label: "Build Your own Agent", href: "#build-agent" },
-  { label: "Service Offerings", href: "#service-offerings" },
-  { label: "Contact", href: "#contact" },
+  { label: "Overview",            href: "/",                scrollTo: null              },
+  { label: "Sub Vertical",        href: null,               scrollTo: "sub-vertical"    },
+  { label: "Build Your own Agent",href: null,               scrollTo: "build-agent"     },
+  { label: "Service Offerings",   href: null,               scrollTo: "service-offerings"},
+  { label: "Contact",             href: null,               scrollTo: "contact"         },
 ];
 
 export default function SecondaryNavBar() {
   const location = useLocation();
+  const navigate = useNavigate();
 
-  const isActive = (href) => {
-    if (href === "/") {
-      return false;
+  const isActive = (item) => {
+    if (item.href === "/") return location.pathname === "/";
+    return false;
+  };
+
+  const handleClick = (e, item) => {
+    if (item.scrollTo) {
+      e.preventDefault();
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          document.getElementById(item.scrollTo)?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      } else {
+        document.getElementById(item.scrollTo)?.scrollIntoView({ behavior: "smooth" });
+      }
     }
-    if (href.startsWith("#")) {
-      return false;
-    }
-    if (href === "/agentic-solutions" && location.pathname.startsWith("/category/")) {
-      return true;
-    }
-    return location.pathname.startsWith(href);
   };
 
   return (
-    <section className="w-full bg-[#000048]">
+    <section className="w-full bg-[#7373D8]">
       <nav
         className="flex items-center gap-[48px] h-[44px] mx-auto w-full max-w-[1440px]"
         style={{ paddingLeft: "var(--page-gutter)", paddingRight: "var(--page-gutter)" }}
       >
         {NAV_ITEMS.map((item, index) => {
-          const active = isActive(item.href);
-
-          if (item.href.startsWith("#")) {
-            return (
-              <a
-                key={index}
-                href={item.href}
-                className="text-[13px] leading-[18px] font-normal text-white hover:text-[#00E8D6] transition-colors"
-              >
-                {item.label}
-              </a>
-            );
-          }
-
+          const active = isActive(item);
           return (
-            <Link
+            <a
               key={index}
-              to={item.href}
-              className={`text-[13px] leading-[18px] font-normal transition-colors ${
+              href={item.href ?? `#${item.scrollTo}`}
+              onClick={(e) => handleClick(e, item)}
+              className={`text-[13px] leading-[18px] font-semibold transition-colors cursor-pointer self-stretch flex items-center ${
                 active
-                  ? "text-[#00E8D6]"
-                  : "text-white hover:text-[#00E8D6]"
+                  ? "bg-white text-[#000048] border-b-[3px] border-[#000048] px-[16px]"
+                  : "text-white hover:opacity-80"
               }`}
             >
               {item.label}
-            </Link>
+            </a>
           );
         })}
       </nav>

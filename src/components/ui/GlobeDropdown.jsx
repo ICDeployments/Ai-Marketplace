@@ -134,7 +134,7 @@ export default function GlobeDropdown() {
                       <button
                         type="button"
                         onClick={() => handleSelect({ label, code, locale })}
-                        className="w-full flex items-center gap-[8px] px-[6px] py-[4px] rounded text-[12px] text-[#333333] hover:bg-[#DEEBF8] hover:text-[#000048] transition-colors focus:outline-none"
+                        className="w-full flex items-center gap-[8px] px-[6px] py-[4px] rounded text-[12px] text-[#53565A] hover:bg-[#DEEBF8] hover:text-[#000048] transition-colors focus:outline-none"
                       >
                         <span className={`fi fi-${code}`} style={{ width: 16, height: 12, display: "inline-block", borderRadius: 2, flexShrink: 0 }} />
                         <span>{label}</span>
@@ -154,7 +154,7 @@ export default function GlobeDropdown() {
                           <button
                             type="button"
                             onClick={() => handleSelect({ label, code, locale })}
-                            className="w-full flex items-center gap-[8px] px-[6px] py-[4px] rounded text-[12px] text-[#333333] hover:bg-[#DEEBF8] hover:text-[#000048] transition-colors focus:outline-none"
+                            className="w-full flex items-center gap-[8px] px-[6px] py-[4px] rounded text-[12px] text-[#53565A] hover:bg-[#DEEBF8] hover:text-[#000048] transition-colors focus:outline-none"
                           >
                             <span className={`fi fi-${code}`} style={{ width: 16, height: 12, display: "inline-block", borderRadius: 2, flexShrink: 0 }} />
                             <span>{label}</span>

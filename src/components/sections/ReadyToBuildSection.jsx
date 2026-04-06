@@ -2,7 +2,7 @@ export default function ReadyToBuildSection() {
   return (
     <section
       className="w-full flex items-stretch overflow-hidden"
-      style={{ minHeight: "320px", backgroundColor: "#7373D8" }}
+      style={{ minHeight: "240px", backgroundColor: "#7373D8" }}
     >
       {/* Left padding — matches PageContainer gutter */}
       <div className="flex-shrink-0" style={{ width: "var(--page-gutter)" }} />
@@ -18,20 +18,20 @@ export default function ReadyToBuildSection() {
           src="/assets/images/midImageHome.png"
           alt="Team collaboration"
           className="w-full h-full object-cover"
-          style={{ minHeight: "320px" }}
+          style={{ minHeight: "240px" }}
         />
       </div>
 
       {/* Right — text content, padded to match page gutter on both sides */}
       <div
-        className="flex flex-col justify-center flex-1 py-[48px]"
-        style={{ paddingLeft: "60px", paddingRight: "var(--page-gutter)" }}
+        className="flex flex-col justify-center flex-1 py-[16px]"
+        style={{ paddingLeft: "36px", paddingRight: "var(--page-gutter)" }}
       >
-        <h2 className="text-white font-bold text-[36px] leading-[44px] mb-[20px]">
+        <h2 className="text-white font-bold text-[36px] leading-[44px] mb-[12px]">
           Ready to build<br />your agent?
         </h2>
 
-        <p className="text-white text-[16px] leading-[26px] mb-[28px]">
+        <p className="text-white text-[18px] leading-[30px] mb-[16px]">
           Bring your ideas—big or small.<br />
           We're pushing into new<br />
           possibilities, and together we<br />
@@ -40,7 +40,7 @@ export default function ReadyToBuildSection() {
 
         <a
           href="#build-agent"
-          className="flex items-center gap-[8px] text-[15px] font-semibold hover:gap-[12px] transition-all w-fit"
+          className="flex items-center gap-[8px] text-[15px] font-semibold hover:gap-[12px] transition-all w-fit mt-[9px]"
           style={{ color: "#ffffff" }}
         >
           <span>Build Your Own Agent</span>

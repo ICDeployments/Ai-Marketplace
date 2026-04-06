@@ -17,7 +17,7 @@ export function MegaDropdown({ openDropdown, selectedSidebar, setSelectedSidebar
                 className={`block w-full text-left py-3 px-4 text-[13px] transition-colors hover:bg-[#2F78C4]/20 ${
                   selectedSidebar === menuNav.id
                     ? "bg-white border-l-4 border-[#2F78C4] font-semibold text-[#000048]"
-                    : "text-[#333333]"
+                    : "text-[#53565A]"
                 }`}
                 onClick={() => setSelectedSidebar(menuNav.id)}
               >
@@ -38,7 +38,7 @@ export function MegaDropdown({ openDropdown, selectedSidebar, setSelectedSidebar
                 {firstSection.heading}
               </h6>
               {firstSection.description && (
-                <p className="text-[12px] text-[#333333] mb-4 leading-relaxed">
+                <p className="text-[12px] text-[#53565A] mb-4 leading-relaxed">
                   {firstSection.description}
                 </p>
               )}
@@ -67,7 +67,7 @@ export function MegaDropdown({ openDropdown, selectedSidebar, setSelectedSidebar
                               </p>
                             )}
                             {item.description && (
-                              <p className="mt-1 text-[11px] text-[#555555] leading-relaxed">
+                              <p className="mt-1 text-[11px] text-[#53565A] leading-relaxed">
                                 {item.description}
                               </p>
                             )}
@@ -112,7 +112,7 @@ export function MegaDropdown({ openDropdown, selectedSidebar, setSelectedSidebar
                 {lastSection.heading}
               </p>
               {lastSection.description && (
-                <p className="text-[11px] text-[#333333] mb-4 leading-relaxed">
+                <p className="text-[11px] text-[#53565A] mb-4 leading-relaxed">
                   {lastSection.description}
                 </p>
               )}
@@ -127,7 +127,7 @@ export function MegaDropdown({ openDropdown, selectedSidebar, setSelectedSidebar
                     <div className="mb-2">
                       <p className="text-[#2F78C4] font-semibold text-[14px]">{item.title}</p>
                       {item.description && (
-                        <p className="text-[11px] text-[#333333] mt-1">{item.description}</p>
+                        <p className="text-[11px] text-[#53565A] mt-1">{item.description}</p>
                       )}
                     </div>
                   )}

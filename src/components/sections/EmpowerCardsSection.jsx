@@ -82,6 +82,7 @@ const CARDS = [
   {
     title: "Cards & Payments",
     description: "Enables Secure, Fast, And Seamless Digital And Card-Based Transactions For Consumers And Businesses.",
+    image: "/assets/images/cards and payment.jpeg",
     slug: "cards-payments",
     idea: [
       "Problem statement/opportunity: New types of payment frauds are happening leaving scope for zero-day vulnerability.",
@@ -106,6 +107,7 @@ const CARDS = [
   {
     title: "Risk & Compliance",
     description: "Ensures Organizations Operate Safely And Ethically By Identifying Risks, Enforcing Regulations, And Maintaining Regulatory Standards.",
+    image: "/assets/images/risk and compliance.jpeg",
     slug: "risk-compliance",
     idea: [
       "Problem statement/opportunity: Use Generative AI to extract key details, summarize cases accurately, and rank them based on urgency and impact.",
@@ -131,6 +133,7 @@ const CARDS = [
   {
     title: "Asset & Wealth Management:",
     description: "Manages And Grows Client Portfolios Through Strategic Investment Planning And Advisory Services.",
+    image: "/assets/images/asset management.jpeg",
     slug: "asset-wealth-management",
     idea: [
       "Problem statement/opportunity: Provide cost-effective human like interaction for low to middle income groups during creation of customer profile and investment strategy.",
@@ -171,7 +174,7 @@ export default function EmpowerCardsSection() {
         </h2>
 
         {/* Centered subtitle */}
-        <p className="text-[#000048] text-[18px] leading-[28px] text-center max-w-[860px] mx-auto mb-[48px]">
+        <p className="text-[#000048] text-[19px] leading-[34px] text-center max-w-[760px] mx-auto mb-[48px]">
           Our service offerings span the full AI lifecycle—from ready-to-deploy models and agentic
           orchestration to seamless integration and advanced analytics.
         </p>
@@ -198,40 +201,43 @@ export default function EmpowerCardsSection() {
                 key={index}
                 onClick={() => handleCardClick(card.slug)}
                 className="relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
-                style={{
-                  height: "265px",
-                  borderRadius: "12px",
-                  border: "0.8px solid rgba(255,255,255,0.12)",
-                }}
+                style={{ height: "265px", borderRadius: "12px" }}
               >
+                {/* Background image */}
                 {card.image ? (
                   <img
                     src={card.image}
                     alt={card.title}
                     className="absolute w-full h-full object-cover"
-                    style={{ top: "-79px", opacity: 1 }}
+                    style={{ top: "-79px" }}
                   />
                 ) : (
                   <div className="absolute inset-0 bg-[#000216]" />
                 )}
 
+                {/* Info panel — solid dark with frosted top edge */}
                 <div
-                  className="absolute bottom-0 left-0 right-0 p-[20px] flex flex-col gap-[8px]"
+                  className="absolute bottom-0 left-0 right-0 flex flex-col gap-[10px] px-[18px] py-[16px]"
                   style={{
-                    background: "linear-gradient(180deg, rgba(0, 2, 22, 0.82) 36.49%, rgba(0, 0, 25, 0.95) 100%)",
+                    height: "56%",
+                    background: "rgba(0, 2, 22, 0.75)",
                     backdropFilter: "blur(4px)",
                     WebkitBackdropFilter: "blur(4px)",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.18)",
                   }}
                 >
-                  <h3 className="text-white font-semibold text-[18px] leading-[24px]">
+                  <h3 className="text-white font-semibold text-[17px] leading-[22px] whitespace-nowrap overflow-hidden text-ellipsis">
                     {card.title}
                   </h3>
-                  <p className="text-[#C8D4E8] text-[13px] leading-[20px]">
+                  <p
+                    className="text-[#C8D4E8] text-[12px] leading-[18px]"
+                    style={{ display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}
+                  >
                     {card.description}
                   </p>
-                  <div className="flex items-center gap-[8px] mt-[4px]">
-                    <span className="text-white text-[13px] font-normal">Explore Usecases</span>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <div className="flex items-center gap-[6px] mt-auto">
+                    <span className="text-white text-[11px] font-normal">Explore Usecases</span>
+                    <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
                       <polygon points="3,2 11,7 3,12" stroke="white" strokeWidth="1.2" fill="none" strokeLinejoin="round"/>
                     </svg>
                   </div>

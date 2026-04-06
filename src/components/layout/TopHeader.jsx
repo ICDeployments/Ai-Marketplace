@@ -151,7 +151,7 @@ export default function TopHeader() {
               />
 
               <nav>
-                <ul className="flex text-[18px] font-medium text-[#000048]">
+                <ul className="flex text-[18px] font-medium text-[#53565A]">
                   {(["industries", "services", "insights", "about"]).map((key) => {
                     const label = key.charAt(0).toUpperCase() + key.slice(1);
                     const isOpen = openDropdown === key;
@@ -160,7 +160,7 @@ export default function TopHeader() {
                         <button
                           type="button"
                           onClick={() => toggleDropdown(key)}
-                          className={`relative flex items-center h-[71px] px-4 transition-all duration-200 hover:bg-[#DEEBF8] hover:text-[#000048] focus:outline-none ${
+                          className={`relative flex items-center h-[71px] px-2.5 transition-all duration-200 hover:bg-[#DEEBF8] hover:text-[#000048] focus:outline-none ${
                             isOpen ? "bg-[#DEEBF8] text-[#000048]" : ""
                           }`}
                         >

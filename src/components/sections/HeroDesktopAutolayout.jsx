@@ -17,7 +17,7 @@ export default function Hero() {
             <br />
             AI Marketplace
           </h1>
-          <p className="mt-6 text-[19px] font-normal leading-none text-[#000048]">
+          <p className="mt-6 text-[19px] font-normal leading-[32px] text-[#000048]">
             A centralized AI Marketplace to discover ready-to-use models and powerful
             analytics—everything you need to scale and accelerate your AI journey.
           </p>

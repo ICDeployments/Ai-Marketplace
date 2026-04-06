@@ -10,7 +10,7 @@ export default function EmpowerSection() {
         </h2>
 
         {/* Description text */}
-        <p className="text-[18px] leading-[28px] text-[#000048] max-w-[860px]">
+        <p className="text-[18px] leading-[32px] text-[#000048] max-w-[720px]">
           AI marketplace website serves as a centralized digital platform where businesses and developers
           can discover, buy, and sell AI models, tools, and algorithms to accelerate innovation.
         </p>

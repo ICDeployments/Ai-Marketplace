@@ -93,23 +93,23 @@ export default function ServiceOfferingsSection() {
         </p>
 
         {/* 3x2 Cards Grid */}
-        <div className="grid grid-cols-3 gap-[24px]">
+        <div className="grid grid-cols-3 gap-[16px]">
           {SERVICES.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-[12px] px-[24px] py-[28px] flex flex-col gap-[16px]"
-              style={{ border: "1px solid #E0E0E0", boxShadow: "0 4px 6px -1px rgba(0,0,72,0.06), 0 8px 16px 0px rgba(0,0,72,0.08)" }}
+              className="bg-white rounded-[12px] px-[20px] py-[24px] flex flex-col gap-[14px]"
+              style={{ boxShadow: "4px 4px 12px 0px rgba(0,0,72,0.10), -4px 0px 12px 0px rgba(0,0,72,0.06), 0 8px 16px 0px rgba(0,0,72,0.08)" }}
             >
               {/* Icon + Title row */}
-              <div className="flex items-start gap-[16px]">
+              <div className="flex items-start gap-[14px]">
                 <div className="flex-shrink-0">{service.icon}</div>
-                <h3 className="text-[#2F78C4] font-bold text-[18px] leading-[24px]">
+                <h3 className="text-[#2F78C4] font-medium text-[17px] leading-[24px]">
                   {service.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="text-[#53565A] text-[14px] leading-[22px]">
+              <p className="text-[#000048] text-[14px] leading-[22px]">
                 {service.description}
               </p>
             </div>

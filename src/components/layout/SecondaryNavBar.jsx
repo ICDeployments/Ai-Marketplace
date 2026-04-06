@@ -44,7 +44,7 @@ export default function SecondaryNavBar() {
               key={index}
               href={item.href ?? `#${item.scrollTo}`}
               onClick={(e) => handleClick(e, item)}
-              className={`text-[13px] leading-[18px] font-semibold transition-colors cursor-pointer self-stretch flex items-center ${
+              className={`text-[15px] leading-[20px] font-semibold transition-colors cursor-pointer self-stretch flex items-center ${
                 active
                   ? "bg-white text-[#000048] border-b-[3px] border-[#000048] px-[16px]"
                   : "text-white hover:opacity-80"

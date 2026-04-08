@@ -190,7 +190,7 @@ const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "rb01.jpg",
-        link: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
       },
       {
         title: "AI Powered Smart Fund Lending Platform",
@@ -201,7 +201,7 @@ const CATEGORY_SOLUTIONS = {
         title: "KYC Processing",
         description: "",
         image: "Orchestrating Seamless Compliance via Autonomous Agentic KYC Transformation.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/33.%20Agentic%20Solution%20-%20KYC%20Processes/Automated%20KYC%20Processes.mp4?csf=1&web=1&e=ZeqOwy&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F33%2E%20Agentic%20Solution%20%2D%20KYC%20Processes&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       }
     ]
   },
@@ -212,7 +212,7 @@ const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "cb01.jpg",
-        link: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
       },
       {
         title: "AI Powered Smart Fund Lending Platform",
@@ -223,7 +223,7 @@ const CATEGORY_SOLUTIONS = {
         title: "Commercial Banking - Client Onboarding - Compliance Checks",
         description: "",
         image: "Intelligent Automation Corporate Banking Next-Gen KYB through Agentic AI.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/13.%20Commercial%20Banking%20-%20Client%20Onboarding/13_Commercial%20Banking_Client%20Onboarding.mp4?csf=1&web=1&e=W4NHua&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F13%2E%20Commercial%20Banking%20%2D%20Client%20Onboarding&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       }
     ]
   },
@@ -234,7 +234,7 @@ const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "ib01.jpg",
-        link: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
       },
       {
         title: "AI Powered Smart Fund Lending Platform",
@@ -250,23 +250,25 @@ const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "cap01.jpg",
-        link: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
       },
       {
         title: "Credit card transaction fraud detection agent",
         description: "",
-        image: "cap02.png"
+        image: "cap02.png",
+        demoLink: "http://credit-fraud-app.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "Fraud and Dispute Management",
         description: "",
         image: "Transforming Fraud and Dispute Resolution Through Agentic Intelligence.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/34.%20Agentic%20Solution%20-%20Fraud%20%26%20Dispute%20Management/Fraud%20and%20Dispute%20Management.mp4?csf=1&web=1&e=wQEaPa&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F34%2E%20Agentic%20Solution%20%2D%20Fraud%20%26%20Dispute%20Management&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       },
       {
         title: "Invisible Payment Solution",
         description: "",
         image: "InvisiblePaymentSolutions.png",
+        demoLink: "https://20.219.97.165.nip.io/login/",
         link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/2101809_cognizant_com/Documents/Microsoft%20Teams%20Chat%20Files/SmartPay_Shopping_App_Demo.mp4?csf=1&web=1&e=xQe3fE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
@@ -277,19 +279,20 @@ const CATEGORY_SOLUTIONS = {
       {
         title: "Credit card transaction fraud detection agent",
         description: "",
-        image: "rac01.png"
+        image: "rac01.png",
+        demoLink: "http://credit-fraud-app.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "AML SAR Generation Workflow - Agentic AI",
         description: "",
         image: "rac02.png",
-        link: "https://n2i9wremfi.us-west-2.awsapprunner.com/"
+        demoLink: "https://n2i9wremfi.us-west-2.awsapprunner.com/"
       },
       {
         title: "AI-Driven document analysis and generation solution - Agentic AI",
         description: "",
         image: "rac03.png",
-        link: "https://sjp3mwhjhn.us-west-2.awsapprunner.com/"
+        demoLink: "https://sjp3mwhjhn.us-west-2.awsapprunner.com/"
       }
     ]
   },
@@ -299,37 +302,38 @@ const CATEGORY_SOLUTIONS = {
       {
         title: "AI enabled Investment Advisory and Portfolio construction and balancing - Agentic AI",
         description: "",
-        image: "awm01.png"
+        image: "awm01.png",
+        demoLink: "https://azure-advisor-app.greenwater-842e0658.eastus2.azurecontainerapps.io/"
       },
       {
         title: "Common Domain Model",
         description: "",
         image: "awm02.png",
-        link: "https://hk9pjj82vm.us-west-2.awsapprunner.com/signin"
+        demoLink: "https://hk9pjj82vm.us-west-2.awsapprunner.com/signin"
       },
       {
         title: "Portfolio Rebalancing",
         description: "",
         image: "Next-Gen Agentic Engine for Context-Aware HNW Portfolio Optimization.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/01.%20Portfolio%20Rebalancing/Portfolio%20Rebalancing%20-%20Demo.mp4?csf=1&web=1&e=1hSqdk&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F01%2E%20Portfolio%20Rebalancing&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       },
       {
         title: "User Personalization for Asset & Wealth Management",
         description: "",
         image: "Driving Hyper-Personalized Wealth Journeys via Autonomous Agents.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/22.%20Vibe%20Coding_User%20Personalization%20Solution/Vibe%20Coding%20User%20Personalization%20Demo%20Final%20-%20Video%20(1).mp4?csf=1&web=1&e=lKqpBU&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F22%2E%20Vibe%20Coding%5FUser%20Personalization%20Solution&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       },
       {
         title: "Portfolio Exception Monitor",
         description: "",
         image: "Proactive Portfolio Resilience with Agentic Exception Monitoring.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/23.%20Vibe%20Coding_Portfolio%20Exception%20Monitor/23_Demo%20Video_Vibe%20Coding_Portfolio%20Exception%20Monitor_Rajdeep.mp4?csf=1&web=1&e=l7Iwbf&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F23%2E%20Vibe%20Coding%5FPortfolio%20Exception%20Monitor&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       },
       {
         title: "Wealth Management - Life Stage Simulator (POV: Clients and Financial Advisor)",
         description: "",
         image: "Empowering Financial Preparedness Through Agentic Goal Modeling.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/24.%20Wealth%20Management%20Life%20Stage%20Simulator%20(POV%20Clients%20and%20Financial%20Advisor).mp4?csf=1&web=1&e=ObvatY&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F24%2E%20Wealth%20Management%20Life%20Stage%20Simulator&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       }
     ]
   },
@@ -340,7 +344,7 @@ const CATEGORY_SOLUTIONS = {
         title: "Trade Reconciliation and Exception Management",
         description: "",
         image: "Transforming Post-Trade Integrity Through Agentic Reconciliation Orchestration.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/43%20Trade%20Reconciliation%20and%20Exception%20Management/Exception%20Management%20Demo.mp4?csf=1&web=1&e=LdTO5C&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F43%20Trade%20Reconciliation%20and%20Exception%20Management&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       }
     ]
   },
@@ -351,7 +355,7 @@ const CATEGORY_SOLUTIONS = {
         title: "Synthetic Data Generation",
         description: "",
         image: "Empowering Advanced Fraud Detection via Automated Synthetic Data Generation.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/46.%20Synthetic%20Data%20Generation/Synthetic%20Data%20Generation%20for%20Fraud%20Detection%20Demo.mp4?csf=1&web=1&e=JHhscM&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F46%2E%20Synthetic%20Data%20Generation&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
       }
     ]
   }
@@ -370,6 +374,7 @@ export default function CategorySolutionsPage() {
         title: solution.title,
         description: solution.description,
         link: solution.link || null,
+        demoLink: solution.demoLink || null,
         ...solutionDetails
       });
       setIsModalOpen(true);

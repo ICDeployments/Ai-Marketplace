@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function SolutionDetailsModal({ solution }) {
-  const [showNoLinkPopup, setShowNoLinkPopup] = useState(false);
   const [showPopupBlockedPopup, setShowPopupBlockedPopup] = useState(false);
   const popupCloseWatcherRef = useRef(null);
 
@@ -13,57 +12,38 @@ export default function SolutionDetailsModal({ solution }) {
     };
   }, []);
 
-  const handleEmailRequest = () => {
-    const subject = encodeURIComponent(`Lab Demo Request - ${solution.title}`);
-    const body = encodeURIComponent(`Hello Team,
+  const openLink = (url) => {
+    if (!url) return;
+    const popupWidth = 1280;
+    const popupHeight = 800;
+    const left = Math.max((window.screen.width - popupWidth) / 2, 0);
+    const top = Math.max((window.screen.height - popupHeight) / 2, 0);
 
+    const popup = window.open(
+      url,
+      "demoWindow",
+      `popup=yes,width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`
+    );
 
-I would like to request access to view the: ${solution.title}
-${solution.description}
-Please provide the necessary permissions or share the demo details so I can proceed further. 
-
-
-Thank you!`);
-    
-    window.location.href = `mailto:SyedHidayatullah.Aneef@cognizant.com?subject=${subject}&body=${body}`;
-  };
-
-  const handleWatchDemo = () => {
-    if (solution.link) {
-      const popupWidth = 1280;
-      const popupHeight = 800;
-      const left = Math.max((window.screen.width - popupWidth) / 2, 0);
-      const top = Math.max((window.screen.height - popupHeight) / 2, 0);
-
-      const popup = window.open(
-        solution.link,
-        "demoWindow",
-        `popup=yes,width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`
-      );
-
-      if (popup) {
-        popup.focus();
-
-        if (popupCloseWatcherRef.current) {
-          clearInterval(popupCloseWatcherRef.current);
-        }
-
-        popupCloseWatcherRef.current = setInterval(() => {
-          if (popup.closed) {
-            clearInterval(popupCloseWatcherRef.current);
-            popupCloseWatcherRef.current = null;
-
-            window.focus();
-          }
-        }, 500);
-      } else {
-        setShowPopupBlockedPopup(true);
+    if (popup) {
+      popup.focus();
+      if (popupCloseWatcherRef.current) {
+        clearInterval(popupCloseWatcherRef.current);
       }
+      popupCloseWatcherRef.current = setInterval(() => {
+        if (popup.closed) {
+          clearInterval(popupCloseWatcherRef.current);
+          popupCloseWatcherRef.current = null;
+          window.focus();
+        }
+      }, 500);
     } else {
-      setShowNoLinkPopup(true);
+      setShowPopupBlockedPopup(true);
     }
   };
 
+  const demoLink = solution.demoLink || null;
+  const videoLink = solution.link && solution.link.includes("sharepoint.com") ? solution.link : null;
   const hasDetailedSections = solution.idea && solution.benefits && solution.demonstration;
 
   return (
@@ -130,52 +110,30 @@ Thank you!`);
 
       {/* Action Buttons */}
       <div className="flex gap-[16px]">
+        {/* Watch Demo — enabled only for non-SharePoint links */}
         <button
-          onClick={handleWatchDemo}
-          className="flex items-center gap-[4px] bg-[#2F78C4] text-white font-semibold text-[14px] px-[24px] py-[12px] rounded-[24px] hover:bg-[#1a5a9b] transition-colors"
+          onClick={() => openLink(demoLink)}
+          disabled={!demoLink}
+          className="flex items-center gap-[8px] bg-[#2F78C4] text-white font-semibold text-[14px] px-[24px] py-[12px] rounded-[24px] hover:bg-[#1a5a9b] transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-[#2F78C4]"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M8 5v14l11-7L8 5z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
           </svg>
           Watch Demo
         </button>
-        
-        {/* <button
-          onClick={handleEmailRequest}
-          className="flex items-center gap-[8px] bg-white text-[#2F78C4] border-2 border-[#2F78C4] font-semibold text-[14px] px-[24px] py-[12px] rounded-[24px] hover:bg-[#2F78C4] hover:text-white transition-colors"
+
+        {/* Watch Video — enabled only for SharePoint links */}
+        <button
+          onClick={() => openLink(videoLink)}
+          disabled={!videoLink}
+          className="flex items-center gap-[8px] bg-[#2F78C4] text-white font-semibold text-[14px] px-[24px] py-[12px] rounded-[24px] hover:bg-[#1a5a9b] transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-[#2F78C4]"
         >
-          Request for Lab Demo
-        </button> */}
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M8 5v14l11-7L8 5z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+          </svg>
+          Watch Video
+        </button>
       </div>
-
-      {showNoLinkPopup && (
-        <div
-          className="fixed inset-0 z-[80] bg-black/40 flex items-center justify-center px-[16px]"
-          onClick={() => setShowNoLinkPopup(false)}
-        >
-          <div
-            className="w-full max-w-[420px] bg-white border border-[#D0D0CE] rounded-[12px] p-[24px]"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <h4 className="text-[#00005A] font-semibold text-[20px] leading-[26px] mb-[8px]">
-              Demo link coming soon
-            </h4>
-            <p className="text-[#000048] text-[14px] leading-[22px]">
-              We are currently updating the demo URL for this solution. Please check back shortly.
-            </p>
-
-            <div className="mt-[20px] flex justify-end">
-              <button
-                type="button"
-                onClick={() => setShowNoLinkPopup(false)}
-                className="bg-[#2F78C4] text-white font-semibold text-[14px] px-[20px] py-[10px] rounded-[20px] hover:bg-[#1a5a9b] transition-colors"
-              >
-                OK
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {showPopupBlockedPopup && (
         <div
@@ -192,7 +150,6 @@ Thank you!`);
             <p className="text-[#000048] text-[14px] leading-[22px]">
               Your browser blocked opening the demo window. Please allow popups for this site and try again.
             </p>
-
             <div className="mt-[20px] flex justify-end">
               <button
                 type="button"

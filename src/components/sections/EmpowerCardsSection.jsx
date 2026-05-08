@@ -162,7 +162,13 @@ export default function EmpowerCardsSection() {
   const visibleCards = CARDS.slice(currentPage * CARDS_PER_PAGE, (currentPage + 1) * CARDS_PER_PAGE);
 
   const handleCardClick = (slug) => {
-    navigate(`/category/${slug}`);
+    if (slug === "retail-banking") {
+      navigate("/banking-suite/retail-banking");
+    } else if (slug === "asset-wealth-management") {
+      navigate("/banking-suite/asset-wealth-management");
+    } else {
+      navigate(`/category/${slug}`);
+    }
   };
 
   return (

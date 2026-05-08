@@ -196,7 +196,12 @@ const CATEGORY_SOLUTIONS = {
         title: "AI Powered Smart Fund Lending Platform",
         description: "",
         image: "rb02.png"
-      },
+      }
+    ]
+  },
+  "kyc-aml-fraud": {
+    title: "Retail Banking",
+    solutions: [
       {
         title: "KYC Processing",
         description: "",
@@ -334,6 +339,72 @@ const CATEGORY_SOLUTIONS = {
         description: "",
         image: "Empowering Financial Preparedness Through Agentic Goal Modeling.jpeg",
         link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/24.%20Wealth%20Management%20Life%20Stage%20Simulator%20(POV%20Clients%20and%20Financial%20Advisor).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Hhk226"
+      }
+    ]
+  },
+  "awm-portfolio-construction": {
+    title: "Asset and Wealth Management",
+    solutions: [
+      {
+        title: "AI enabled Investment Advisory and Portfolio construction and balancing - Agentic AI",
+        description: "",
+        image: "awm01.png",
+        demoLink: "https://azure-advisor-app.greenwater-842e0658.eastus2.azurecontainerapps.io/"
+      }
+    ]
+  },
+  "awm-portfolio-mgmt": {
+    title: "Asset and Wealth Management",
+    solutions: [
+      {
+        title: "Portfolio Rebalancing",
+        description: "",
+        image: "Next-Gen Agentic Engine for Context-Aware HNW Portfolio Optimization.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F01%2E%20Portfolio%20Rebalancing&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
+      }
+    ]
+  },
+  "awm-lead-generation": {
+    title: "Asset and Wealth Management",
+    solutions: [
+      {
+        title: "Wealth Management - Life Stage Simulator (POV: Clients and Financial Advisor)",
+        description: "",
+        image: "Empowering Financial Preparedness Through Agentic Goal Modeling.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/24.%20Wealth%20Management%20Life%20Stage%20Simulator%20(POV%20Clients%20and%20Financial%20Advisor).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Hhk226"
+      }
+    ]
+  },
+  "awm-model-management": {
+    title: "Asset and Wealth Management",
+    solutions: [
+      {
+        title: "Common Domain Model",
+        description: "",
+        image: "awm02.png",
+        demoLink: "https://hk9pjj82vm.us-west-2.awsapprunner.com/signin"
+      }
+    ]
+  },
+  "awm-portfolio-accounting": {
+    title: "Asset and Wealth Management",
+    solutions: [
+      {
+        title: "User Personalization for Asset & Wealth Management",
+        description: "",
+        image: "Driving Hyper-Personalized Wealth Journeys via Autonomous Agents.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/22.%20Vibe%20Coding_User%20Personalization%20Solution/Vibe%20Coding%20User%20Personalization%20Demo%20Final%20-%20Video%20(1).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kvI41K"
+      }
+    ]
+  },
+  "awm-regulatory-reporting": {
+    title: "Asset and Wealth Management",
+    solutions: [
+      {
+        title: "Portfolio Exception Monitor",
+        description: "",
+        image: "Proactive Portfolio Resilience with Agentic Exception Monitoring.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/23.%20Vibe%20Coding_Portfolio%20Exception%20Monitor/23_Demo%20Video_Vibe%20Coding_Portfolio%20Exception%20Monitor_Rajdeep.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YaJK74"
       }
     ]
   },

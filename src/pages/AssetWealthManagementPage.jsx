@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
@@ -17,12 +18,12 @@ const ROW1_CARDS = [
     subtitle: "Core banking products and services for customers",
     badge: { count: 4, label: "Agents" },
     items: [
-      { label: "LeadGeneration" },
+      { label: "LeadGeneration", slug: "awm-lead-generation" },
       { label: "Customer Onboarding" },
       { label: "Relationship Mgmt." },
       { label: "Research Management" },
       { label: "Investment Strategy" },
-      { label: "Portfolio Construction" },
+      { label: "Portfolio Construction", slug: "awm-portfolio-construction" },
       { label: "Investment Recommendation" },
       { label: "Sub-Advisory Selection" },
       { label: "Asset Allocation" },
@@ -30,7 +31,7 @@ const ROW1_CARDS = [
       { label: "Marketing" },
       { label: "Product Management" },
       { label: "Trade Order Entry" },
-      { label: "Portfolio Mgmt." },
+      { label: "Portfolio Mgmt.", slug: "awm-portfolio-mgmt" },
       { label: "Compliance, Licensing Registration" },
       { label: "Portfolio Risk" },
       { label: "Decision Support" },
@@ -42,7 +43,7 @@ const ROW1_CARDS = [
     badge: { count: 4, label: "Agents" },
     items: [
       { label: "Marketing & Communications Compliance" },
-      { label: "Model Management" },
+      { label: "Model Management", slug: "awm-model-management" },
       { label: "Account Master" },
       { label: "Trade Processing" },
       { label: "Settlement Processing" },
@@ -66,7 +67,7 @@ const ROW1_CARDS = [
       { label: "Account Setup & Processing" },
       { label: "Order Management" },
       { label: "Managed Account Operations" },
-      { label: "Portfolio Accounting & Administration" },
+      { label: "Portfolio Accounting & Administration", slug: "awm-portfolio-accounting" },
       { label: "Records & Information Management" },
       { label: "Account Funding / Money Movement" },
       { label: "Securities Processing" },
@@ -82,7 +83,7 @@ const ROW1_CARDS = [
       { label: "Identity & Access Management" },
       { label: "Document & Content Management" },
       { label: "Data Management & Analytics" },
-      { label: "Regulatory Reporting" },
+      { label: "Regulatory Reporting", slug: "awm-regulatory-reporting" },
       { label: "Reference & Market Data" },
       { label: "Risk Management and Fraud Detection" },
       { label: "Compliance Management" },
@@ -213,6 +214,7 @@ function SubItem({ label, count }) {
 /* ── Card ── */
 function LayerCard({ card }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const navigate = useNavigate();
   const toggleItem = (i) => setExpandedIndex(expandedIndex === i ? null : i);
 
   return (
@@ -239,8 +241,11 @@ function LayerCard({ card }) {
           <li key={i}>
             <div
               className="flex items-center justify-between px-[10px] py-[8px] rounded-[6px]"
-              style={{ backgroundColor: "#DEEEFF", cursor: item.hasArrow ? "pointer" : "default" }}
-              onClick={() => item.hasArrow && toggleItem(i)}
+              style={{ backgroundColor: "#DEEEFF", cursor: (item.hasArrow || item.slug) ? "pointer" : "default" }}
+              onClick={() => {
+                if (item.hasArrow) toggleItem(i);
+                else if (item.slug) navigate(`/category/${item.slug}`);
+              }}
             >
               <span className="flex items-center gap-[8px]">
                 <span className="flex-shrink-0" style={{ width: 5, height: 5, borderRadius: "50%", backgroundColor: "#2F78C4" }} />

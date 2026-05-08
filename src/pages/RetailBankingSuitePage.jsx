@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
@@ -33,38 +34,38 @@ const ROW1_CARDS = [
         label: "Business Developement",
         hasArrow: true,
         subItems: [
-          { label: "Sales, Marketing, CRM", count: 1 },
-          { label: "Product Origination", count: 2 },
-          { label: "Advisory Services", count: 1 },
-          { label: "Product Management & Pricing", count: 1 },
+          { label: "Sales, Marketing, CRM", count: 1, slug: "retail-banking" },
+          { label: "Product Origination", count: 2, slug: "retail-banking" },
+          { label: "Advisory Services", count: 1, slug: "retail-banking" },
+          { label: "Product Management & Pricing", count: 1, slug: "retail-banking" },
         ],
       },
       {
         label: "Product Fullfilment",
         hasArrow: true,
         subItems: [
-          { label: "Deposits / CASA", count: 1 },
-          { label: "Lending / Mortgages", count: 2 },
-          { label: "Trade Finance, Investments", count: 1 },
+          { label: "Deposits / CASA", count: 1, slug: "retail-banking" },
+          { label: "Lending / Mortgages", count: 2, slug: "retail-banking" },
+          { label: "Trade Finance, Investments", count: 1, slug: "retail-banking" },
         ],
       },
       {
         label: "Cross Platform Services",
         hasArrow: true,
         subItems: [
-          { label: "Account-based, RT Payments", count: 1 },
-          { label: "Debit & Credit Cards", count: 1 },
-          { label: "Check / Lock Box", count: 1 },
+          { label: "Account-based, RT Payments", count: 1, slug: "retail-banking" },
+          { label: "Debit & Credit Cards", count: 1, slug: "cards-payments" },
+          { label: "Check / Lock Box", count: 1, slug: "retail-banking" },
         ],
       },
       {
         label: "Service Operations",
         hasArrow: true,
         subItems: [
-          { label: "Application Processing", count: 1 },
-          { label: "Reconciliations", count: 1 },
-          { label: "Client Reporting", count: 1 },
-          { label: "Dispute Resolutions", count: 1 },
+          { label: "Application Processing", count: 1, slug: "retail-banking" },
+          { label: "Reconciliations", count: 1, slug: "retail-banking" },
+          { label: "Client Reporting", count: 1, slug: "retail-banking" },
+          { label: "Dispute Resolutions", count: 1, slug: "retail-banking" },
         ],
       },
     ],
@@ -78,37 +79,37 @@ const ROW1_CARDS = [
         label: "Finance & Reg Reporting",
         hasArrow: true,
         subItems: [
-          { label: "SGL / GL / Financial Control", count: 1 },
-          { label: "Regulatory Reporting", count: 1 },
-          { label: "Compliance", count: 1 },
+          { label: "SGL / GL / Financial Control", count: 1, slug: "retail-banking" },
+          { label: "Regulatory Reporting", count: 1, slug: "risk-compliance" },
+          { label: "Compliance", count: 1, slug: "risk-compliance" },
         ],
       },
       {
         label: "Financial Risk Management",
         hasArrow: true,
         subItems: [
-          { label: "Credit Risk", count: 1 },
-          { label: "Market Risk", count: 1 },
-          { label: "Liquidity Risk", count: 1 },
-          { label: "Operational Risk", count: 1 },
+          { label: "Credit Risk", count: 1, slug: "risk-compliance" },
+          { label: "Market Risk", count: 1, slug: "risk-compliance" },
+          { label: "Liquidity Risk", count: 1, slug: "risk-compliance" },
+          { label: "Operational Risk", count: 1, slug: "risk-compliance" },
         ],
       },
       {
         label: "Business Process Integration",
         hasArrow: true,
         subItems: [
-          { label: "Process Design", count: 1 },
-          { label: "Workflow Management", count: 1 },
-          { label: "Process Automation", count: 1 },
+          { label: "Process Design", count: 1, slug: "retail-banking" },
+          { label: "Workflow Management", count: 1, slug: "retail-banking" },
+          { label: "Process Automation", count: 1, slug: "retail-banking" },
         ],
       },
       {
         label: "Data & Analytics",
         hasArrow: true,
         subItems: [
-          { label: "ODS / DWH / Data Lake", count: 1 },
-          { label: "Reporting / BI", count: 1 },
-          { label: "Analytics & Insights", count: 1 },
+          { label: "ODS / DWH / Data Lake", count: 1, slug: "retail-banking" },
+          { label: "Reporting / BI", count: 1, slug: "retail-banking" },
+          { label: "Analytics & Insights", count: 1, slug: "retail-banking" },
         ],
       },
     ],
@@ -118,7 +119,7 @@ const ROW1_CARDS = [
     subtitle: "Core banking products and services for customers",
     items: [
       { label: "CLM/Onboarding" },
-      { label: "KYC/AML/Fraud Detection, Prevention" },
+      { label: "KYC/AML/Fraud Detection, Prevention", slug: "kyc-aml-fraud" },
       { label: "Records Management, Controls, Recs, ESG" },
     ],
   },
@@ -245,17 +246,21 @@ function Chevron({ open }) {
 }
 
 /* ── Sub-item row ── */
-function SubItem({ label, count }) {
+function SubItem({ label, count, slug }) {
   const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
+  const clickable = !!slug;
   return (
     <div
-      className="flex items-center justify-between px-[12px] py-[8px] cursor-pointer transition-colors"
+      className="flex items-center justify-between px-[12px] py-[8px] transition-colors"
       style={{
         backgroundColor: hovered ? "#2F78C4" : "transparent",
         color: hovered ? "#ffffff" : "#000048",
+        cursor: clickable ? "pointer" : "default",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => clickable && navigate(`/category/${slug}`)}
     >
       <span className="text-[12px] leading-[17px]">{label}</span>
       {count != null && (
@@ -273,6 +278,7 @@ function SubItem({ label, count }) {
 /* ── Card component ── */
 function LayerCard({ card }) {
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const navigate = useNavigate();
 
   const toggleItem = (i) => setExpandedIndex(expandedIndex === i ? null : i);
 
@@ -318,9 +324,12 @@ function LayerCard({ card }) {
               className="flex items-center justify-between px-[10px] py-[8px] rounded-[6px]"
               style={{
                 backgroundColor: "#DEEEFF",
-                cursor: item.hasArrow ? "pointer" : "default",
+                cursor: (item.hasArrow || item.slug) ? "pointer" : "default",
               }}
-              onClick={() => item.hasArrow && toggleItem(i)}
+              onClick={() => {
+                if (item.hasArrow) toggleItem(i);
+                else if (item.slug) navigate(`/category/${item.slug}`);
+              }}
             >
               <span className="flex items-center gap-[8px]">
                 <span
@@ -344,7 +353,7 @@ function LayerCard({ card }) {
                 }}
               >
                 {item.subItems.map((sub, j) => (
-                  <SubItem key={j} label={sub.label} count={sub.count} />
+                  <SubItem key={j} label={sub.label} count={sub.count} slug={sub.slug} />
                 ))}
               </div>
             )}

@@ -1,0 +1,10 @@
+:root{
+  --gradient-g1: linear-gradient(180deg, #d0d0ff 0%, #aeaef9 100%);
+  --gradient-g2: linear-gradient(90deg, #ffffff 0%, #d3ddff 100%);
+  --gradient-g3: linear-gradient(90deg, #090088 0%, #2f98ab 100%);
+  --gradient-g4: linear-gradient(90deg, #3b62cc 0%, #95e1e5 100%);
+  --gradient-g5: linear-gradient(90deg, #3d54d0 0%, #35ccd1 100%);
+  --gradient-g6: linear-gradient(90deg, #13457d 0%, #26989a 100%);
+  --gradient-g7: linear-gradient(90deg, #000043 0%, #1560ad 61%, #00e8d6 100%);
+  --gradient-g8: linear-gradient(1deg, #2d2d8f 10%, #006fba 49%, #21fceb 94%);
+}

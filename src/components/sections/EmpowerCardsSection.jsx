@@ -6,7 +6,7 @@ import PageContainer from "../layout/PageContainer";
 const CARDS = [
   {
     title: "Retail Banking",
-    description: "Offers Businesses Tailored Financial Products Such As Credit, Treasury Services, And Cash-Management Solutions.",
+    description: "Customer facing AI agents tailored for everyday banking like Onboarding, Servicing,",
     image: "/assets/images/RetailBanking.jpg",
     slug: "retail-banking",
     idea: [
@@ -27,7 +27,7 @@ const CARDS = [
   },
   {
     title: "Commercial Banking",
-    description: "Offers Businesses Tailored Financial Products Such As Credit, Treasury Services, And Cash-Management Solutions.",
+    description: "Corporate and SME agents for Trade finance, Credit underwriting, Relationship support",
     image: "/assets/images/CommercialBanking.jpg",
     slug: "commercial-banking",
     idea: [
@@ -55,7 +55,7 @@ const CARDS = [
   },
   {
     title: "Investment Banking",
-    description: "Offers Businesses Tailored Financial Products Such As Credit, Treasury Services, And Cash-Management Solutions.",
+    description: "Advisory, portfolio analytics and research agents for private banking, wealth platforms",
     image: "/assets/images/InvestmentBanking.jpg",
     slug: "investment-banking",
     idea: [
@@ -81,7 +81,7 @@ const CARDS = [
   },
   {
     title: "Cards & Payments",
-    description: "Enables Secure, Fast, And Seamless Digital And Card-Based Transactions For Consumers And Businesses.",
+    description: "Real time agents for authorisation, fraud, FX and cross border SWIFT message validation",
     image: "/assets/images/cards and payment.jpeg",
     slug: "cards-payments",
     idea: [
@@ -106,7 +106,7 @@ const CARDS = [
   },
   {
     title: "Risk & Compliance",
-    description: "Ensures Organizations Operate Safely And Ethically By Identifying Risks, Enforcing Regulations, And Maintaining Regulatory Standards.",
+    description: "Agents for AML, sanctions, Regulatory reporting and Trade surveillances",
     image: "/assets/images/risk and compliance.jpeg",
     slug: "risk-compliance",
     idea: [
@@ -132,7 +132,7 @@ const CARDS = [
   },
   {
     title: "Asset & Wealth Management:",
-    description: "Manages And Grows Client Portfolios Through Strategic Investment Planning And Advisory Services.",
+    description: "Advisory, portfolio analytics and research agents for private banking, wealth platforms",
     image: "/assets/images/asset management.jpeg",
     slug: "asset-wealth-management",
     idea: [
@@ -174,17 +174,6 @@ export default function EmpowerCardsSection() {
   return (
     <section className="w-full py-[60px] bg-white">
       <PageContainer>
-        {/* Centered heading */}
-        <h2 className="text-[#000048] font-bold text-[40px] leading-[50px] mb-[20px] text-center">
-          Empower Your Workflow With<br />End-To-End Agentic AI
-        </h2>
-
-        {/* Centered subtitle */}
-        <p className="text-[#000048] text-[19px] leading-[34px] text-center max-w-[760px] mx-auto mb-[48px]">
-          Our service offerings span the full AI lifecycle—from ready-to-deploy models and agentic
-          orchestration to seamless integration and advanced analytics.
-        </p>
-
         {/* Cards with side arrows */}
         <div className="relative">
 

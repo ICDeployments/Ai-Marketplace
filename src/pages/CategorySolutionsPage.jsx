@@ -182,8 +182,24 @@ const SOLUTION_DETAILS = {
 };
 
 // Define solutions for each category
-const CATEGORY_SOLUTIONS = {
+export const CATEGORY_SOLUTIONS = {
   "retail-banking": {
+    title: "Retail Banking",
+    solutions: [
+      {
+        title: "Real Time Loan Application Fraud Detection",
+        description: "",
+        image: "rb01.jpg",
+        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+      },
+      {
+        title: "AI Powered Smart Fund Lending Platform",
+        description: "",
+        image: "rb02.png"
+      }
+    ]
+  },
+  "lending-mortgages": {
     title: "Retail Banking",
     solutions: [
       {

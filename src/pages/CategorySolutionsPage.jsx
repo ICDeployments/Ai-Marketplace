@@ -313,7 +313,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "AI-Driven document analysis and generation solution - Agentic AI",
         description: "",
         image: "rac03.png",
-        demoLink: "https://sjp3mwhjhn.us-west-2.awsapprunner.com/"
+        demoLink: "https://mg8mkgmzhp.us-west-2.awsapprunner.com/"
       }
     ]
   },

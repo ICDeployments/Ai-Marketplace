@@ -131,10 +131,31 @@ const CARDS = [
     ]
   },
   {
-    title: "Asset & Wealth Management:",
+    title: "Asset Management",
+    description: "Advisory, portfolio analytics and research agents for asset managers and institutional investors",
+    image: "/assets/images/asset management.jpeg",
+    slug: "asset-management",
+    idea: [
+      "Problem statement/opportunity: Provide cost-effective human like interaction for low to middle income groups during creation of customer profile and investment strategy.",
+      "Persona: Tech savvy asset management customer",
+      "Scope: Create customer profile and investment strategy using digital avatar of relationship manager and conversational AI.",
+      "Approach: Role of AI is to just converse with the customer. Investment strategy will be prepared with traditional approach."
+    ],
+    benefits: [
+      "Cost saving by reducing human involvement to serve the masses.",
+      "Enhanced customer experience as compared to simple form-based website."
+    ],
+    demonstration: [
+      "Set up will involve a big TV screen and a smart table in Customer service zone.",
+      "Visitor will be displayed a digital avatar on a big screen.",
+      "Smart table will be used to capture and show the customer details and display investment strategy."
+    ]
+  },
+  {
+    title: "Wealth Management",
     description: "Advisory, portfolio analytics and research agents for private banking, wealth platforms",
     image: "/assets/images/asset management.jpeg",
-    slug: "asset-wealth-management",
+    slug: "wealth-management",
     idea: [
       "Problem statement/opportunity: Provide cost-effective human like interaction for low to middle income groups during creation of customer profile and investment strategy.",
       "Persona: Tech savvy wealth management customer",
@@ -166,6 +187,16 @@ export default function EmpowerCardsSection() {
       navigate("/banking-suite/retail-banking");
     } else if (slug === "asset-wealth-management") {
       navigate("/banking-suite/asset-wealth-management");
+    } else if (slug === "commercial-banking") {
+      navigate("/banking-suite/commercial-banking");
+    } else if (slug === "investment-banking") {
+      navigate("/banking-suite/investment-banking");
+    } else if (slug === "asset-management") {
+      navigate("/banking-suite/asset-management");
+    } else if (slug === "wealth-management") {
+      navigate("/banking-suite/wealth-management");
+    } else if (slug === "risk-compliance") {
+      navigate("/banking-suite/risk-compliance");
     } else {
       navigate(`/category/${slug}`);
     }

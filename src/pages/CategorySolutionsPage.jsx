@@ -190,7 +190,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "rb01.jpg",
-        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-app-revamped-640237069320-us-west-2-an.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "AI Powered Smart Fund Lending Platform",
@@ -206,7 +206,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "rb01.jpg",
-        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-app-revamped-640237069320-us-west-2-an.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "AI Powered Smart Fund Lending Platform",
@@ -233,7 +233,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "cb01.jpg",
-        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-app-revamped-640237069320-us-west-2-an.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "AI Powered Smart Fund Lending Platform",
@@ -255,7 +255,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "ib01.jpg",
-        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-app-revamped-640237069320-us-west-2-an.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "AI Powered Smart Fund Lending Platform",
@@ -271,13 +271,13 @@ export const CATEGORY_SOLUTIONS = {
         title: "Real Time Loan Application Fraud Detection",
         description: "",
         image: "cap01.jpg",
-        demoLink: "http://real-time-fraud-detection-app.s3-website-us-west-2.amazonaws.com/loan-dashboard"
+        demoLink: "http://real-time-app-revamped-640237069320-us-west-2-an.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "Credit card transaction fraud detection agent",
         description: "",
         image: "cap02.png",
-        demoLink: "http://credit-fraud-app.s3-website-us-west-2.amazonaws.com/"
+        demoLink: "http://creditcard-facelift-version.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "Fraud and Dispute Management",
@@ -301,13 +301,13 @@ export const CATEGORY_SOLUTIONS = {
         title: "Credit card transaction fraud detection agent",
         description: "",
         image: "rac01.png",
-        demoLink: "http://credit-fraud-app.s3-website-us-west-2.amazonaws.com/"
+        demoLink: "http://creditcard-facelift-version.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "AML SAR Generation Workflow - Agentic AI",
         description: "",
         image: "rac02.png",
-        demoLink: "https://n2i9wremfi.us-west-2.awsapprunner.com/"
+        demoLink: "http://sar-facelift.s3-website-us-west-2.amazonaws.com/"
       },
       {
         title: "AI-Driven document analysis and generation solution - Agentic AI",
@@ -336,7 +336,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Portfolio Rebalancing",
         description: "",
         image: "Next-Gen Agentic Engine for Context-Aware HNW Portfolio Optimization.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F01%2E%20Portfolio%20Rebalancing&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/01.%20Portfolio%20Rebalancing/Portfolio%20Rebalancing%20-%20Demo.mp4?csf=1&web=1&e=nryu2A&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       },
       {
         title: "User Personalization for Asset & Wealth Management",
@@ -376,7 +376,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Portfolio Rebalancing",
         description: "",
         image: "Next-Gen Agentic Engine for Context-Aware HNW Portfolio Optimization.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F01%2E%20Portfolio%20Rebalancing&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/01.%20Portfolio%20Rebalancing/Portfolio%20Rebalancing%20-%20Demo.mp4?csf=1&web=1&e=nryu2A&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
   },
@@ -431,7 +431,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Trade Reconciliation and Exception Management",
         description: "",
         image: "Transforming Post-Trade Integrity Through Agentic Reconciliation Orchestration.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F43%20Trade%20Reconciliation%20and%20Exception%20Management&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/43%20Trade%20Reconciliation%20and%20Exception%20Management/Trade%20Reconciliation%20and%20Exception%20Management.mp4?csf=1&web=1&e=Vrs3F7&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
   },
@@ -442,7 +442,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Synthetic Data Generation",
         description: "",
         image: "Empowering Advanced Fraud Detection via Automated Synthetic Data Generation.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/personal/170240_cognizant_com/Documents/PB_New/CBC/Gen-AI/Service%20Offering/AI%20Market%20Place/../../../../../../../113135_cognizant_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F46%2E%20Synthetic%20Data%20Generation&sortField=LinkFilename&isAscending=true&viewid=8842125c%2D5b62%2D473e%2Dba05%2Dbe81d24cea8b&csf=1&ovuser=de08c407%2D19b9%2D427d%2D9fe8%2Dedf254300ca7%2C170240%40cognizant%2Ecom&CID=347effa1%2D60b8%2D6000%2Dfbe2%2D2efbced17e1f&cidOR=SPO&FolderCTID=0x0120005733F3CF541CA1419DD978CFDB8FA146&view=0"
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/46.%20Synthetic%20Data%20Generation/Synthetic%20Data%20Generation%20for%20Fraud%20Detection%20Demo.mp4?csf=1&web=1&e=KhxC5S&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
   }

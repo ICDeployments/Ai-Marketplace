@@ -29,10 +29,13 @@
   font-style: normal;
 }
 
+html, body, *, *::before, *::after {
+  font-family: "Gallix", system-ui, sans-serif;
+}
+
 html, body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: "Gallix", system-ui, sans-serif;
 }
 
 :root{

@@ -1,0 +1,423 @@
+import { useNavigate } from "react-router-dom";
+import { CATEGORY_SOLUTIONS } from "./CategorySolutionsPage";
+import TopHeader from "../components/layout/TopHeader";
+import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
+import Footer from "../components/layout/Footer";
+import PageContainer from "../components/layout/PageContainer";
+
+/* ─── Data ─── */
+
+const CONSUMPTION_ITEMS = [
+  "Branch",
+  "Mobile (incl. Employee Access)",
+  "Online (including Employee Intranet Access)",
+  "Contact Center",
+];
+
+const TRADE_SERVICES_ITEMS = [
+  { label: "Order Management" },
+  { label: "Valuation & Pricing" },
+  { label: "Trade Processing" },
+  { label: "Trade Reconciliation", slug: "capital-market" },
+  { label: "Clearing & Custody Services" },
+  { label: "Quote Management" },
+  { label: "Trade Analytics/Reporting" },
+  { label: "Trade Settlement" },
+  { label: "Trade Risk Management" },
+  { label: "Prime Brokerage Services" },
+];
+
+const PRE_TRADE_SERVICES_TOP = [
+  { label: "Product & Service Sales" },
+  { label: "Product Development" },
+  { label: "Deal Structuring" },
+  { label: "CRM" },
+  { label: "Client Analytics" },
+  { label: "Accounts Management" },
+];
+
+const PRE_TRADE_SERVICES_BOTTOM = [
+  { label: "Research management" },
+  { label: "Legal protections & declarations" },
+  { label: "Analytics" },
+  { label: "Financial Projections" },
+];
+
+const PRODUCT_CONTROL_ITEMS = [
+  { label: "P&L Calculation" },
+  { label: "P&L Attribution" },
+  { label: "Price Model Testing" },
+  { label: "Valuation & IPV" },
+];
+
+const FINANCE_TREASURY_ITEMS = [
+  { label: "Financial Statements" },
+  { label: "P&L AttriGeneral Ledger / SGLbution" },
+  { label: "Debt & Capital Mgmt" },
+  { label: "Collateral Mgmt" },
+];
+
+const REG_COMPLIANCE_ITEMS = [
+  { label: "CDD/KYC/AML, Fraud Detect/Prevent", slug: "kyc-aml-fraud" },
+  { label: "E2E Fin Crime Mgmt." },
+  { label: "Records Mgmt, Controls, Recs, ESG" },
+  { label: "Regulatory Reporting", slug: "awm-regulatory-reporting" },
+];
+
+const FINANCIAL_RISK_ITEMS = [
+  { label: "Credit Risk" },
+  { label: "Market Risk" },
+  { label: "Liquidity Risk" },
+  { label: "Operational Risk" },
+];
+
+const BUSINESS_PROCESS_ITEMS = [
+  { label: "Process Design" },
+  { label: "Workflow Management" },
+  { label: "Process / Workflow Automation" },
+];
+
+const DATA_MGMT_ITEMS = [
+  { label: "Client / Counterparty Master Data" },
+  { label: "Product Master Data" },
+  { label: "Securities Reference Data" },
+  { label: "Books/Accounts Reference Data" },
+  { label: "Market Data (Real time / Historical)" },
+  { label: "FX (Vol/Curves)" },
+  { label: "ODS / DWH / Data Lake", slug: "data-management" },
+  { label: "Analytics & Insights" },
+  { label: "Reporting / BI" },
+];
+
+const ENTERPRISE_ITEMS = [
+  "Business Strategy / Management",
+  "PMO",
+  "HR Management",
+  "IT Management",
+  "Procurement",
+  "Facilities Management",
+];
+
+const FOUNDATION_ITEMS = [
+  "Document and Content Mgmt",
+  "IAM (Identity & Access Mgmt)",
+  "Notifications",
+];
+
+const FOUNDATION_SUB = {
+  title: "Infrastructure & Hosting",
+  items: ["Cybersecurity", "Cloud", "Provisioning", "Perimeter security", "DevOps", "Observability"],
+};
+
+/* ─── Shared UI primitives ─── */
+
+function ItemBox({ label, slug, textBound = false }) {
+  const navigate = useNavigate();
+  const count = slug ? (CATEGORY_SOLUTIONS[slug]?.solutions?.length ?? 0) : 0;
+  const on = count > 0;
+
+  return (
+    <div
+      className={`relative flex items-center justify-center text-center px-[14px] py-[10px] rounded-[5px] ${textBound ? "w-fit" : "w-full"}`}
+      style={{
+        backgroundColor: on ? "#2F78C4" : "#DEEEFF",
+        border: "none",
+        color: on ? "#ffffff" : "#000048",
+        fontSize: 11,
+        lineHeight: "14px",
+        fontWeight: on ? 600 : 400,
+        cursor: on ? "pointer" : "default",
+      }}
+      onClick={() => on && navigate(`/category/${slug}`)}
+    >
+      {label}
+      {on && (
+        <span
+          className="absolute flex items-center justify-center rounded-full"
+          style={{
+            top: -10, right: -8, width: 16, height: 16,
+            backgroundColor: "white",
+            color: "#2F78C4",
+            border: "1.5px solid #2F78C4",
+            fontSize: 10,
+            fontWeight: 700,
+            lineHeight: 1,
+          }}
+        >
+          {count}
+        </span>
+      )}
+    </div>
+  );
+}
+
+function SectionLabel({ children }) {
+  return (
+    <p className="font-bold text-[15px] tracking-widest uppercase text-center mb-[10px]"
+       style={{ color: "#2F78C4" }}>
+      {children}
+    </p>
+  );
+}
+
+function ColHeader({ children }) {
+  return (
+    <p className="text-center font-semibold text-[11px] leading-[15px] mb-[14px]"
+       style={{ color: "#000048" }}>
+      {children}
+    </p>
+  );
+}
+
+function SectionBox({ children, className = "", style = {} }) {
+  return (
+    <div className={`bg-white rounded-[10px] p-[14px] ${className}`}
+         style={{ border: "1px solid #C7C7C7", ...style }}>
+      {children}
+    </div>
+  );
+}
+
+function SubSectionBox({ children, className = "" }) {
+  return (
+    <div className={`rounded-[7px] p-[10px] ${className}`}
+         style={{ border: "1px solid #C7C7C7", backgroundColor: "#ffffff" }}>
+      {children}
+    </div>
+  );
+}
+
+function ColBox({ children, className = "" }) {
+  return (
+    <div className={`rounded-[8px] p-[10px] ${className}`} style={{ border: "1px solid #C7C7C7" }}>
+      {children}
+    </div>
+  );
+}
+
+/* ─── Page ─── */
+
+export default function InvestmentBankingSuitePage() {
+  return (
+    <div className="w-full min-h-screen flex flex-col bg-white">
+      <TopHeader />
+      <DarkMarketplaceNav />
+
+      {/* Architecture diagram */}
+      <section className="w-full pt-[40px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
+        <PageContainer>
+
+          {/* CONSUMPTION LAYER */}
+          <SectionBox className="mb-[12px]">
+            <SectionLabel>Consumption Layer</SectionLabel>
+            <div className="flex items-center justify-center flex-wrap gap-[12px] mt-[16px]">
+              {CONSUMPTION_ITEMS.map((item, i) => (
+                <ItemBox key={i} label={item} textBound />
+              ))}
+            </div>
+          </SectionBox>
+
+          {/* MIDDLE ROW */}
+          <div className="flex gap-[12px] mb-[12px] items-stretch">
+
+            {/* ── LEFT COLUMN ── */}
+            <div className="flex flex-col gap-[12px]" style={{ width: 215, flexShrink: 0 }}>
+
+              {/* Integration Layer */}
+              <SectionBox className="flex-1">
+                <SectionLabel>Integration Layer</SectionLabel>
+
+                {/* Ecosystems Integration as a box */}
+                <div className="mb-[10px]">
+                  <ItemBox label="Ecosystems Integration" />
+                </div>
+
+                {/* Ecosystem sub-card */}
+                <div className="rounded-[6px] p-[7px] mb-[8px]"
+                     style={{ backgroundColor: "#ffffff", border: "1px solid #C7C7C7" }}>
+                  <p className="text-[10px] font-semibold text-center mb-[5px]" style={{ color: "#000048" }}>
+                    Ecosystem
+                  </p>
+                  <div className="flex flex-col gap-[10px]">
+                    {["Corporates", "Relationship Manager", "Intermediary", "3rd Party"].map((item, i) => (
+                      <ItemBox key={i} label={item} />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Standalone items */}
+                <div className="flex flex-col gap-[10px] mb-[8px]">
+                  {["API Management", "FIX Gateways"].map((item, i) => (
+                    <ItemBox key={i} label={item} />
+                  ))}
+                </div>
+
+                {/* Reference Data Providers */}
+                <p className="font-bold text-[10px] uppercase tracking-wider text-center mb-[5px]"
+                   style={{ color: "#2F78C4" }}>
+                  Reference Data Providers
+                </p>
+                <div className="rounded-[6px] p-[7px]"
+                     style={{ backgroundColor: "#ffffff", border: "1px solid #C7C7C7" }}>
+                  <div className="flex flex-col gap-[10px]">
+                    {["Party Reference Data / Market / ESG Data", "Products/Financial Instruments/Pricing", "External Agencies"].map((item, i) => (
+                      <ItemBox key={i} label={item} />
+                    ))}
+                  </div>
+                </div>
+              </SectionBox>
+
+              {/* Enterprise Enablement */}
+              <SectionBox>
+                <SectionLabel>Enterprise Enablement</SectionLabel>
+                <div className="flex flex-col gap-[10px]">
+                  {ENTERPRISE_ITEMS.map((item, i) => (
+                    <ItemBox key={i} label={item} />
+                  ))}
+                </div>
+              </SectionBox>
+
+            </div>
+
+            {/* ── RIGHT COLUMN — Business Layer ── */}
+            <SectionBox className="flex-1 min-w-0">
+              <SectionLabel>Business Layer</SectionLabel>
+
+              {/* Business Products & Services */}
+              <SubSectionBox className="mb-[10px]">
+                <p className="font-bold text-[11px] tracking-wider text-center mb-[10px]"
+                   style={{ color: "#000048" }}>
+                  BUSINESS PRODUCTS &amp; SERVICES
+                </p>
+
+                <div className="grid grid-cols-3 gap-[16px] items-start">
+                  {/* Col 1 — Trade Services */}
+                  <ColBox>
+                    <ColHeader>Trade Services</ColHeader>
+                    <div className="flex flex-col gap-[10px]">
+                      {TRADE_SERVICES_ITEMS.map((item, i) => (
+                        <ItemBox key={i} label={item.label} slug={item.slug} />
+                      ))}
+                    </div>
+                  </ColBox>
+
+                  {/* Col 2 — two Pre-Trade Services boxes */}
+                  <div className="flex flex-col gap-[10px]">
+                    <ColBox>
+                      <ColHeader>Pre-Trade Services</ColHeader>
+                      <div className="flex flex-col gap-[10px]">
+                        {PRE_TRADE_SERVICES_TOP.map((item, i) => (
+                          <ItemBox key={i} label={item.label} slug={item.slug} />
+                        ))}
+                      </div>
+                    </ColBox>
+                    <ColBox>
+                      <ColHeader>Pre-Trade Services</ColHeader>
+                      <div className="flex flex-col gap-[10px]">
+                        {PRE_TRADE_SERVICES_BOTTOM.map((item, i) => (
+                          <ItemBox key={i} label={item.label} slug={item.slug} />
+                        ))}
+                      </div>
+                    </ColBox>
+                  </div>
+
+                  {/* Col 3 — Product Control + Finance / Treasury */}
+                  <div className="flex flex-col gap-[10px]">
+                    <ColBox>
+                      <ColHeader>Product Control</ColHeader>
+                      <div className="flex flex-col gap-[10px]">
+                        {PRODUCT_CONTROL_ITEMS.map((item, i) => (
+                          <ItemBox key={i} label={item.label} slug={item.slug} />
+                        ))}
+                      </div>
+                    </ColBox>
+                    <ColBox>
+                      <ColHeader>Finance / Treasury</ColHeader>
+                      <div className="flex flex-col gap-[10px]">
+                        {FINANCE_TREASURY_ITEMS.map((item, i) => (
+                          <ItemBox key={i} label={item.label} slug={item.slug} />
+                        ))}
+                      </div>
+                    </ColBox>
+                  </div>
+                </div>
+              </SubSectionBox>
+
+              {/* Reg. Compliance & Risk Management */}
+              <SubSectionBox className="mb-[10px]">
+                <p className="font-bold text-[11px] tracking-wider text-center mb-[10px]" style={{ color: "#000048" }}>
+                  Reg. Compliance &amp; Risk Management
+                </p>
+                <div className="grid grid-cols-4 gap-[16px]">
+                  {REG_COMPLIANCE_ITEMS.map((item, i) => (
+                    <ItemBox key={i} label={item.label} slug={item.slug} />
+                  ))}
+                </div>
+              </SubSectionBox>
+
+              {/* Business Shared Services */}
+              <SubSectionBox>
+                <p className="font-bold text-[11px] tracking-wider text-center mb-[10px]"
+                   style={{ color: "#000048" }}>
+                  BUSINESS SHARED SERVICES
+                </p>
+                <div className="grid grid-cols-4 gap-[16px] items-start">
+                  <ColBox>
+                    <ColHeader>Financial Risk Management</ColHeader>
+                    <div className="flex flex-col gap-[10px]">
+                      {FINANCIAL_RISK_ITEMS.map((item, i) => (
+                        <ItemBox key={i} label={item.label} slug={item.slug} />
+                      ))}
+                    </div>
+                  </ColBox>
+
+                  <ColBox>
+                    <ColHeader>Business Process Management</ColHeader>
+                    <div className="flex flex-col gap-[10px]">
+                      {BUSINESS_PROCESS_ITEMS.map((item, i) => (
+                        <ItemBox key={i} label={item.label} slug={item.slug} />
+                      ))}
+                    </div>
+                  </ColBox>
+
+                  <ColBox className="col-span-2">
+                    <ColHeader>Data Mgmt &amp; Analytics</ColHeader>
+                    <div className="grid grid-cols-2 gap-[10px]">
+                      {DATA_MGMT_ITEMS.map((item, i) => (
+                        <ItemBox key={i} label={item.label} slug={item.slug} />
+                      ))}
+                    </div>
+                  </ColBox>
+                </div>
+              </SubSectionBox>
+
+            </SectionBox>
+          </div>
+
+          {/* FOUNDATIONAL LAYER */}
+          <SectionBox>
+            <SectionLabel>Foundational Layer</SectionLabel>
+            <div className="grid grid-cols-3 gap-[16px] mb-[16px]">
+              {FOUNDATION_ITEMS.map((item, i) => (
+                <ItemBox key={i} label={item} />
+              ))}
+            </div>
+            <SubSectionBox>
+              <p className="text-[11px] font-semibold text-center mb-[7px]" style={{ color: "#000048" }}>
+                {FOUNDATION_SUB.title}
+              </p>
+              <div className="grid grid-cols-6 gap-[16px]">
+                {FOUNDATION_SUB.items.map((item, i) => (
+                  <ItemBox key={i} label={item} />
+                ))}
+              </div>
+            </SubSectionBox>
+          </SectionBox>
+
+        </PageContainer>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

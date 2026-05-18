@@ -55,7 +55,7 @@ const CARDS = [
   },
   {
     title: "Investment Banking",
-    description: "Advisory, portfolio analytics and research agents for private banking, wealth platforms",
+    description: "Capital raising, advisory, and deal-making activities for corporates, governments, and institutions include Deals, advisory, client intelligence agents",
     image: "/assets/images/InvestmentBanking.jpg",
     slug: "investment-banking",
     idea: [
@@ -132,7 +132,7 @@ const CARDS = [
   },
   {
     title: "Asset Management",
-    description: "Advisory, portfolio analytics and research agents for asset managers and institutional investors",
+    description: "Portfolio optimization, risk management, and long-term value creation with AI and data analytics to enhance investment strategies, forecasting, and performance monitoring",
     image: "/assets/images/asset management.jpeg",
     slug: "asset-management",
     idea: [
@@ -153,7 +153,7 @@ const CARDS = [
   },
   {
     title: "Market Infrastructure",
-    description: "Agents for exchanges, clearing, settlement, depository, surveillance and post-trade operations",
+    description: "The core systems and institutions that enable financial markets to function efficiently like Post-trade, compliance, resilience agents",
     image: "/assets/images/InvestmentBanking.jpg",
     slug: "market-infrastructure",
     idea: [
@@ -176,7 +176,7 @@ const CARDS = [
   },
   {
     title: "Wealth Management",
-    description: "Advisory, portfolio analytics and research agents for private banking, wealth platforms",
+    description: "Client-centric, goal-based advisory and relationship management by Leveraging AI for personalized insights, AI-advisory, and client engagement.",
     image: "/assets/images/asset management.jpeg",
     slug: "wealth-management",
     idea: [

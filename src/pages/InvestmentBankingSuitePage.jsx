@@ -4,6 +4,7 @@ import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
+import GradientUnderline from "../components/ui/GradientUnderline";
 
 /* ─── Data ─── */
 
@@ -18,7 +19,7 @@ const TRADE_SERVICES_ITEMS = [
   { label: "Order Management" },
   { label: "Valuation & Pricing" },
   { label: "Trade Processing" },
-  { label: "Trade Reconciliation", slug: "capital-market" },
+  { label: "Trade Reconciliation" },
   { label: "Clearing & Custody Services" },
   { label: "Quote Management" },
   { label: "Trade Analytics/Reporting" },
@@ -58,10 +59,10 @@ const FINANCE_TREASURY_ITEMS = [
 ];
 
 const REG_COMPLIANCE_ITEMS = [
-  { label: "CDD/KYC/AML, Fraud Detect/Prevent", slug: "kyc-aml-fraud" },
+  { label: "CDD/KYC/AML, Fraud Detect/Prevent" },
   { label: "E2E Fin Crime Mgmt." },
   { label: "Records Mgmt, Controls, Recs, ESG" },
-  { label: "Regulatory Reporting", slug: "awm-regulatory-reporting" },
+  { label: "Regulatory Reporting" },
 ];
 
 const FINANCIAL_RISK_ITEMS = [
@@ -84,7 +85,7 @@ const DATA_MGMT_ITEMS = [
   { label: "Books/Accounts Reference Data" },
   { label: "Market Data (Real time / Historical)" },
   { label: "FX (Vol/Curves)" },
-  { label: "ODS / DWH / Data Lake", slug: "data-management" },
+  { label: "ODS / DWH / Data Lake" },
   { label: "Analytics & Insights" },
   { label: "Reporting / BI" },
 ];
@@ -203,8 +204,19 @@ export default function InvestmentBankingSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full bg-white pt-[40px] pb-[24px]">
+        <PageContainer>
+          <div className="inline-block">
+            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
+              Investment Banking
+            </h2>
+            <GradientUnderline />
+          </div>
+        </PageContainer>
+      </section>
+
       {/* Architecture diagram */}
-      <section className="w-full pt-[40px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
+      <section className="w-full pt-[24px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
         <PageContainer>
 
           {/* CONSUMPTION LAYER */}

@@ -265,7 +265,7 @@ export const CATEGORY_SOLUTIONS = {
     ]
   },
   "cards-payments": {
-    title: "Cards and payment",
+    title: "Cards & Payments",
     solutions: [
       {
         title: "Real Time Loan Application Fraud Detection",
@@ -443,6 +443,145 @@ export const CATEGORY_SOLUTIONS = {
         description: "",
         image: "Empowering Advanced Fraud Detection via Automated Synthetic Data Generation.jpeg",
         link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/46.%20Synthetic%20Data%20Generation/Synthetic%20Data%20Generation%20for%20Fraud%20Detection%20Demo.mp4?csf=1&web=1&e=KhxC5S&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      }
+    ]
+  },
+  "cb-clm-onboarding": {
+    title: "Commercial Banking",
+    solutions: [
+      {
+        title: "Commercial Banking - Client Onboarding - Compliance Checks",
+        description: "",
+        image: "Intelligent Automation Corporate Banking Next-Gen KYB through Agentic AI.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/personal/113135_cognizant_com/_layouts/15/stream.aspx?id=%2Fpersonal%2F113135%5Fcognizant%5Fcom%2FDocuments%2FDocuments%2FC%20Drive%2FFramework%20Tools%20%26%20Accelerators%2FAgentic%20AI%2FAgents%20Foundry%2FSolution%20Demo%2F13%2E%20Commercial%20Banking%20%2D%20Client%20Onboarding%2F13%5FCommercial%20Banking%5FClient%20Onboarding%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ef3fa911b%2D152a%2D4773%2D8283%2Dfa6cd2867354"
+      }
+    ]
+  },
+  "cap-authorization": {
+    title: "Cards & Payments",
+    solutions: [
+      {
+        title: "Invisible Payment Solution",
+        description: "",
+        image: "InvisiblePaymentSolutions.png",
+        demoLink: "https://20.219.97.165.nip.io/login/",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/2101809_cognizant_com/Documents/Microsoft%20Teams%20Chat%20Files/SmartPay_Shopping_App_Demo.mp4?csf=1&web=1&e=xQe3fE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      }
+    ]
+  },
+  "cap-txn-monitoring": {
+    title: "Cards & Payments",
+    solutions: [
+      {
+        title: "Credit card transaction fraud detection agent",
+        description: "",
+        image: "cap02.png",
+        demoLink: "http://creditcard-facelift-version.s3-website-us-west-2.amazonaws.com/"
+      }
+    ]
+  },
+  "cap-case-mgmt": {
+    title: "Cards & Payments",
+    solutions: [
+      {
+        title: "Fraud and Dispute Management",
+        description: "",
+        image: "Transforming Fraud and Dispute Resolution Through Agentic Intelligence.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/34.%20Agentic%20Solution%20-%20Fraud%20%26%20Dispute%20Management/Fraud%20and%20Dispute%20Management.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZSexnD"
+      }
+    ]
+  },
+  "rc-fraud-decisioning": {
+    title: "Risk & Compliance",
+    solutions: [
+      {
+        title: "Credit card transaction fraud detection agent",
+        description: "",
+        image: "rac01.png",
+        demoLink: "http://creditcard-facelift-version.s3-website-us-west-2.amazonaws.com/"
+      }
+    ]
+  },
+  "rc-sar-filing": {
+    title: "Risk & Compliance",
+    solutions: [
+      {
+        title: "AML SAR Generation Workflow - Agentic AI",
+        description: "",
+        image: "rac02.png",
+        demoLink: "http://sar-facelift.s3-website-us-west-2.amazonaws.com/"
+      }
+    ]
+  },
+  "rc-reg-change": {
+    title: "Risk & Compliance",
+    solutions: [
+      {
+        title: "AI-Driven document analysis and generation solution - Agentic AI",
+        description: "",
+        image: "rac03.png",
+        demoLink: "https://mg8mkgmzhp.us-west-2.awsapprunner.com/"
+      }
+    ]
+  },
+  "wm-advisor-relationship": {
+    title: "Wealth Management",
+    solutions: [
+      {
+        title: "AI enabled Investment Advisory and Portfolio construction and balancing - Agentic AI",
+        description: "",
+        image: "awm01.png",
+        demoLink: "https://azure-advisor-app.greenwater-842e0658.eastus2.azurecontainerapps.io/"
+      }
+    ]
+  },
+  "wm-analytics-insights": {
+    title: "Wealth Management",
+    solutions: [
+      {
+        title: "Common Domain Model",
+        description: "",
+        image: "awm02.png",
+        demoLink: "https://hk9pjj82vm.us-west-2.awsapprunner.com/signin"
+      }
+    ]
+  },
+  "wm-account-opening": {
+    title: "Wealth Management",
+    solutions: [
+      {
+        title: "User Personalization for Asset & Wealth Management",
+        description: "",
+        image: "Driving Hyper-Personalized Wealth Journeys via Autonomous Agents.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/22.%20Vibe%20Coding_User%20Personalization%20Solution/Vibe%20Coding%20User%20Personalization%20Demo%20Final%20-%20Video%20(1).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kvI41K"
+      },
+      {
+        title: "Wealth Management - Life Stage Simulator (POV: Clients and Financial Advisor)",
+        description: "",
+        image: "Empowering Financial Preparedness Through Agentic Goal Modeling.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/24.%20Wealth%20Management%20Life%20Stage%20Simulator%20(POV%20Clients%20and%20Financial%20Advisor).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Hhk226"
+      }
+    ]
+  },
+  "wm-portfolio-risk": {
+    title: "Wealth Management",
+    solutions: [
+      {
+        title: "Portfolio Exception Monitor",
+        description: "",
+        image: "Proactive Portfolio Resilience with Agentic Exception Monitoring.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/23.%20Vibe%20Coding_Portfolio%20Exception%20Monitor/23_Demo%20Video_Vibe%20Coding_Portfolio%20Exception%20Monitor_Rajdeep.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YaJK74"
+      }
+    ]
+  },
+  "am-account-opening": {
+    title: "Asset Management",
+    solutions: [
+      {
+        title: "User Personalization for Asset & Wealth Management",
+        description: "",
+        image: "Driving Hyper-Personalized Wealth Journeys via Autonomous Agents.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/22.%20Vibe%20Coding_User%20Personalization%20Solution/Vibe%20Coding%20User%20Personalization%20Demo%20Final%20-%20Video%20(1).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kvI41K"
       }
     ]
   }

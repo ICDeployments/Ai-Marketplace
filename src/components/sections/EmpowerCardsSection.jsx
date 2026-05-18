@@ -152,6 +152,29 @@ const CARDS = [
     ]
   },
   {
+    title: "Market Infrastructure",
+    description: "Agents for exchanges, clearing, settlement, depository, surveillance and post-trade operations",
+    image: "/assets/images/InvestmentBanking.jpg",
+    slug: "market-infrastructure",
+    idea: [
+      "Problem statement/opportunity: Market infrastructure providers (exchanges, clearing houses, depositories) face increasing demand for real-time surveillance, low-latency operations, and integrated risk management across the trade lifecycle.",
+      "Persona: Exchange operators, clearing house staff, depository services teams, market surveillance and compliance officers",
+      "Scope: AI agents across listing, trading, clearing, settlement, custody, surveillance and investor services.",
+      "Approach: Targeted AI agents per function (e.g. counterparty surveillance, margin calculation, exception management) with human-in-the-loop oversight."
+    ],
+    benefits: [
+      "Improved market integrity through real-time surveillance and alerting.",
+      "Reduced operational risk in post-trade clearing and settlement.",
+      "Faster issue registration, listing and corporate-action workflows.",
+      "Better investor experience through self-service tools and timely disclosures."
+    ],
+    demonstration: [
+      "Walk through the Market Infrastructure taxonomy across Exchange, Clearing, and Information Provider domains.",
+      "Drill into a specific function (e.g. Surveillance > Alerts/Warnings) to view the underlying AI solution.",
+      "Show end-to-end trade lifecycle from order management to settlement and depository services."
+    ]
+  },
+  {
     title: "Wealth Management",
     description: "Advisory, portfolio analytics and research agents for private banking, wealth platforms",
     image: "/assets/images/asset management.jpeg",
@@ -197,6 +220,10 @@ export default function EmpowerCardsSection() {
       navigate("/banking-suite/wealth-management");
     } else if (slug === "risk-compliance") {
       navigate("/banking-suite/risk-compliance");
+    } else if (slug === "market-infrastructure") {
+      navigate("/banking-suite/market-infrastructure");
+    } else if (slug === "cards-payments") {
+      navigate("/banking-suite/cards-payments");
     } else {
       navigate(`/category/${slug}`);
     }

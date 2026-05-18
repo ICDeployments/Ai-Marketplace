@@ -4,6 +4,7 @@ import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
+import GradientUnderline from "../components/ui/GradientUnderline";
 
 /* ─── Data ─── */
 
@@ -230,8 +231,19 @@ export default function RetailBankingSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full bg-white pt-[40px] pb-[24px]">
+        <PageContainer>
+          <div className="inline-block">
+            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
+              Retail Banking
+            </h2>
+            <GradientUnderline />
+          </div>
+        </PageContainer>
+      </section>
+
       {/* Architecture diagram */}
-      <section className="w-full pt-[40px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
+      <section className="w-full pt-[24px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
         <PageContainer>
 
           {/* CONSUMPTION LAYER */}

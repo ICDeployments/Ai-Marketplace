@@ -4,6 +4,7 @@ import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
+import GradientUnderline from "../components/ui/GradientUnderline";
 
 /* ─── Data ─── */
 
@@ -35,7 +36,7 @@ const BUSINESS_PRODUCTS_COLS = [
     title: "Lending",
     items: [
       { label: "Loan Origination" },
-      { label: "Loan Origination", slug: "lending-mortgages" },
+      { label: "Loan Origination" },
       { label: "Securitization and Secondary Trading" },
     ],
   },
@@ -67,7 +68,7 @@ const INVESTMENT_BANKING_ITEMS = [
 ];
 
 const REG_COMPLIANCE_ITEMS = [
-  { label: "CLM/Onboarding" },
+  { label: "CLM/Onboarding", slug: "cb-clm-onboarding" },
   { label: "KYC/AML/Fraud Detection, Prevention" },
   { label: "E2E Fin Crime Mgmt." },
   { label: "Records Management, Controls, Recs, ESG" },
@@ -232,8 +233,19 @@ export default function CommercialBankingSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full bg-white pt-[40px] pb-[24px]">
+        <PageContainer>
+          <div className="inline-block">
+            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
+              Commercial Banking
+            </h2>
+            <GradientUnderline />
+          </div>
+        </PageContainer>
+      </section>
+
       {/* Architecture diagram */}
-      <section className="w-full pt-[40px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
+      <section className="w-full pt-[24px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
         <PageContainer>
 
           {/* CONSUMPTION LAYER */}

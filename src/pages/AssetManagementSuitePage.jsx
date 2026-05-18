@@ -4,6 +4,7 @@ import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
+import GradientUnderline from "../components/ui/GradientUnderline";
 
 /* ─── Data ─── */
 
@@ -22,9 +23,9 @@ const BUSINESS_PRODUCTS_COLS = [
       { label: "Investment Strategy" },
       { label: "Solution Strategy" },
       { label: "Trade Order Entry" },
-      { label: "A/c Opening/Onboarding" },
+      { label: "A/c Opening/Onboarding", slug: "am-account-opening" },
       { label: "Securities Research" },
-      { label: "Portfolio Mgmt.", slug: "awm-portfolio-mgmt" },
+      { label: "Portfolio Mgmt." },
       { label: "Asset Allocation" },
       { label: "Portfolio Risk" },
       { label: "Product Development / Mgmt." },
@@ -34,7 +35,7 @@ const BUSINESS_PRODUCTS_COLS = [
     title: "Investment Product Operations",
     items: [
       { label: "Mktg/Comms Compliance" },
-      { label: "Model Mgmt", slug: "awm-model-management" },
+      { label: "Model Mgmt" },
       { label: "Settlement Processing" },
       { label: "Post-Trade Compliance" },
       { label: "Service Case Mgmt" },
@@ -217,8 +218,19 @@ export default function AssetManagementSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full bg-white pt-[40px] pb-[24px]">
+        <PageContainer>
+          <div className="inline-block">
+            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
+              Asset Management
+            </h2>
+            <GradientUnderline />
+          </div>
+        </PageContainer>
+      </section>
+
       {/* Architecture diagram */}
-      <section className="w-full pt-[40px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
+      <section className="w-full pt-[24px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
         <PageContainer>
 
           {/* CONSUMPTION LAYER */}

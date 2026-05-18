@@ -4,6 +4,7 @@ import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
+import GradientUnderline from "../components/ui/GradientUnderline";
 
 /* ─── Data ─── */
 
@@ -15,8 +16,8 @@ const COLUMNS = [
       items: [
         { label: "Operational Risk Management" },
         { label: "Integrated Risk Management – IT & Suppliers" },
-        { label: "Regulatory Change Mgmt.", slug: "risk-compliance" },
-        { label: "Data Governance & Protection", slug: "data-management" },
+        { label: "Regulatory Change Mgmt.", slug: "rc-reg-change" },
+        { label: "Data Governance & Protection" },
         { label: "Market & Reference Data" },
         { label: "Quality Assurance / Model Mgmt." },
       ],
@@ -60,9 +61,9 @@ const COLUMNS = [
     {
       title: "Fraud Mgmt.",
       items: [
-        { label: "Decisioning", slug: "cards-payments" },
-        { label: "Models", slug: "data-management" },
-        { label: "Alert Mgmt.", slug: "risk-compliance" },
+        { label: "Decisioning", slug: "rc-fraud-decisioning" },
+        { label: "Models" },
+        { label: "Alert Mgmt." },
         { label: "Bureau Reporting" },
       ],
     },
@@ -79,7 +80,7 @@ const COLUMNS = [
       items: [
         { label: "Blue Sheet" },
         { label: "Escheatment" },
-        { label: "Trade Reporting", slug: "capital-market" },
+        { label: "Trade Reporting" },
         { label: "Capital Adequacy" },
         { label: "Customer Deposits" },
         { label: "Fees & Commission" },
@@ -93,13 +94,13 @@ const COLUMNS = [
       title: "CLM & KYC",
       items: [
         { label: "Prospecting" },
-        { label: "On-boarding / Initial CDD", slug: "kyc-aml-fraud" },
+        { label: "On-boarding / Initial CDD" },
         { label: "Ongoing - CDD" },
         { label: "Suitability & Entitlements" },
-        { label: "Single Client View", slug: "awm-model-management" },
+        { label: "Single Client View" },
         { label: "Legal. Credit & Tax" },
         { label: "Client Risk Rating" },
-        { label: "Account Set-up & Maintenance", slug: "commercial-banking" },
+        { label: "Account Set-up & Maintenance" },
       ],
     },
     {
@@ -131,7 +132,7 @@ const COLUMNS = [
         { label: "Client Name Screening" },
         { label: "Network Analysis" },
         { label: "Investigations" },
-        { label: "SAR / Reg Filings", slug: "risk-compliance" },
+        { label: "SAR / Reg Filings", slug: "rc-sar-filing" },
         { label: "Adverse Media / Negative News" },
         { label: "Trader Surveillance" },
       ],
@@ -140,9 +141,9 @@ const COLUMNS = [
       title: "Credit Risk",
       items: [
         { label: "Facility, Limits & Agreements Data" },
-        { label: "Portfolio Mgmt. & Exposure Monitoring", slug: "awm-portfolio-mgmt" },
+        { label: "Portfolio Mgmt. & Exposure Monitoring" },
         { label: "Over limit controls & defaults / recovery" },
-        { label: "Reporting", slug: "awm-regulatory-reporting" },
+        { label: "Reporting" },
       ],
     },
     {
@@ -224,7 +225,18 @@ export default function RiskComplianceSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
-      <section className="w-full pt-[40px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
+      <section className="w-full bg-white pt-[40px] pb-[24px]">
+        <PageContainer>
+          <div className="inline-block">
+            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
+              Risk &amp; Compliance
+            </h2>
+            <GradientUnderline />
+          </div>
+        </PageContainer>
+      </section>
+
+      <section className="w-full pt-[24px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
         <PageContainer>
           <div className="grid grid-cols-4 gap-[20px] items-start">
             {COLUMNS.map((col, ci) => (

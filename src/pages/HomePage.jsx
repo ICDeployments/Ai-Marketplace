@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import SecondaryNavBar from "../components/layout/SecondaryNavBar";
@@ -10,13 +12,25 @@ import IntroAndFormSection from "../components/sections/IntroAndFormSection";
 import Footer from "../components/layout/Footer";
 
 export default function HomePage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const target = location.state?.scrollTo || (location.hash ? location.hash.slice(1) : null);
+    if (target) {
+      requestAnimationFrame(() => {
+        document.getElementById(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  }, [location]);
+
   return (
     <div className="w-full">
       <TopHeader />
       <DarkMarketplaceNav isHomePage={true} />
       <Hero />
       <SecondaryNavBar />
-      <div id="sub-vertical"><EmpowerSection /><EmpowerCardsSection /></div>
+      <div id="sub-vertical"><EmpowerSection /></div>
+      <div id="category-cards"><EmpowerCardsSection /></div>
       <div id="build-agent"><ReadyToBuildSection /></div>
       <div id="service-offerings"><ServiceOfferingsSection /></div>
       <div id="contact"><IntroAndFormSection /></div>

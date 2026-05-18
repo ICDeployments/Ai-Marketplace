@@ -12,42 +12,6 @@ const COLUMNS = [
   /* Column 1 */
   [
     {
-      title: "Enterprise Enablement",
-      items: [
-        { label: "Operational Risk Management" },
-        { label: "Integrated Risk Management – IT & Suppliers" },
-        { label: "Regulatory Change Mgmt.", slug: "rc-reg-change" },
-        { label: "Data Governance & Protection" },
-        { label: "Market & Reference Data" },
-        { label: "Quality Assurance / Model Mgmt." },
-      ],
-    },
-    {
-      title: "Employee Compliance",
-      items: [
-        { label: "Mandated Training & Education" },
-        { label: "Personal Trading" },
-        { label: "Licensing & Registration" },
-        { label: "Policy Management" },
-        { label: "External Business Affiliation" },
-        { label: "Information Barrier Monitoring" },
-        { label: "Employee Communications" },
-      ],
-    },
-    {
-      title: "Cyber Security",
-      items: [
-        { label: "Identity & Access Management" },
-        { label: "Integrated Threat & Vulnerability Mgmt." },
-        { label: "GRC Tooling for App, Network, Policies" },
-        { label: "Data Protection & Privacy" },
-      ],
-    },
-  ],
-
-  /* Column 2 */
-  [
-    {
       title: "Assisted And Digital Channels",
       items: [
         { label: "Mobile" },
@@ -88,7 +52,7 @@ const COLUMNS = [
     },
   ],
 
-  /* Column 3 */
+  /* Column 2 */
   [
     {
       title: "CLM & KYC",
@@ -122,7 +86,7 @@ const COLUMNS = [
     },
   ],
 
-  /* Column 4 */
+  /* Column 3 */
   [
     {
       title: "Financial Crime Compliance",
@@ -147,17 +111,72 @@ const COLUMNS = [
       ],
     },
     {
-      title: "Ecosystem",
+      title: "Cyber Security",
       items: [
-        { label: "Client" },
-        { label: "RM" },
-        { label: "Intermediary" },
-        { label: "Credit & Fraud Bureau" },
-        { label: "Beneficiary Bank" },
-        { label: "Correspondent Bank" },
+        { label: "Identity & Access Management" },
+        { label: "Integrated Threat & Vulnerability Mgmt." },
+        { label: "GRC Tooling for App, Network, Policies" },
+        { label: "Data Protection & Privacy" },
       ],
     },
   ],
+];
+
+const BOTTOM_CARDS = [
+  {
+    title: "Employee Compliance",
+    rows: [
+      {
+        columns: 3,
+        items: [
+          { label: "External Business Affiliation" },
+          { label: "Information Barrier Monitoring" },
+          { label: "Employee Communications" },
+        ],
+      },
+      {
+        columns: 4,
+        items: [
+          { label: "Mandated Training & Education" },
+          { label: "Personal Trading" },
+          { label: "Licensing & Registration" },
+          { label: "Policy Management" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Ecosystem",
+    rows: [
+      {
+        columns: 6,
+        items: [
+          { label: "Client" },
+          { label: "RM" },
+          { label: "Intermediary" },
+          { label: "Credit & Fraud Bureau" },
+          { label: "Beneficiary Bank" },
+          { label: "Correspondent Bank" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Enterprise Enablement",
+    rows: [
+      {
+        columns: 6,
+        items: [
+          { label: "Operational Risk Management" },
+          { label: "Integrated Risk Management – IT & Suppliers" },
+          { label: "Regulatory Change Mgmt.", slug: "rc-reg-change" },
+          { label: "Data Governance & Protection" },
+          { label: "Market & Reference Data" },
+          { label: "Quality Assurance / Model Mgmt." },
+        ],
+      },
+    ],
+  },
 ];
 
 /* ─── Shared UI primitives ─── */
@@ -217,9 +236,34 @@ function CardBox({ title, items }) {
   );
 }
 
+function WideCardBox({ title, rows }) {
+  return (
+    <div className="bg-white rounded-[10px] p-[14px]" style={{ border: "1px solid #C7C7C7" }}>
+      <p className="text-center font-semibold text-[13px] leading-[18px] mb-[14px]"
+         style={{ color: "#000048" }}>
+        {title}
+      </p>
+      <div className="flex flex-col gap-[10px]">
+        {rows.map((row, ri) => (
+          <div
+            key={ri}
+            className="grid gap-[10px]"
+            style={{ gridTemplateColumns: `repeat(${row.columns}, minmax(0, 1fr))` }}
+          >
+            {row.items.map((item, ii) => (
+              <ItemBox key={ii} label={item.label} slug={item.slug} />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ─── Page ─── */
 
 export default function RiskComplianceSuitePage() {
+  const navigate = useNavigate();
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
       <TopHeader />
@@ -228,8 +272,11 @@ export default function RiskComplianceSuitePage() {
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
-            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
-              Risk &amp; Compliance
+            <h2
+              className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px] cursor-pointer hover:opacity-80"
+              onClick={() => navigate("/", { state: { scrollTo: "category-cards" } })}
+            >
+              Governance Risk &amp; Compliance
             </h2>
             <GradientUnderline />
           </div>
@@ -238,13 +285,19 @@ export default function RiskComplianceSuitePage() {
 
       <section className="w-full pt-[24px] pb-[60px] flex-1" style={{ backgroundColor: "#F5F7FA" }}>
         <PageContainer>
-          <div className="grid grid-cols-4 gap-[20px] items-start">
+          <div className="grid grid-cols-3 gap-[20px] items-start">
             {COLUMNS.map((col, ci) => (
               <div key={ci} className="flex flex-col gap-[20px]">
                 {col.map((card, ii) => (
                   <CardBox key={ii} title={card.title} items={card.items} />
                 ))}
               </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-[20px] mt-[20px]">
+            {BOTTOM_CARDS.map((card, i) => (
+              <WideCardBox key={i} title={card.title} rows={card.rows} />
             ))}
           </div>
         </PageContainer>

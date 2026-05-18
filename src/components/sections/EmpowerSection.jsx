@@ -18,7 +18,7 @@ export default function EmpowerSection() {
           Our offerings span the full AI lifecycle: ready-to-deploy agents, agentic orchestration, seamless
           integration with existing systems, and advanced analytics for continuous improvement.
         </p>
-        <ul className="mt-[20px] max-w-[720px] flex flex-col gap-[10px]">
+        <ul className="mt-[20px] ml-[32px] max-w-[720px] flex flex-col gap-[10px]">
           {[
             "Curated catalog of BFSI use-case agents (Retail, Commercial, Capital Markets, Payments, Risk)",
             "Secure deployment patterns with human-in-the-loop controls and audit trails",

@@ -273,7 +273,7 @@ export default function EmpowerCardsSection() {
                   className="absolute bottom-0 left-0 right-0 flex flex-col gap-[10px] px-[18px] py-[16px]"
                   style={{
                     height: "56%",
-                    background: "rgba(0, 2, 22, 0.75)",
+                    background: "#00004899",
                     backdropFilter: "blur(4px)",
                     WebkitBackdropFilter: "blur(4px)",
                     borderTop: "1px solid rgba(255, 255, 255, 0.18)",

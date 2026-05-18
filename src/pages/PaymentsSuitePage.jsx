@@ -65,23 +65,10 @@ function CardBox({ title, items, columns = 1 }) {
   );
 }
 
-/* Title-only header card (no pills) — for the "EXTERNAL GATEWAYS …" card */
-function TitleOnlyCard({ title }) {
-  return (
-    <div
-      className="bg-white rounded-[10px] flex items-center justify-center text-center px-[18px] py-[28px]"
-      style={{ border: "1px solid #C7C7C7", minHeight: 170 }}
-    >
-      <p className="font-bold text-[14px] leading-[20px] tracking-[0.3px]" style={{ color: "#2F78C4" }}>
-        {title}
-      </p>
-    </div>
-  );
-}
-
 /* ─── Page ─── */
 
 export default function PaymentsSuitePage() {
+  const navigate = useNavigate();
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
       <TopHeader />
@@ -90,7 +77,10 @@ export default function PaymentsSuitePage() {
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
-            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
+            <h2
+              className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px] cursor-pointer hover:opacity-80"
+              onClick={() => navigate("/", { state: { scrollTo: "category-cards" } })}
+            >
               Cards &amp; Payments
             </h2>
             <GradientUnderline />
@@ -125,9 +115,17 @@ export default function PaymentsSuitePage() {
           {/* 4-column main grid */}
           <div className="grid grid-cols-4 gap-[20px] items-start">
 
-            {/* Column 1 */}
-            <div className="flex flex-col gap-[20px]">
-              <TitleOnlyCard title="EXTERNAL GATEWAYS – API / MQ / MANAGED FILE TRANSFER / HOST-TO-HOST" />
+            {/* Column 1 — External Gateways group */}
+            <div
+              className="bg-white rounded-[10px] p-[14px] flex flex-col gap-[16px]"
+              style={{ border: "1px solid #C7C7C7" }}
+            >
+              <p
+                className="text-center font-bold text-[14px] leading-[20px] tracking-[0.3px] px-[8px]"
+                style={{ color: "#2F78C4" }}
+              >
+                EXTERNAL GATEWAYS – API / MQ / MANAGED FILE TRANSFER / HOST-TO-HOST
+              </p>
               <CardBox
                 title="External Channels"
                 items={[
@@ -213,6 +211,22 @@ export default function PaymentsSuitePage() {
                   { label: "Case Management", slug: "cap-case-mgmt" },
                 ]}
               />
+              <CardBox
+                title="Data Management"
+                columns={2}
+                items={[
+                  { label: "Data Migration" },
+                  { label: "Analytics / Reporting" },
+                ]}
+              />
+              <CardBox
+                title="Data Management"
+                columns={2}
+                items={[
+                  { label: "Security" },
+                  { label: "Dev / Ops" },
+                ]}
+              />
             </div>
 
             {/* Column 3 */}
@@ -249,6 +263,14 @@ export default function PaymentsSuitePage() {
                   { label: "Account Posting" },
                   { label: "Exception Processing" },
                   { label: "Transaction Posting" },
+                ]}
+              />
+              <CardBox
+                title="Business Process"
+                columns={2}
+                items={[
+                  { label: "Workflow" },
+                  { label: "Process Automation" },
                 ]}
               />
             </div>
@@ -293,34 +315,6 @@ export default function PaymentsSuitePage() {
               />
             </div>
 
-          </div>
-
-          {/* Bottom row: 3 cards with 2-column item layout (occupies ~3/4 width) */}
-          <div className="grid grid-cols-4 gap-[20px] mt-[20px] items-start">
-            <CardBox
-              title="Data Management"
-              columns={2}
-              items={[
-                { label: "Data Migration" },
-                { label: "Analytics / Reporting" },
-              ]}
-            />
-            <CardBox
-              title="Business Process"
-              columns={2}
-              items={[
-                { label: "Workflow" },
-                { label: "Process Automation" },
-              ]}
-            />
-            <CardBox
-              title="Data Management"
-              columns={2}
-              items={[
-                { label: "Security" },
-                { label: "Dev / Ops" },
-              ]}
-            />
           </div>
 
         </PageContainer>

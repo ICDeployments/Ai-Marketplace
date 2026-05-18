@@ -39,8 +39,16 @@ export default function ReadyToBuildSection() {
         </p>
 
         <a
-          href="#build-agent"
-          className="flex items-center gap-[8px] text-[15px] font-semibold hover:gap-[12px] transition-all w-fit mt-[9px]"
+          href="https://neuro-san-prod.evolution.ml/multiAgentAccelerator"
+          onClick={(e) => {
+            e.preventDefault();
+            window.open(
+              "https://neuro-san-prod.evolution.ml/multiAgentAccelerator",
+              "_blank",
+              "noopener,noreferrer,width=1200,height=800,resizable=yes,scrollbars=yes"
+            );
+          }}
+          className="flex items-center gap-[8px] text-[15px] font-semibold hover:gap-[12px] transition-all w-fit mt-[9px] cursor-pointer"
           style={{ color: "#ffffff" }}
         >
           <span>Build Your Own Agent</span>

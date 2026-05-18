@@ -268,12 +268,6 @@ export const CATEGORY_SOLUTIONS = {
     title: "Cards & Payments",
     solutions: [
       {
-        title: "Real Time Loan Application Fraud Detection",
-        description: "",
-        image: "cap01.jpg",
-        demoLink: "http://real-time-app-revamped-640237069320-us-west-2-an.s3-website-us-west-2.amazonaws.com/"
-      },
-      {
         title: "Credit card transaction fraud detection agent",
         description: "",
         image: "cap02.png",
@@ -582,6 +576,28 @@ export const CATEGORY_SOLUTIONS = {
         description: "",
         image: "Driving Hyper-Personalized Wealth Journeys via Autonomous Agents.jpeg",
         link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/22.%20Vibe%20Coding_User%20Personalization%20Solution/Vibe%20Coding%20User%20Personalization%20Demo%20Final%20-%20Video%20(1).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kvI41K"
+      }
+    ]
+  },
+  "am-trade-recon": {
+    title: "Asset Management",
+    solutions: [
+      {
+        title: "Trade Reconciliation and Exception Management",
+        description: "",
+        image: "Transforming Post-Trade Integrity Through Agentic Reconciliation Orchestration.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/43%20Trade%20Reconciliation%20and%20Exception%20Management/Trade%20Reconciliation%20and%20Exception%20Management.mp4?csf=1&web=1&e=Vrs3F7&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      }
+    ]
+  },
+  "mi-data-analytics": {
+    title: "Market Infrastructure",
+    solutions: [
+      {
+        title: "Synthetic Data Generation",
+        description: "",
+        image: "Empowering Advanced Fraud Detection via Automated Synthetic Data Generation.jpeg",
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/46.%20Synthetic%20Data%20Generation/Synthetic%20Data%20Generation%20for%20Fraud%20Detection%20Demo.mp4?csf=1&web=1&e=KhxC5S&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
       }
     ]
   }

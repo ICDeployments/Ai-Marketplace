@@ -42,7 +42,7 @@ const BUSINESS_PRODUCTS_COLS = [
       { label: "Risk Mgmt" },
       { label: "Mktg Ops & Sales Support" },
       { label: "Trade Processing" },
-      { label: "Trade Recon" },
+      { label: "Trade Recon", slug: "am-trade-recon" },
       { label: "Client Reporting" },
       { label: "Billing & Fee Mgmt" },
       { label: "Cash Mgmt" },
@@ -213,6 +213,7 @@ function ColBox({ children }) {
 /* ─── Page ─── */
 
 export default function AssetManagementSuitePage() {
+  const navigate = useNavigate();
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
       <TopHeader />
@@ -221,7 +222,10 @@ export default function AssetManagementSuitePage() {
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
-            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
+            <h2
+              className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px] cursor-pointer hover:opacity-80"
+              onClick={() => navigate("/", { state: { scrollTo: "category-cards" } })}
+            >
               Asset Management
             </h2>
             <GradientUnderline />
@@ -261,7 +265,7 @@ export default function AssetManagementSuitePage() {
                 {/* Ecosystem sub-card */}
                 <div className="rounded-[6px] p-[7px] mb-[8px]"
                      style={{ backgroundColor: "#ffffff", border: "1px solid #C7C7C7" }}>
-                  <p className="text-[10px] font-semibold text-center mb-[5px]" style={{ color: "#000048" }}>
+                  <p className="text-[10px] font-semibold text-center mb-[5px]" style={{ color: "#000000" }}>
                     Ecosystem
                   </p>
                   <div className="flex flex-col gap-[10px]">
@@ -277,12 +281,11 @@ export default function AssetManagementSuitePage() {
                 </div>
 
                 {/* Reference Data Providers */}
-                <p className="font-bold text-[10px] uppercase tracking-wider text-center mb-[5px]"
-                   style={{ color: "#2F78C4" }}>
-                  Reference Data Providers
-                </p>
                 <div className="rounded-[6px] p-[7px]"
                      style={{ backgroundColor: "#ffffff", border: "1px solid #C7C7C7" }}>
+                  <p className="text-[10px] font-semibold text-center mb-[5px]" style={{ color: "#000000" }}>
+                    Reference data providers
+                  </p>
                   <div className="flex flex-col gap-[10px]">
                     {["Party Reference Data / Market / ESG Data", "Products/Financial Instruments/Pricing", "External Agencies"].map((item, i) => (
                       <ItemBox key={i} label={item} />

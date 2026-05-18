@@ -90,6 +90,7 @@ function SectionWrapper({ title, children }) {
 /* ─── Page ─── */
 
 export default function MarketInfrastructureSuitePage() {
+  const navigate = useNavigate();
   return (
     <div className="w-full min-h-screen flex flex-col bg-white">
       <TopHeader />
@@ -98,7 +99,10 @@ export default function MarketInfrastructureSuitePage() {
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
-            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
+            <h2
+              className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px] cursor-pointer hover:opacity-80"
+              onClick={() => navigate("/", { state: { scrollTo: "category-cards" } })}
+            >
               Market Infrastructure
             </h2>
             <GradientUnderline />
@@ -184,7 +188,7 @@ export default function MarketInfrastructureSuitePage() {
                     { label: "Regulatory Reporting" },
                     { label: "ESG data" },
                     { label: "Historical Data" },
-                    { label: "Data Analytics" },
+                    { label: "Data Analytics", slug: "mi-data-analytics" },
                     { label: "Risk Analytics" },
                   ]}
                 />

@@ -3,7 +3,7 @@ import PageContainer from "../layout/PageContainer";
 const SERVICES = [
   {
     title: "VSM Prioritization Approach",
-    description: "Revolutionary machine learning models that reduce loan default rates by 35% while increasing approval rates for underserved communities.",
+    description: "Identify and prioritize high-impact AI opportunities across the value stream using data-driven insights. Focus investments on use cases that deliver maximum business value and ROI.",
     icon: (
       <svg width="46" height="46" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4.6665 18.6666L13.9998 9.33325L23.3332 18.6666" stroke="#2F78C4" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -12,8 +12,8 @@ const SERVICES = [
     ),
   },
   {
-    title: "Process vs. Persona based Agentification",
-    description: "Revolutionary machine learning models that reduce loan default rates by 35% while increasing approval rates for underserved communities.",
+    title: "Process vs. Persona Based Agentification",
+    description: "Design AI agents aligned to business processes or specific roles like RM, Analyst, or Operations. Enable smarter automation tailored to how work is actually performed.",
     icon: (
       <svg width="46" height="46" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_645_828)">
@@ -30,7 +30,7 @@ const SERVICES = [
   },
   {
     title: "AI Regulatory Assessment Framework",
-    description: "Revolutionary machine learning models that reduce loan default rates by 35% while increasing approval rates for underserved communities.",
+    description: "Evaluate AI solutions for compliance with regulatory, risk, and data privacy requirements. Ensure deployments are audit-ready and aligned with industry standards.",
     icon: (
       <svg width="46" height="46" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15.75 45.0017V55.125H11.8125V45.0017C8.42625 44.1217 5.90625 41.0642 5.90625 37.4062C5.90625 33.7483 8.42625 30.6908 11.8125 29.8108V9.93431H15.75V29.8108C19.1363 30.6908 21.6562 33.7483 21.6562 37.4062C21.6562 41.0642 19.1363 44.1217 15.75 45.0017ZM13.7812 33.4688C11.6058 33.4688 9.84375 35.2308 9.84375 37.4062C9.84375 39.5817 11.6058 41.3438 13.7812 41.3438C15.9567 41.3438 17.7188 39.5817 17.7188 37.4062C17.7188 35.2308 15.9567 33.4688 13.7812 33.4688ZM33.4688 31.2204V43.3125V55.125H29.5312V43.3125V31.2204C26.145 30.3404 23.625 27.2829 23.625 23.625C23.625 19.9671 26.145 16.9096 29.5312 16.0296V9.93431H33.4688V16.0296C36.855 16.9096 39.375 19.9671 39.375 23.625C39.375 27.2829 36.855 30.3404 33.4688 31.2204ZM31.5 19.6875C29.3245 19.6875 27.5625 21.4495 27.5625 23.625C27.5625 25.8005 29.3245 27.5625 31.5 27.5625C33.6755 27.5625 35.4375 25.8005 35.4375 23.625C35.4375 21.4495 33.6755 19.6875 31.5 19.6875ZM57.0938 31.5C57.0938 35.1579 54.5737 38.2154 51.1875 39.0954V55.125H47.25V39.0954C43.8638 38.2154 41.3438 35.1579 41.3438 31.5C41.3438 27.8421 43.8638 24.7846 47.25 23.9046V9.93431H51.1875V23.9046C54.5737 24.7846 57.0938 27.8421 57.0938 31.5ZM49.2188 27.5625C47.0433 27.5625 45.2812 29.3245 45.2812 31.5C45.2812 33.6755 47.0433 35.4375 49.2188 35.4375C51.3942 35.4375 53.1562 33.6755 53.1562 31.5C53.1562 29.3245 51.3942 27.5625 49.2188 27.5625Z" fill="#2F78C4"/>
@@ -39,7 +39,7 @@ const SERVICES = [
   },
   {
     title: "AI Readiness Assessment Framework",
-    description: "Revolutionary machine learning models that reduce loan default rates by 35% while increasing approval rates for underserved communities.",
+    description: "Assess your organization's preparedness across data, technology, and operating model. Identify gaps and define a clear roadmap for AI adoption.",
     icon: (
       <svg width="46" height="46" viewBox="0 0 57 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M35.625 27.9746C36.6982 27.9746 37.5566 28.8895 37.5566 30C37.5566 31.1105 36.6982 32.0254 35.625 32.0254H21.375C20.3018 32.0254 19.4434 31.1105 19.4434 30C19.4434 28.8895 20.3018 27.9746 21.375 27.9746H35.625Z" fill="#2F78C4" stroke="#2F78C4" strokeWidth="0.3"/>
@@ -51,7 +51,7 @@ const SERVICES = [
   },
   {
     title: "AI Governance Framework",
-    description: "Revolutionary machine learning models that reduce loan default rates by 35% while increasing approval rates for underserved communities.",
+    description: "Establish controls for responsible AI usage, monitoring, and risk management. Drive transparency, accountability, and trust in AI systems.",
     icon: (
       <svg width="46" height="46" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_645_848)">
@@ -67,8 +67,8 @@ const SERVICES = [
     ),
   },
   {
-    title: "AI based workflow design",
-    description: "Revolutionary machine learning models that reduce loan default rates by 35% while increasing approval rates for underserved communities.",
+    title: "AI-Based Workflow Design",
+    description: "Redesign workflows by embedding AI agents into key decision and execution points. Transform operations into intelligent, automated, and scalable processes.",
     icon: (
       <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M14.3749 29.7083H4.79152C4.28319 29.7083 3.79568 29.9103 3.43623 30.2697C3.07679 30.6291 2.87486 31.1167 2.87486 31.625V41.2083C2.87486 41.7167 3.07679 42.2042 3.43623 42.5636C3.79568 42.9231 4.28319 43.125 4.79152 43.125H14.3749C14.8832 43.125 15.3707 42.9231 15.7301 42.5636C16.0896 42.2042 16.2915 41.7167 16.2915 41.2083V38.3333H22.9999C23.5082 38.3333 23.9957 38.1314 24.3551 37.7719C24.7146 37.4125 24.9165 36.925 24.9165 36.4167C24.9165 35.9083 24.7146 35.4208 24.3551 35.0614C23.9957 34.7019 23.5082 34.5 22.9999 34.5H16.2915V31.625C16.2915 31.1167 16.0896 30.6291 15.7301 30.2697C15.3707 29.9103 14.8832 29.7083 14.3749 29.7083ZM12.4582 39.2917H6.70819V33.5417H12.4582V39.2917ZM7.66652 16.9778V24.9167C7.66652 25.425 7.86846 25.9125 8.2279 26.2719C8.58735 26.6314 9.07486 26.8333 9.58319 26.8333C10.0915 26.8333 10.579 26.6314 10.9385 26.2719C11.2979 25.9125 11.4999 25.425 11.4999 24.9167V16.9778C13.3066 16.5113 14.8812 15.4019 15.9285 13.8575C16.9758 12.3131 17.4239 10.4397 17.1887 8.58857C16.9536 6.73743 16.0514 5.03559 14.6513 3.80204C13.2512 2.56849 11.4492 1.88794 9.58319 1.88794C7.71717 1.88794 5.91521 2.56849 4.51508 3.80204C3.11494 5.03559 2.21275 6.73743 1.97763 8.58857C1.7425 10.4397 2.19058 12.3131 3.23787 13.8575C4.28516 15.4019 5.85976 16.5113 7.66652 16.9778ZM9.58319 5.74999C10.3414 5.74999 11.0825 5.97481 11.7129 6.39602C12.3433 6.81724 12.8346 7.41592 13.1247 8.11637C13.4149 8.81682 13.4908 9.58758 13.3429 10.3312C13.195 11.0748 12.8299 11.7578 12.2938 12.2939C11.7577 12.83 11.0746 13.1951 10.331 13.343C9.58744 13.4909 8.81669 13.415 8.11624 13.1249C7.41579 12.8347 6.8171 12.3434 6.39589 11.713C5.97468 11.0826 5.74986 10.3415 5.74986 9.58332C5.74986 8.56666 6.15372 7.59164 6.87261 6.87275C7.5915 6.15386 8.56653 5.74999 9.58319 5.74999ZM38.3332 29.0222V23C38.3332 22.4917 38.1313 22.0041 37.7718 21.6447C37.4124 21.2853 36.9249 21.0833 36.4165 21.0833C35.9082 21.0833 35.4207 21.2853 35.0612 21.6447C34.7018 22.0041 34.4999 22.4917 34.4999 23V29.0222C32.6931 29.4887 31.1185 30.5981 30.0712 32.1425C29.0239 33.6869 28.5758 35.5603 28.811 37.4114C29.0461 39.2626 29.9483 40.9644 31.3484 42.1979C32.7485 43.4315 34.5505 44.112 36.4165 44.112C38.2825 44.112 40.0845 43.4315 41.4846 42.1979C42.8848 40.9644 43.787 39.2626 44.0221 37.4114C44.2572 35.5603 43.8091 33.6869 42.7618 32.1425C41.7146 30.5981 40.1399 29.4887 38.3332 29.0222ZM36.4165 40.25C35.6584 40.25 34.9172 40.0252 34.2868 39.604C33.6564 39.1827 33.1651 38.5841 32.875 37.8836C32.5848 37.1832 32.5089 36.4124 32.6568 35.6688C32.8048 34.9252 33.1698 34.2422 33.7059 33.7061C34.242 33.17 34.9251 32.8049 35.6687 32.657C36.4123 32.5091 37.183 32.585 37.8835 32.8751C38.5839 33.1653 39.1826 33.6566 39.6038 34.287C40.025 34.9174 40.2499 35.6585 40.2499 36.4167C40.2499 37.4333 39.846 38.4083 39.1271 39.1272C38.4082 39.8461 37.4332 40.25 36.4165 40.25ZM31.6249 16.2917H41.2082C41.7165 16.2917 42.204 16.0897 42.5635 15.7303C42.9229 15.3708 43.1249 14.8833 43.1249 14.375V4.79166C43.1249 4.28333 42.9229 3.79581 42.5635 3.43637C42.204 3.07692 41.7165 2.87499 41.2082 2.87499H31.6249C31.1165 2.87499 30.629 3.07692 30.2696 3.43637C29.9101 3.79581 29.7082 4.28333 29.7082 4.79166V7.66666H22.9999C22.4915 7.66666 22.004 7.86859 21.6446 8.22804C21.2851 8.58748 21.0832 9.07499 21.0832 9.58332C21.0832 10.0917 21.2851 10.5792 21.6446 10.9386C22.004 11.2981 22.4915 11.5 22.9999 11.5H29.7082V14.375C29.7082 14.8833 29.9101 15.3708 30.2696 15.7303C30.629 16.0897 31.1165 16.2917 31.6249 16.2917ZM33.5415 6.70832H39.2915V12.4583H33.5415V6.70832Z" fill="#2F78C4"/>

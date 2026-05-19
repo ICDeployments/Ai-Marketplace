@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
@@ -605,7 +605,10 @@ export const CATEGORY_SOLUTIONS = {
 
 export default function CategorySolutionsPage() {
   const { category } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
   const categoryData = CATEGORY_SOLUTIONS[category];
+  const headingLabel = location.state?.fromLabel || categoryData?.title;
   const [selectedSolution, setSelectedSolution] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -653,8 +656,11 @@ export default function CategorySolutionsPage() {
       <section className="w-full bg-white py-[60px]">
         <PageContainer>
           <div className="mb-[40px] inline-block">
-            <h2 className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px]">
-              {categoryData.title}
+            <h2
+              className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px] cursor-pointer hover:opacity-80"
+              onClick={() => navigate(-1)}
+            >
+              {headingLabel}
             </h2>
             <GradientUnderline />
           </div>

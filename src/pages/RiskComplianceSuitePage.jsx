@@ -197,7 +197,7 @@ function ItemBox({ label, slug }) {
         fontWeight: on ? 600 : 400,
         cursor: on ? "pointer" : "default",
       }}
-      onClick={() => on && navigate(`/category/${slug}`)}
+      onClick={() => on && navigate(`/category/${slug}`, { state: { fromLabel: label } })}
     >
       {label}
       {on && (
@@ -274,7 +274,7 @@ export default function RiskComplianceSuitePage() {
           <div className="inline-block">
             <h2
               className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px] cursor-pointer hover:opacity-80"
-              onClick={() => navigate("/", { state: { scrollTo: "category-cards" } })}
+              onClick={() => navigate("/", { state: { scrollTo: "sub-vertical" } })}
             >
               Governance Risk &amp; Compliance
             </h2>

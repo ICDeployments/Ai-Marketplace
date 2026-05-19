@@ -29,8 +29,8 @@ export default function HomePage() {
       <DarkMarketplaceNav isHomePage={true} />
       <Hero />
       <SecondaryNavBar />
-      <div id="sub-vertical"><EmpowerSection /></div>
-      <div id="category-cards"><EmpowerCardsSection /></div>
+      <div id="overview"><EmpowerSection /></div>
+      <div id="sub-vertical"><EmpowerCardsSection /></div>
       <div id="build-agent"><ReadyToBuildSection /></div>
       <div id="service-offerings"><ServiceOfferingsSection /></div>
       <div id="contact"><IntroAndFormSection /></div>

@@ -256,26 +256,26 @@ export default function EmpowerCardsSection() {
                 className="relative overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
                 style={{ height: "265px", borderRadius: "12px" }}
               >
-                {/* Background image */}
+                {/* Background image (full card) */}
                 {card.image ? (
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="absolute w-full h-full object-cover"
-                    style={{ top: "-79px" }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    style={{ objectPosition: "center 0%" }}
                   />
                 ) : (
                   <div className="absolute inset-0 bg-[#000216]" />
                 )}
 
-                {/* Info panel — solid dark with frosted top edge */}
+                {/* Info panel — frosted blur over bottom portion */}
                 <div
                   className="absolute bottom-0 left-0 right-0 flex flex-col gap-[10px] px-[18px] py-[16px]"
                   style={{
                     height: "56%",
-                    background: "#00004899",
-                    backdropFilter: "blur(4px)",
-                    WebkitBackdropFilter: "blur(4px)",
+                    background: "#000048CC",
+                    backdropFilter: "blur(6px)",
+                    WebkitBackdropFilter: "blur(6px)",
                     borderTop: "1px solid rgba(255, 255, 255, 0.18)",
                   }}
                 >

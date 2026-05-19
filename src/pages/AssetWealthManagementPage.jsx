@@ -320,7 +320,7 @@ function LayerCard({ card }) {
               style={{ backgroundColor: "#DEEEFF", cursor: (item.hasArrow || item.slug) ? "pointer" : "default" }}
               onClick={() => {
                 if (item.hasArrow) toggleItem(i);
-                else if (item.slug) navigate(`/category/${item.slug}`);
+                else if (item.slug) navigate(`/category/${item.slug}`, { state: { fromLabel: item.label } });
               }}
             >
               <span className="flex items-center gap-[8px]">

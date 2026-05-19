@@ -1,8 +1,23 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import PageContainer from "./PageContainer";
 import GlobeDropdown from "../ui/GlobeDropdown";
 import { MegaDropdown } from "../ui/MegaDropdown";
 import { industriesMenu, servicesMenu, insightsMenu, aboutMenu } from "../../data/MegaDropDownData";
+import { CATEGORY_SOLUTIONS } from "../../pages/CategorySolutionsPage";
+
+/* Maps a /banking-suite/<slug> route to the CATEGORY_SOLUTIONS title(s) it represents */
+const SUITE_SCOPE = {
+  "retail-banking":          { label: "Retail Banking",          titles: ["Retail Banking"] },
+  "commercial-banking":      { label: "Commercial Banking",      titles: ["Commercial Banking"] },
+  "investment-banking":      { label: "Investment Banking",      titles: ["Investment Banking", "Capital Market"] },
+  "cards-payments":          { label: "Cards & Payments",        titles: ["Cards & Payments"] },
+  "risk-compliance":         { label: "Risk & Compliance",       titles: ["Risk & Compliance"] },
+  "asset-management":        { label: "Asset Management",        titles: ["Asset Management", "Asset and Wealth Management"] },
+  "wealth-management":       { label: "Wealth Management",       titles: ["Wealth Management", "Asset and Wealth Management"] },
+  "market-infrastructure":   { label: "Market Infrastructure",   titles: ["Market Infrastructure"] },
+  "asset-wealth-management": { label: "Asset & Wealth Management", titles: ["Asset and Wealth Management", "Asset Management", "Wealth Management"] },
+};
 
 /* ── utility links ──────────────────────────────────────────────────────── */
 
@@ -23,18 +38,94 @@ const MENU_SOURCES = {
 /* ── search bar ─────────────────────────────────────────────────────────── */
 
 function SearchBar() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
+  const containerRef = useRef(null);
+
+  const scope = useMemo(() => {
+    const m = location.pathname.match(/^\/banking-suite\/([^/]+)/);
+    return m ? SUITE_SCOPE[m[1]] || null : null;
+  }, [location.pathname]);
+
+  /* Reset query whenever the route changes */
+  useEffect(() => {
+    setSearchTerm("");
+    setIsOpen(false);
+    setIsFocused(false);
+  }, [location.pathname]);
+
+  const allSolutions = useMemo(() => {
+    const byTitle = new Map();
+    for (const [slug, data] of Object.entries(CATEGORY_SOLUTIONS || {})) {
+      for (const sol of data.solutions || []) {
+        if (!byTitle.has(sol.title)) {
+          byTitle.set(sol.title, { title: sol.title, category: data.title, slug });
+        }
+      }
+    }
+    return Array.from(byTitle.values());
+  }, []);
+
+  const scopedSolutions = useMemo(() => {
+    if (!scope) return allSolutions;
+    return allSolutions.filter((s) => scope.titles.includes(s.category));
+  }, [scope, allSolutions]);
+
+  const matches = useMemo(() => {
+    const q = searchTerm.trim().toLowerCase();
+    if (!q) return [];
+    return scopedSolutions
+      .filter((s) => s.title.toLowerCase().includes(q) || s.category.toLowerCase().includes(q))
+      .slice(0, 8);
+  }, [searchTerm, scopedSolutions]);
+
+  const showResults = isOpen && searchTerm.trim().length > 0;
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleClick = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setIsOpen(false);
+        setIsFocused(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [isOpen]);
+
+  const handleSelect = (result) => {
+    setSearchTerm("");
+    setIsOpen(false);
+    setIsFocused(false);
+    navigate(`/category/${result.slug}`, { state: { fromLabel: result.category } });
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && matches.length > 0) {
+      handleSelect(matches[0]);
+    } else if (e.key === "Escape") {
+      setIsOpen(false);
+    }
+  };
 
   return (
-    <div className="relative flex items-center">
+    <div ref={containerRef} className="relative flex items-center">
       <input
         type="text"
         placeholder="Search"
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+          setIsOpen(true);
+        }}
+        onFocus={() => {
+          setIsFocused(true);
+          setIsOpen(true);
+        }}
+        onKeyDown={handleKeyDown}
         style={{ width: isFocused ? "320px" : "220px", transition: "width 0.3s ease" }}
         className="h-[40px] rounded-md border border-[#D0D0CE] bg-white py-2 pl-4 pr-10 text-[13px] focus:border-[#2F78C4] focus:outline-none placeholder:text-[#97999B]"
       />
@@ -56,6 +147,35 @@ function SearchBar() {
           <path d="M21 21l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </div>
+
+      {showResults && (
+        <div
+          className="absolute top-full mt-2 right-0 z-50 bg-white rounded-md shadow-lg border border-[#D0D0CE] overflow-hidden"
+          style={{ width: "320px", maxHeight: "400px", overflowY: "auto" }}
+        >
+          <div className="px-4 py-2 text-[11px] text-[#97999B] bg-[#F5F7FA] border-b border-[#E0E0E0]">
+            {scope ? <>Searching in <span className="font-semibold text-[#000048]">{scope.label}</span></> : "Searching all use cases"}
+          </div>
+          {matches.length === 0 ? (
+            <div className="px-4 py-3 text-[12px] text-[#97999B]">No use cases match "{searchTerm}"</div>
+          ) : (
+            matches.map((result, i) => (
+              <button
+                key={`${result.slug}-${i}`}
+                type="button"
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  handleSelect(result);
+                }}
+                className="w-full text-left px-4 py-2 hover:bg-[#DEEBF8] border-b border-[#F0F0F0] last:border-b-0 block"
+              >
+                <div className="text-[13px] font-medium text-[#000048] truncate">{result.title}</div>
+                <div className="text-[11px] text-[#97999B]">{result.category}</div>
+              </button>
+            ))
+          )}
+        </div>
+      )}
     </div>
   );
 }

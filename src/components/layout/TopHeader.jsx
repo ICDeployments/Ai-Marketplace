@@ -128,14 +128,14 @@ function SearchBar() {
         }}
         onKeyDown={handleKeyDown}
         style={{ width: isFocused ? "320px" : "220px", transition: "width 0.3s ease" }}
-        className="h-[40px] rounded-md border border-[#D0D0CE] bg-white py-2 pl-4 pr-10 text-[13px] focus:border-[#2F78C4] focus:outline-none placeholder:text-[#97999B]"
+        className="h-[40px] rounded-md border border-[#D0D0CE] bg-white py-2 pl-4 pr-10 text-[13px] focus:border-[#2F78C4] focus:outline-none placeholder:text-[#565656]"
       />
       <div className="absolute inset-y-0 right-3 flex items-center gap-1">
         {searchTerm && (
           <button
             type="button"
             onClick={() => setSearchTerm("")}
-            className="text-[#97999B] hover:text-[#000048]"
+            className="text-[#565656] hover:text-[#000048]"
             aria-label="Clear"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -143,7 +143,7 @@ function SearchBar() {
             </svg>
           </button>
         )}
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="text-[#97999B]">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="text-[#565656]">
           <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2" />
           <path d="M21 21l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         </svg>
@@ -240,7 +240,7 @@ export default function TopHeader() {
         {/* Top utility bar */}
         <PageContainer>
           <div className="flex h-[40px] items-center justify-end">
-            <div className="flex items-center divide-x divide-[#D0D0CE] text-[12px] text-[#97999B]">
+            <div className="flex items-center divide-x divide-[#D0D0CE] text-[12px] text-[#565656]">
               {UTILITY_LINKS.map(({ label, href }) => (
                 <a
                   key={label}

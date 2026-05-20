@@ -4,7 +4,6 @@ import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
-import GradientUnderline from "../components/ui/GradientUnderline";
 
 /* ─── Shared UI primitives ─── */
 
@@ -78,12 +77,11 @@ export default function PaymentsSuitePage() {
         <PageContainer>
           <div className="inline-block">
             <h2
-              className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px] cursor-pointer hover:opacity-80"
+              className="text-[#00005A] font-bold text-[22px] leading-[26px] mb-[8px] cursor-pointer hover:opacity-80"
               onClick={() => navigate("/", { state: { scrollTo: "sub-vertical" } })}
             >
               Cards &amp; Payments
             </h2>
-            <GradientUnderline />
           </div>
         </PageContainer>
       </section>

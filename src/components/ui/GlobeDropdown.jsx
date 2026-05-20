@@ -62,7 +62,7 @@ const COLUMNS = [
 
 /* ── sub-components ──────────────────────────────────────────────────────── */
 
-function GlobeIcon({ size = 14, color = "#97999B" }) {
+function GlobeIcon({ size = 14, color = "#565656" }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z" stroke={color} strokeWidth="1.6" />
@@ -107,7 +107,7 @@ export default function GlobeDropdown() {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-[6px] text-[#97999B] text-[12px] leading-[18px] focus:outline-none"
+        className="flex items-center gap-[6px] text-[#565656] text-[12px] leading-[18px] focus:outline-none"
       >
         <GlobeIcon size={14} />
         <span>{selected.locale}</span>

@@ -154,7 +154,7 @@ const CARDS = [
   {
     title: "Market Infrastructure",
     description: "The core systems and institutions that enable financial markets to function efficiently like Post-trade, compliance, resilience agents",
-    image: "/assets/images/InvestmentBanking.jpg",
+    image: "/assets/images/Market infrastructure.jpeg",
     slug: "market-infrastructure",
     idea: [
       "Problem statement/opportunity: Market infrastructure providers (exchanges, clearing houses, depositories) face increasing demand for real-time surveillance, low-latency operations, and integrated risk management across the trade lifecycle.",
@@ -177,7 +177,7 @@ const CARDS = [
   {
     title: "Wealth Management",
     description: "Client-centric, goal-based advisory and relationship management by Leveraging AI for personalized insights, AI-advisory, and client engagement.",
-    image: "/assets/images/asset management.jpeg",
+    image: "/assets/images/Wealth Management.jpeg",
     slug: "wealth-management",
     idea: [
       "Problem statement/opportunity: Provide cost-effective human like interaction for low to middle income groups during creation of customer profile and investment strategy.",
@@ -193,6 +193,29 @@ const CARDS = [
       "Set up will involve a big TV screen and a smart table in Customer service zone.",
       "Visitor will be displayed a digital avatar on a big screen.",
       "Smart table will be used to capture and show the customer details and display investment strategy."
+    ]
+  },
+  {
+    title: "Insurance",
+    description: "AI agents for underwriting, claims processing, fraud detection, and policy servicing across life, health, and P&C insurance lines.",
+    image: "/assets/images/Insurance_.jpeg",
+    slug: "insurance",
+    idea: [
+      "Problem statement/opportunity: Insurance carriers face slow underwriting cycles, claims leakage, and rising fraud losses across personal and commercial lines.",
+      "Persona: Underwriters, claims adjusters, fraud investigators, policy servicing teams.",
+      "Scope: AI agents across the policy lifecycle — quoting, underwriting, first-notice-of-loss, claims adjudication, fraud detection, and renewals.",
+      "Approach: Domain-specific AI agents augment human decision-making with document understanding, risk scoring, and automated workflow orchestration."
+    ],
+    benefits: [
+      "Faster underwriting and policy issuance through automated risk assessment.",
+      "Reduced claims leakage via consistent, AI-assisted adjudication.",
+      "Improved fraud detection across submission, claims, and renewal touchpoints.",
+      "Higher customer satisfaction through faster servicing and proactive engagement."
+    ],
+    demonstration: [
+      "Submit a sample policy application and walk through automated risk scoring.",
+      "Trigger a first-notice-of-loss workflow and show AI-assisted document extraction.",
+      "Highlight fraud signals on a flagged claim and walk through the agent's recommended next steps."
     ]
   }
 ];
@@ -224,6 +247,8 @@ export default function EmpowerCardsSection() {
       navigate("/banking-suite/market-infrastructure");
     } else if (slug === "cards-payments") {
       navigate("/banking-suite/cards-payments");
+    } else if (slug === "insurance") {
+      navigate("/banking-suite/insurance");
     } else {
       navigate(`/category/${slug}`);
     }
@@ -262,7 +287,7 @@ export default function EmpowerCardsSection() {
                     src={card.image}
                     alt={card.title}
                     className="absolute inset-0 w-full h-full object-cover"
-                    style={{ objectPosition: "center 0%" }}
+                    style={{ objectPosition: "center 30%" }}
                   />
                 ) : (
                   <div className="absolute inset-0 bg-[#000216]" />

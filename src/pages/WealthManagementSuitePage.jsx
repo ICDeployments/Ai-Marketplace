@@ -94,7 +94,7 @@ const BUSINESS_SHARED_COLS = [
       { label: "Books/Accounts Reference Data" },
       { label: "Market Data(Real time / Historical)" },
       { label: "FX (Vol/Curves)" },
-      { label: "Analytics & Insights", slug: "wm-analytics-insights" },
+      { label: "Analytics & Insights" },
       { label: "Reporting / BI" },
     ],
   },

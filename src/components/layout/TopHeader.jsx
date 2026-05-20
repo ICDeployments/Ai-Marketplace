@@ -17,6 +17,7 @@ const SUITE_SCOPE = {
   "wealth-management":       { label: "Wealth Management",       titles: ["Wealth Management", "Asset and Wealth Management"] },
   "market-infrastructure":   { label: "Market Infrastructure",   titles: ["Market Infrastructure"] },
   "asset-wealth-management": { label: "Asset & Wealth Management", titles: ["Asset and Wealth Management", "Asset Management", "Wealth Management"] },
+  "insurance":               { label: "Insurance",                 titles: ["Insurance"] },
 };
 
 /* ── utility links ──────────────────────────────────────────────────────── */

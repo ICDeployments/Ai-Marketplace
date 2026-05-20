@@ -529,8 +529,8 @@ export const CATEGORY_SOLUTIONS = {
       }
     ]
   },
-  "wm-analytics-insights": {
-    title: "Wealth Management",
+  "ib-client-analytics": {
+    title: "Investment Banking",
     solutions: [
       {
         title: "Common Domain Model",

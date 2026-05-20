@@ -14,6 +14,7 @@ import InvestmentBankingSuitePage from "../pages/InvestmentBankingSuitePage";
 import RiskComplianceSuitePage from "../pages/RiskComplianceSuitePage";
 import MarketInfrastructureSuitePage from "../pages/MarketInfrastructureSuitePage";
 import PaymentsSuitePage from "../pages/PaymentsSuitePage";
+import InsuranceSuitePage from "../pages/InsuranceSuitePage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,6 +43,7 @@ export default function AppRoutes() {
       <Route path="/banking-suite/risk-compliance" element={<RiskComplianceSuitePage />} />
       <Route path="/banking-suite/market-infrastructure" element={<MarketInfrastructureSuitePage />} />
       <Route path="/banking-suite/cards-payments" element={<PaymentsSuitePage />} />
+      <Route path="/banking-suite/insurance" element={<InsuranceSuitePage />} />
       </Routes>
     </>
   );

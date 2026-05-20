@@ -33,7 +33,7 @@ const PRE_TRADE_SERVICES_TOP = [
   { label: "Product Development" },
   { label: "Deal Structuring" },
   { label: "CRM" },
-  { label: "Client Analytics" },
+  { label: "Client Analytics", slug: "ib-client-analytics" },
   { label: "Accounts Management" },
 ];
 
@@ -327,7 +327,7 @@ export default function InvestmentBankingSuitePage() {
                       </div>
                     </ColBox>
                     <ColBox>
-                      <ColHeader>Pre-Trade Services</ColHeader>
+                      <ColHeader>Research Mgmt</ColHeader>
                       <div className="flex flex-col gap-[10px]">
                         {PRE_TRADE_SERVICES_BOTTOM.map((item, i) => (
                           <ItemBox key={i} label={item.label} slug={item.slug} />

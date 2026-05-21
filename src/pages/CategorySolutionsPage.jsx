@@ -5,7 +5,6 @@ import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
 import PageContainer from "../components/layout/PageContainer";
 import RightArrow from "../components/ui/RightArrow";
-import GradientUnderline from "../components/ui/GradientUnderline";
 import Modal from "../components/ui/Modal";
 import SolutionDetailsModal from "../components/sections/SolutionDetailsModal";
 
@@ -657,12 +656,11 @@ export default function CategorySolutionsPage() {
         <PageContainer>
           <div className="mb-[40px] inline-block">
             <h2
-              className="text-[#00005A] font-bold text-[32px] leading-[36px] mb-[8px] cursor-pointer hover:opacity-80"
+              className="text-[#00005A] font-bold text-[22px] leading-[26px] mb-[8px] cursor-pointer hover:opacity-80"
               onClick={() => navigate(-1)}
             >
               {headingLabel}
             </h2>
-            <GradientUnderline />
           </div>
 
           {/* Solutions Grid */}

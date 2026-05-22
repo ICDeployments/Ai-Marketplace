@@ -52,7 +52,7 @@ const SOLUTION_DETAILS = {
     idea: [
       "Problem statement/opportunity: Use Generative AI to extract key details, summarize cases accurately, and rank them based on urgency and impact.",
       "This ensures faster decision-making, enhanced compliance, and improved customer satisfaction, while reducing operational inefficiencies i.e., false positive",
-      "Scope: SAR Generation to report potentially suspicious transactions to regulators like FIU-IND (India) or FinCEN (USA)",
+      "Scope: SAR narrative report Generation to report potentially suspicious transactions to regulators like FIU-IND (India) or FinCEN (USA)",
       "Multi agents : Preprocessor, Flagging agent, SAR Narrative agent, Evaluator agent, Report formator agent",
       "Personas: Banks and financial entities, managing a high volume of customer cases and regulatory inquiries, Audit & Risk teams, Compliance managers"
     ],

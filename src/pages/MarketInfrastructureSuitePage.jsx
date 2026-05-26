@@ -97,6 +97,14 @@ export default function MarketInfrastructureSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/MarketInfractureHero.png"
+          alt="Market Infrastructure"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -107,6 +115,9 @@ export default function MarketInfrastructureSuitePage() {
               Market Infrastructure
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            Post-trade processing, settlement, clearing, synthetic data services, and analytics that power capital market operations.
+          </p>
         </PageContainer>
       </section>
 

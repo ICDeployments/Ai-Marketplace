@@ -206,6 +206,14 @@ export default function InvestmentBankingSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/InvestingBankingHero.png"
+          alt="Investment Banking"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -216,6 +224,9 @@ export default function InvestmentBankingSuitePage() {
               Investment Banking
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            Capital markets advisory, deal origination, structured finance, and post-trade operations for institutional clients across global markets.
+          </p>
         </PageContainer>
       </section>
 

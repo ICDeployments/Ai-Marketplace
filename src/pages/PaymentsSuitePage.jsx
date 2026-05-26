@@ -75,6 +75,14 @@ export default function PaymentsSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/PaymentHero.png"
+          alt="Payments"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -85,6 +93,9 @@ export default function PaymentsSuitePage() {
               Cards &amp; Payments
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            Real-time payment processing, card lifecycle management, fraud detection, dispute resolution, and emerging frictionless payment experiences.
+          </p>
         </PageContainer>
       </section>
 

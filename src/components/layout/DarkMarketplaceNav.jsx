@@ -44,7 +44,16 @@ export default function DarkMarketplaceNav({ isHomePage = false }) {
 
     if (location.pathname === "/") return list;
 
-    list.push({ label: "Ai Marketplace", onClick: () => navigate("/") });
+    list.push({
+      label: "Ai Marketplace",
+      onClick: () => {
+        // Return to where the user came from. If this is the first route
+        // entry (direct URL / bookmark), location.key === "default" and
+        // there's no in-app history to go back to — fall back to home.
+        if (location.key === "default") navigate("/");
+        else navigate(-1);
+      },
+    });
 
     const suiteMatch = location.pathname.match(/^\/banking-suite\/([^/]+)/);
     if (suiteMatch) {

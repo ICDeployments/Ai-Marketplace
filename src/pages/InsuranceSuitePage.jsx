@@ -109,6 +109,14 @@ export default function InsuranceSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/InsuranceHero.png"
+          alt="Insurance"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -119,6 +127,9 @@ export default function InsuranceSuitePage() {
               Insurance
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            Underwriting, claims, policy administration, and customer engagement across life, health, P&amp;C, and reinsurance.
+          </p>
         </PageContainer>
       </section>
 

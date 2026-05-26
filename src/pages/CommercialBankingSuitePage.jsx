@@ -235,6 +235,14 @@ export default function CommercialBankingSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/CommercialBankingHero.png"
+          alt="Commercial Banking"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -245,6 +253,9 @@ export default function CommercialBankingSuitePage() {
               Commercial Banking
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            End-to-end corporate banking — client onboarding, KYB compliance, lending, trade finance, treasury, and cash management for SMB and large enterprises.
+          </p>
         </PageContainer>
       </section>
 

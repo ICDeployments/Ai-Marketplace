@@ -270,6 +270,14 @@ export default function RiskComplianceSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/RiskAndComplianceHero.png"
+          alt="Risk & Compliance"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -280,6 +288,9 @@ export default function RiskComplianceSuitePage() {
               Governance Risk &amp; Compliance
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            Fraud decisioning, AML/SAR workflows, regulatory change management, and audit-ready compliance reporting across the financial services lifecycle.
+          </p>
         </PageContainer>
       </section>
 

@@ -220,6 +220,14 @@ export default function AssetManagementSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/AssetManagementHero.png"
+          alt="Asset Management"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -230,6 +238,9 @@ export default function AssetManagementSuitePage() {
               Asset Management
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            Investment operations and middle-office workflows for fund managers — trade reconciliation, portfolio accounting, exception management, and client servicing.
+          </p>
         </PageContainer>
       </section>
 

@@ -216,6 +216,14 @@ export default function WealthManagementSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/WealthManagementHero.png"
+          alt="Wealth Management"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -226,6 +234,9 @@ export default function WealthManagementSuitePage() {
               Wealth Management
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            Personalized advisory, portfolio rebalancing, life-stage planning, and hyper-personalized client engagement for HNW and mass-affluent segments.
+          </p>
         </PageContainer>
       </section>
 

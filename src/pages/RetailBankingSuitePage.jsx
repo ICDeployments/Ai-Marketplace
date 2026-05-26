@@ -233,6 +233,14 @@ export default function RetailBankingSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
+      <section className="w-full">
+        <img
+          src="/assets/images/RetailBankingHero.png"
+          alt="Retail Banking"
+          className="w-full h-auto block"
+        />
+      </section>
+
       <section className="w-full bg-white pt-[40px] pb-[24px]">
         <PageContainer>
           <div className="inline-block">
@@ -243,6 +251,9 @@ export default function RetailBankingSuitePage() {
               Retail Banking
             </h2>
           </div>
+          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
+            Consumer-facing banking covering deposits, lending, mortgages, KYC, and customer servicing across mobile, web, branch, and contact center channels.
+          </p>
         </PageContainer>
       </section>
 

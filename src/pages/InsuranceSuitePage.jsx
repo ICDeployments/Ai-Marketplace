@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { CATEGORY_SOLUTIONS } from "./CategorySolutionsPage";
+import { getCategoryPotentialColor } from "../data/usecasePotentials";
 import TopHeader from "../components/layout/TopHeader";
 import DarkMarketplaceNav from "../components/layout/DarkMarketplaceNav";
 import Footer from "../components/layout/Footer";
@@ -62,12 +63,13 @@ function ItemBox({ label, slug }) {
   const navigate = useNavigate();
   const count = slug ? (CATEGORY_SOLUTIONS[slug]?.solutions?.length ?? 0) : 0;
   const on = count > 0;
+  const accentColor = (on && getCategoryPotentialColor(slug)) || "#2F78C4";
 
   return (
     <div
       className="relative flex items-center justify-center text-center px-[14px] py-[12px] rounded-[6px] w-full"
       style={{
-        backgroundColor: on ? "#2F78C4" : "#DEEEFF",
+        backgroundColor: on ? accentColor : "#DEEEFF",
         color: on ? "#ffffff" : "#000048",
         fontSize: 13,
         lineHeight: "16px",
@@ -83,8 +85,8 @@ function ItemBox({ label, slug }) {
           style={{
             top: -10, right: -8, width: 18, height: 18,
             backgroundColor: "white",
-            color: "#2F78C4",
-            border: "1.5px solid #2F78C4",
+            color: accentColor,
+            border: `1.5px solid ${accentColor}`,
             fontSize: 11,
             fontWeight: 700,
             lineHeight: 1,

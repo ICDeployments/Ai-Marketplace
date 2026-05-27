@@ -233,28 +233,26 @@ export default function RetailBankingSuitePage() {
       <TopHeader />
       <DarkMarketplaceNav />
 
-      <section className="w-full">
+      <section className="relative w-full">
         <img
           src="/assets/images/RetailBankingHero.png"
           alt="Retail Banking"
           className="w-full h-auto block"
         />
-      </section>
-
-      <section className="w-full bg-white pt-[40px] pb-[24px]">
-        <PageContainer>
-          <div className="inline-block">
+        <div className="absolute inset-0 flex items-center">
+          <PageContainer>
             <h2
-              className="text-[#00005A] font-bold text-[22px] leading-[26px] mb-[8px] cursor-pointer hover:opacity-80"
+              className="font-bold text-[42px] leading-[50px] uppercase tracking-wide mb-[12px] cursor-pointer hover:opacity-80"
+              style={{ color: "#FFFFFF" }}
               onClick={() => navigate("/", { state: { scrollTo: "sub-vertical" } })}
             >
               Retail Banking
             </h2>
-          </div>
-          <p className="text-[#000048] text-[15px] leading-[24px] max-w-[900px] mt-[8px]">
-            Consumer-facing banking covering deposits, lending, mortgages, KYC, and customer servicing across mobile, web, branch, and contact center channels.
-          </p>
-        </PageContainer>
+            <p className="text-[15px] leading-[24px] max-w-[560px]" style={{ color: "#FFFFFF" }}>
+              Consumer-facing banking covering deposits, lending, mortgages, KYC, and customer servicing across mobile, web, branch, and contact center channels.
+            </p>
+          </PageContainer>
+        </div>
       </section>
 
       {/* Architecture diagram */}

@@ -226,6 +226,13 @@ export default function AssetManagementSuitePage() {
           alt="Asset Management"
           className="w-full h-auto block"
         />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(0, 0, 72, 0.47) 43.84%, rgba(0, 0, 72, 0) 100%)",
+          }}
+        />
         <div className="absolute inset-0 flex items-center">
           <PageContainer>
             <h2

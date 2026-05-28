@@ -23,9 +23,9 @@ export default function Modal({ isOpen, onClose, title, onBack, headerExtra, chi
       />
 
       {/* Modal Content */}
-      <div className="relative bg-white rounded-[8px] w-[90%] max-w-[1200px] max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div className="relative bg-white rounded-[12px] w-[90%] max-w-[1200px] max-h-[90vh] overflow-hidden shadow-2xl flex flex-col">
         {/* Header */}
-        <div className="sticky top-0 bg-white px-[32px] py-[20px] z-10">
+        <div className="bg-white px-[32px] py-[20px] flex-shrink-0">
           <div className="flex items-center justify-between mb-[16px] gap-[16px]">
             <div className="flex items-center gap-[12px] flex-1 min-w-0">
               {onBack && (
@@ -60,7 +60,7 @@ export default function Modal({ isOpen, onClose, title, onBack, headerExtra, chi
         </div>
 
         {/* Body */}
-        <div className="px-[32px] pt-[10px] pb-[24px]">
+        <div className="overflow-y-auto flex-1 px-[32px] pt-[10px] pb-[24px]">
           {children}
         </div>
       </div>

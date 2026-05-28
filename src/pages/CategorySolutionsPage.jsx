@@ -680,7 +680,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Wealth Management - Life Stage Simulator (POV: Clients and Financial Advisor)",
         description: "",
         image: "Empowering Financial Preparedness Through Agentic Goal Modeling.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/24.%20Wealth%20Management%20Life%20Stage%20Simulator%20(POV%20Clients%20and%20Financial%20Advisor).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Hhk226"
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/WM_Life%20Stage%20Simulator.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=S2a38l"
       }
     ]
   },
@@ -713,7 +713,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Wealth Management - Life Stage Simulator (POV: Clients and Financial Advisor)",
         description: "",
         image: "Empowering Financial Preparedness Through Agentic Goal Modeling.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/24.%20Wealth%20Management%20Life%20Stage%20Simulator%20(POV%20Clients%20and%20Financial%20Advisor).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Hhk226"
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/WM_Life%20Stage%20Simulator.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=S2a38l"
       }
     ]
   },
@@ -885,7 +885,7 @@ export const CATEGORY_SOLUTIONS = {
         title: "Wealth Management - Life Stage Simulator (POV: Clients and Financial Advisor)",
         description: "",
         image: "Empowering Financial Preparedness Through Agentic Goal Modeling.jpeg",
-        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/24.%20Wealth%20Management%20Life%20Stage%20Simulator%20(POV%20Clients%20and%20Financial%20Advisor).mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Hhk226"
+        link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/24.%20Wealth%20Management%20Life%20Stage%20Simulator/WM_Life%20Stage%20Simulator.mp4?csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=S2a38l"
       }
     ]
   },

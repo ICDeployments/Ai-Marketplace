@@ -40,6 +40,7 @@ jobs:
           # Add VITE_FEEDBACK_FLOW_URL as a repo secret in the frontend repo's
           # GitHub settings (Settings → Secrets and variables → Actions).
           VITE_FEEDBACK_FLOW_URL: ${{ secrets.VITE_FEEDBACK_FLOW_URL }}
+          VITE_IDEA_FLOW_URL: ${{ secrets.VITE_IDEA_FLOW_URL }}
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_ISLAND_01556540F }}
           action: "upload"

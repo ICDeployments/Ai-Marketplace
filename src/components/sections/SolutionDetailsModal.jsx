@@ -99,24 +99,46 @@ export default function SolutionDetailsModal({ solution, isCasestudyView }) {
     const trimmed = feedbackText.trim();
     if (!trimmed) return;
 
-    // Mimic flow: simulate a network round-trip without actually sending anywhere.
-    // Log payload to console so devs can inspect submissions during the mock period.
     setSubmitStatus("sending");
     setSubmitError("");
 
-    console.log("[Feedback mimic] would submit:", {
+    const payload = {
       solution_title: solution.title,
       feedback: trimmed,
       submitted_at: new Date().toISOString(),
-    });
+    };
 
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setSubmitStatus("success");
-    setFeedbackText("");
-    setTimeout(() => {
-      setShowFeedbackForm(false);
-      setSubmitStatus("idle");
-    }, 1200);
+    try {
+      const flowUrl = import.meta.env.VITE_FEEDBACK_FLOW_URL;
+      if (!flowUrl) {
+        throw new Error("VITE_FEEDBACK_FLOW_URL is not configured.");
+      }
+
+      // The Power Automate trigger validates the body against its JSON schema,
+      // so it must arrive as application/json (a text/plain body is seen as a
+      // string and rejected with 400). The powerplatform.com endpoint returns
+      // proper CORS headers, so the application/json preflight succeeds.
+      const response = await fetch(flowUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      setSubmitStatus("success");
+      setFeedbackText("");
+      setTimeout(() => {
+        setShowFeedbackForm(false);
+        setSubmitStatus("idle");
+      }, 1200);
+    } catch (error) {
+      console.error("[Feedback] submit failed:", error);
+      setSubmitStatus("error");
+      setSubmitError("Sorry, your feedback couldn't be sent. Please try again later.");
+    }
   };
 
   const demoLink = solution.demoLink || null;

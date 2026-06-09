@@ -4,13 +4,14 @@ import { useState } from "react";
 // The `key` values must match the column names referenced in the Power
 // Automate flow (Add a row into a table → Backlog.xlsx) and the trigger schema.
 const FIELDS = [
-  { key: "use_case_name", label: "Name of the Use Case", type: "text", required: true },
-  { key: "epic_format", label: "Epic Format", type: "text" },
+  { key: "use_case_name", label: "Name of the Use Case", type: "text", required: true, wide: true },
+  { key: "epic_format", label: "Epic Format", type: "textarea", required: true },
   { key: "problem_statement", label: "Problem Statement", type: "textarea", required: true },
   { key: "description", label: "Brief Description of the Use Case", type: "textarea" },
-  { key: "business_area", label: "Business Area / Vertical", type: "text" },
+  { key: "benefit_case", label: "Benefit case for the customer", type: "textarea" },
+  { key: "business_area", label: "Business Area / Vertical", type: "text", required: true },
   { key: "client_or_internal", label: "Client Project / Internal", type: "text" },
-  { key: "poc", label: "POC (Proof of Concept)", type: "select", options: ["Yes", "No"] },
+  { key: "poc", label: "Point of Contact", type: "text", required: true },
   { key: "agent_type", label: "Single Agent / Multi-Agent", type: "text" },
   { key: "total_agents", label: "Number of Total Agents", type: "number" },
   { key: "grounded_agents", label: "Number of Grounded Agents with Synthetic Data", type: "number" },
@@ -91,7 +92,7 @@ export default function IdeaSubmissionForm({ onSuccess }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px]">
         {FIELDS.map((field) => {
-          const isWide = field.type === "textarea";
+          const isWide = field.type === "textarea" || field.wide;
           return (
             <div key={field.key} className={isWide ? "md:col-span-2" : ""}>
               <label className="block text-[#000048] font-semibold text-[13px] leading-[18px] mb-[6px]">

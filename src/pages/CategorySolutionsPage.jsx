@@ -510,6 +510,143 @@ const SOLUTION_DETAILS = {
       "Step 5: Data used to train ML models",
       "Step 6: Improved fraud detection outcomes"
     ]
+  },
+  "Unified Servicing AI": {
+    problemStatement: "Mortgage servicing has become operationally fragmented. Servicers are forced to build and maintain numerous tools outside their Loan Origination System (LOS) to run day-to-day operations — spanning contact centre, back office, and reporting. This creates poor user experience, high cost of operations, cluttered data views, limited analytics capability, and low feasibility for process transformation at scale.",
+    idea: {
+      opportunity: "Mortgage servicers can consolidate fragmented tooling, eliminate manual workarounds, reduce agent handle time, and operationalise data analytics as a day-to-day capability rather than an ad hoc project. The platform is applicable across servicer types — banks, non-bank servicers, and BPO operations — and scales across high-volume servicing portfolios.",
+      personas: "Contact Centre Agent, Back Office Servicing Associate, Operations Manager / Team Lead, Compliance & Policy Officer, Data Analyst / Reporting Lead",
+      scope: "Unified contact centre view integrating telephony (NICE, RingCentral) and servicing platforms; real-time speech-to-text with GenAI-guided next best action; back-office single-window operations view by department and user profile; embedded policy and regulatory guidance; inbuilt scripting and VBA automation; role-based persona dashboards with Power BI analytics; SLA tracking, agent performance reporting, and inventory ageing; full mortgage servicing lifecycle coverage — onboarding to foreclosure/payoff.",
+      approach: "A GenAI-backed unified servicing platform with three integrated layers — Contact Centre View (telephony integration with real-time speech-to-text, GenAI-suggested next best action, and contextual loan data), Back Office View (single-window processing combining all departmental screens with automated notations, error-proofing, and automation scripting), and Dashboard & Analytics View (profile-based Power BI dashboards with customisable layouts, SLA reporting, and CSV/XLSX export). Approach: Unify, Guide, Consolidate, Automate, Monitor, Govern."
+    },
+    specializedAgents: [
+      "Speech-to-Text Transcription Agent – Real-time call transcription feeding context into the GenAI guidance layer",
+      "Next Best Action Agent – Suggests optimal resolution steps based on live conversation and loan data",
+      "Policy & Compliance Guidance Agent – Surfaces relevant regulatory and policy rules at each process step",
+      "Call Summarisation Agent – Auto-generates call transfer summaries, eliminating manual note-taking",
+      "Back Office Automation Agent – Executes inbuilt scripts and VBA automations for repetitive processing tasks",
+      "Notation & Documentation Agent – Auto-generates notations and screen dumps for audit and compliance trails",
+      "Analytics & Reporting Agent – Powers persona-based dashboards, SLA tracking, and auto-generated MIS reports",
+      "Case Routing & Assignment Agent – Smart case assignment based on agent profile, expertise, and SLA priority"
+    ],
+    benefits: [
+      "Unified operations: one platform replaces multiple siloed tools across contact centre and back office",
+      "Reduced AHT: real-time GenAI guidance cuts handle time and agent ramp-up effort",
+      "Process accuracy: embedded policy rules and compliance checklists drive 99%+ accuracy",
+      "Analytics on demand: Power BI dashboards replace manual reporting; data-driven decisions daily",
+      "Cost reduction: eliminates tool sprawl and reduces operational overhead",
+      "Faster transformation: inbuilt automation scripting accelerates process change without IT dependency"
+    ],
+    demonstration: [
+      "Step 1: A contact centre agent receives a borrower call → speech-to-text activates in real time",
+      "Step 2: GenAI surfaces relevant loan data and suggests the next best action",
+      "Step 3: A call summary is auto-generated on transfer",
+      "Step 4: Back-office view — a servicing associate processes a task within a single consolidated screen with policy guidance embedded",
+      "Step 5: Operations manager view shows live dashboards with agent performance, inventory ageing, and SLA adherence — all without leaving the platform"
+    ]
+  },
+  "Credit Decisioning AI": {
+    problemStatement: "Credit underwriting for commercial loans is slow, manual, and error-prone. Underwriters must review large, complex financial documents across multiple formats, extract key ratios, benchmark peers, and calculate risk ratings — all manually. This leads to longer loan approval cycles, inconsistent decisioning quality, and difficulty scaling during high-volume periods.",
+    idea: {
+      opportunity: "Banks and financial institutions can compress commercial loan approval timelines significantly, reduce manual underwriting effort by ~30%, improve decision consistency, and scale credit operations without proportional headcount growth. The solution is reusable across loan products and geographies.",
+      personas: "Loan Underwriter, Credit Officer, Credit Risk Manager, Loan Processor",
+      scope: "Ingestion of financial documents (balance sheets, P&L, cash flow statements) in multiple formats; LLM-based data extraction and field mapping to credit analysis templates; automated financial ratio calculation (DTI, leverage, liquidity, coverage); risk rating generation; peer comparison, vertical/horizontal analysis, and industry benchmarking; summarisation and credit decision recommendation; synthetic test data creation; RAG (Retrieval-Augmented Generation) using LangChain + VectorDB.",
+      approach: "An LLM-agnostic GenAI platform using RAG (LangChain + VectorDB) to process financial statements end-to-end. The system extracts and maps data into client-defined spreadsheet templates, generates risk ratings with full reasoning transparency, benchmarks against peers, and produces a credit decision summary — reducing the underwriter's role from manual extraction to review and sign-off. Built with parameterised prompts and a synthetic data creation engine for scale."
+    },
+    specializedAgents: [
+      "Document Ingestion Agent – Classifies and ingests financial documents across formats",
+      "Data Extraction & Mapping Agent – LLM-driven extraction of financial fields into structured templates",
+      "Financial Analysis Agent – Calculates ratios (DTI, leverage, liquidity, coverage); runs vertical/horizontal analysis",
+      "Peer Benchmarking Agent – Compares borrower financials against industry peers and benchmarks",
+      "Risk Rating Agent – Generates a composite credit/risk score based on ratio thresholds and model logic",
+      "Summarisation & Recommendation Agent – Produces a credit decision narrative with reasoning and source references",
+      "Synthetic Data Creation Engine – Generates training data at scale from smaller real-data samples",
+      "RAG Layer (LangChain + VectorDB) – Retrieves contextually relevant financial content to ground LLM outputs"
+    ],
+    benefits: [
+      "Faster loan approvals: reduced cycle time through automated extraction and analysis",
+      "Operational efficiency: ~30% improvement in underwriting productivity",
+      "Decision quality: data-driven risk ratings with consistent methodology",
+      "Fraud detection: AI flags anomalies and inconsistencies in financial data",
+      "Reusability: parameterised prompts and reusable artefacts across loan types",
+      "Scalability: handles high-volume periods without additional FTEs"
+    ],
+    demonstration: [
+      "Step 1: Financial documents are uploaded",
+      "Step 2: The LLM extracts and maps data fields",
+      "Step 3: Key ratios are calculated automatically",
+      "Step 4: Risk rating is generated with supporting reasoning",
+      "Step 5: A peer comparison and industry benchmark view is displayed",
+      "Step 6: A credit decision summary with recommendation is produced — enabling the underwriter to review, validate, and approve in a fraction of the traditional cycle time"
+    ]
+  },
+  "Digital Automation Fabric (DAF)": {
+    problemStatement: "Mortgage and property record operations involve processing millions of unstructured documents across 250+ sub-document types from 3,000 counties. Manual data capture results in poor accuracy, high operational costs, low straight-through processing (STP) rates, and inability to scale with volume spikes.",
+    idea: {
+      opportunity: "Banks, mortgage servicers, and property data providers can eliminate manual bottlenecks in document-intensive workflows, drive 99.5%+ accuracy, improve STP by 50%, and reduce per-record processing costs significantly — while scaling to handle 4.6 million+ records per month without adding headcount.",
+      personas: "Mortgage Operations Manager, Loan Underwriter / Credit Officer, Chief Data Officer / Head of Ops Technology, Compliance & QC Lead",
+      scope: "Multi-format document ingestion (250+ sub-document types, 3,000 US counties); OCR and ML-based document classification and indexing; automated data extraction and entry/verification; APN (Assessor Parcel Number) research automation; digital QC and quality audit workflows; output file generation with reject and edit handling; end-to-end process orchestration with persona-driven dashboards; BPaaS delivery — hosted platform (DIF) + managed operations.",
+      approach: "A BPaaS-delivered cognitive content processing platform (Digital Information Fabric / DIF) combining OCR, RPA, ML classification, and self-learning AI. It handles end-to-end orchestration from image indexing through APN research, data entry/verification, digital QC, and output generation — with persona-driven dashboards providing actionable insights. Approach: Re-engineer, Ingest, Classify, Extract, Verify, Output, Learn."
+    },
+    specializedAgents: [
+      "OCR Engine – Converts document images to machine-readable text across all formats",
+      "ML Classification Agent – Recognises and indexes 250+ document sub-types automatically",
+      "Data Extraction Agent – Extracts structured data points from unstructured content",
+      "APN Research Agent – Automates Assessor Parcel Number lookup and validation",
+      "Digital QC Agent – Performs automated quality checks and flags exceptions",
+      "Quality Audit Module – Validates output against standards; manages rejects and edits",
+      "RPA Automation Layer – Handles repetitive data entry, verification, and output file generation",
+      "Insights & Dashboard Agent – Delivers persona-driven operational analytics and SLA visibility"
+    ],
+    benefits: [
+      "Accuracy: 99.5% data accuracy achieved",
+      "STP improvement: 50% improvement in straight-through processing for unstructured mortgage documents",
+      "Productivity: 30–40% productivity improvement",
+      "Scale: 4.6 million records processed per month",
+      "Cost optimisation: vendor consolidation reduces tech and ops overhead"
+    ],
+    demonstration: [
+      "Step 1: Mortgage documents in multiple formats are ingested",
+      "Step 2: Documents are classified into 250+ document types",
+      "Step 3: Data is extracted with 99.5% accuracy",
+      "Step 4: APN research is completed automatically",
+      "Step 5: Digital QC validates output",
+      "Step 6: Clean structured data files are generated",
+      "Step 7: Operational dashboards display throughput, accuracy, and SLA metrics in real time — eliminating manual data capture entirely"
+    ]
+  },
+  "AI-Powered Feedback Loop Closure": {
+    technology: "Azure",
+    problemStatement: "Banks handle massive volumes of unstructured customer feedback across portals, surveys, app stores, and social media. Manual triage leads to delayed resolutions, generic responses, and underutilized insights — eroding client satisfaction and increasing operational overhead.",
+    idea: {
+      opportunity: "Banks can transform reactive feedback handling into a proactive, insight-driven process. Automated triage, ticket creation, and follow-up reduce resolution time, improve NPS, and free relationship managers to focus on high-value interactions.",
+      personas: "Digital Banking Product Owners, AI & Analytics Leaders, RMs, IT Service Management Leads",
+      scope: "Feedback ingestion from surveys, banking portals, app stores, and social media; automated classification (Business/IT, Complaints/Issues/Suggestions) and sentiment analysis; history similarity check using vector embeddings; automated actions — JIRA ticket creation, ServiceNow incident creation, customer acknowledgement; RM and user dashboards with feedback and process analytics; proactive follow-up and loop closure notifications.",
+      approach: "An end-to-end Agentic AI platform with a Pre-Processing Unit, Data Processing Orchestrator, History Processing Engine (vector DB), Notification Control Unit, and Action Agent — all connected to a centralised processed feedback store and analytics dashboard. Built on Azure Cosmos DB, vector embeddings, and LLM integration. Approach: Collect, Process, Analyse, Act, Close."
+    },
+    specializedAgents: [
+      "Pre-Processing Unit Agent",
+      "Data Processing Unit Agent / Orchestrator",
+      "History Processing Agent",
+      "Action Steps Agent",
+      "Monitoring Layer Agent",
+      "Notification Control Unit"
+    ],
+    benefits: [
+      "Faster resolution",
+      "Proactive issue management",
+      "Personalised engagement",
+      "Operational efficiency",
+      "Scalability"
+    ],
+    demonstration: [
+      "Step 1: A customer submits feedback via a banking portal",
+      "Step 2: The system classifies the feedback and analyses sentiment",
+      "Step 3: A history check identifies a similar past issue",
+      "Step 4: A ServiceNow ticket is auto-created and assigned",
+      "Step 5: The RM is notified on their dashboard",
+      "Step 6: The customer receives a personalised acknowledgement, closing the loop automatically"
+    ]
   }
 };
 
@@ -528,6 +665,12 @@ export const CATEGORY_SOLUTIONS = {
         title: "AI Powered Smart Fund Lending Platform",
         description: "",
         image: "rb02.png"
+      },
+      {
+        title: "Unified Servicing AI",
+        description: "",
+        image: "rb02.png",
+        link: "https://cognizantonline.sharepoint.com/:v:/r/sites/BFSILabCognizant/Shared%20Documents/BFSI%20Use%20cases/SL%20Use%20cases%20for%20website/IOA-%20BFS%20use%20cases/Unified%20Servicing%20Ai-V9.m4v?csf=1&web=1&e=xRx3Vb&referrer=Outlook.Win32&referrerScenario=email-linkwithembed"
       }
     ]
   },
@@ -930,6 +1073,39 @@ export const CATEGORY_SOLUTIONS = {
         description: "",
         image: "Empowering Advanced Fraud Detection via Automated Synthetic Data Generation.jpeg",
         link: "https://cognizantonline-my.sharepoint.com/:v:/r/personal/113135_cognizant_com/Documents/Documents/C%20Drive/Framework%20Tools%20%26%20Accelerators/Agentic%20AI/Agents%20Foundry/Solution%20Demo/46.%20Synthetic%20Data%20Generation/Synthetic%20Data%20Generation%20for%20Fraud%20Detection%20Demo.mp4?csf=1&web=1&e=KhxC5S&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+      }
+    ]
+  },
+  "cb-loan-origination": {
+    title: "Commercial Banking",
+    solutions: [
+      {
+        title: "Credit Decisioning AI",
+        description: "",
+        image: "cb01.jpg",
+        link: "https://cognizantonline.sharepoint.com/:v:/r/sites/BFSILabCognizant/Shared%20Documents/BFSI%20Use%20cases/SL%20Use%20cases%20for%20website/IOA-%20BFS%20use%20cases/Credit%20Decisioning.mp4?csf=1&web=1&e=AoGJ8U&referrer=Outlook.Win32&referrerScenario=email-linkwithembed"
+      }
+    ]
+  },
+  "cb-loan-servicing": {
+    title: "Commercial Banking",
+    solutions: [
+      {
+        title: "Digital Automation Fabric (DAF)",
+        description: "",
+        image: "cb02.png",
+        link: "https://cognizantonline.sharepoint.com/:v:/r/sites/BFSILabCognizant/Shared%20Documents/BFSI%20Use%20cases/SL%20Use%20cases%20for%20website/IOA-%20BFS%20use%20cases/Digital%20Automation%20Fabric_2025.mp4?csf=1&web=1&e=Qygbdh&referrer=Outlook.Win32&referrerScenario=email-linkwithembed"
+      }
+    ]
+  },
+  "rb-client-reporting": {
+    title: "Retail Banking",
+    solutions: [
+      {
+        title: "AI-Powered Feedback Loop Closure",
+        description: "",
+        image: "rb02.png",
+        link: "https://cognizantonline.sharepoint.com/:v:/r/sites/BFSILabCognizant/Shared%20Documents/BFSI%20Use%20cases/Detailed%20use%20cases/Feedback%20loop/Demo_4_2%201.mp4?csf=1&web=1&e=umUBgd&referrer=Outlook.Win32&referrerScenario=email-linkwithembed"
       }
     ]
   }

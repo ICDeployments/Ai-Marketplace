@@ -41,7 +41,7 @@ const BUSINESS_PRODUCTS_COLS = [
     items: [
       { label: "Application Processing" },
       { label: "Reconciliations" },
-      { label: "Client Reporting" },
+      { label: "Client Reporting", slug: "rb-client-reporting" },
       { label: "Dispute Resolutions" },
     ],
   },

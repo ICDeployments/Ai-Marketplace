@@ -46,13 +46,9 @@ export default function DarkMarketplaceNav({ isHomePage = false }) {
 
     list.push({
       label: "Ai Marketplace",
-      onClick: () => {
-        // Return to where the user came from. If this is the first route
-        // entry (direct URL / bookmark), location.key === "default" and
-        // there's no in-app history to go back to — fall back to home.
-        if (location.key === "default") navigate("/");
-        else navigate(-1);
-      },
+      // Always return to the home page, restoring the scroll position the user
+      // was at when they navigated away (handled in HomePage via sessionStorage).
+      onClick: () => navigate("/", { state: { restoreScroll: true } }),
     });
 
     const suiteMatch = location.pathname.match(/^\/banking-suite\/([^/]+)/);

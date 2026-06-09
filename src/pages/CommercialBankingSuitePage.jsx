@@ -35,8 +35,8 @@ const BUSINESS_PRODUCTS_COLS = [
   {
     title: "Lending",
     items: [
-      { label: "Loan Origination" },
-      { label: "Loan Origination" },
+      { label: "Loan Origination", slug: "cb-loan-origination" },
+      { label: "Loan Servicing", slug: "cb-loan-servicing" },
       { label: "Securitization and Secondary Trading" },
     ],
   },

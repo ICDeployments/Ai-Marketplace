@@ -274,7 +274,7 @@ export default function RiskComplianceSuitePage() {
         <img
           src="/assets/images/RiskAndComplianceHero.png"
           alt="Risk & Compliance"
-          className="w-full h-auto block"
+          className="w-full h-[300px] object-cover block"
         />
         <div
           className="absolute inset-0"

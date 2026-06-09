@@ -79,7 +79,7 @@ export default function PaymentsSuitePage() {
         <img
           src="/assets/images/PaymentHero.png"
           alt="Payments"
-          className="w-full h-auto block"
+          className="w-full h-[300px] object-cover block"
         />
         <div
           className="absolute inset-0"

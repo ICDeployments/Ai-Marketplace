@@ -113,7 +113,7 @@ export default function InsuranceSuitePage() {
         <img
           src="/assets/images/InsuranceHero.png"
           alt="Insurance"
-          className="w-full h-auto block"
+          className="w-full h-[300px] object-cover block"
         />
         <div
           className="absolute inset-0"

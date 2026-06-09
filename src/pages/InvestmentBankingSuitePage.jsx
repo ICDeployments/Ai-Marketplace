@@ -210,7 +210,7 @@ export default function InvestmentBankingSuitePage() {
         <img
           src="/assets/images/InvestingBankingHero.png"
           alt="Investment Banking"
-          className="w-full h-auto block"
+          className="w-full h-[300px] object-cover block"
         />
         <div
           className="absolute inset-0"

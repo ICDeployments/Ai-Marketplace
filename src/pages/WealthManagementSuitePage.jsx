@@ -220,7 +220,7 @@ export default function WealthManagementSuitePage() {
         <img
           src="/assets/images/WealthManagementHero.png"
           alt="Wealth Management"
-          className="w-full h-auto block"
+          className="w-full h-[300px] object-cover block"
         />
         <div
           className="absolute inset-0"

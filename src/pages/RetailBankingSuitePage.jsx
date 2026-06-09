@@ -237,7 +237,7 @@ export default function RetailBankingSuitePage() {
         <img
           src="/assets/images/RetailBankingHero.png"
           alt="Retail Banking"
-          className="w-full h-auto block"
+          className="w-full h-[300px] object-cover block"
         />
         <div
           className="absolute inset-0"

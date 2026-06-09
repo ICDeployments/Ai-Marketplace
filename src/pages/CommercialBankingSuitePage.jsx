@@ -239,7 +239,7 @@ export default function CommercialBankingSuitePage() {
         <img
           src="/assets/images/CommercialBankingHero.png"
           alt="Commercial Banking"
-          className="w-full h-auto block"
+          className="w-full h-[300px] object-cover block"
         />
         <div
           className="absolute inset-0"

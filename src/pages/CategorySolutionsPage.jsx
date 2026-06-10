@@ -647,6 +647,46 @@ const SOLUTION_DETAILS = {
       "Step 5: The RM is notified on their dashboard",
       "Step 6: The customer receives a personalised acknowledgement, closing the loop automatically"
     ]
+  },
+  "GNN-Based AML Transaction Monitoring": {
+    technology: "GNN (GraphSAGE + GAT) · Kafka · Claude API (roadmap)",
+    problemStatement: "Traditional AML transaction monitoring systems evaluate transactions one at a time against fixed, rule-based thresholds. This approach generates excessive false positives (typical precision of ~5%), misses network-level laundering patterns like smurfing, layering, and shell company chains, and buries investigators under unranked alert queues. Criminal networks exploit the gaps between transactions that rule-based systems cannot see.",
+    idea: {
+      opportunity: "Banks can reduce investigator workload from reviewing thousands of unranked alerts to a prioritised queue where 9 in 10 top-ranked accounts are genuine laundering cases. The GNN architecture detects cross-account crime patterns invisible to rule-based systems, improves SAR filing accuracy, and lays the foundation for an LLM narrative layer that cuts SAR drafting from 2–3 hours to 5 minutes per case.",
+      personas: "AML Investigator, Financial Intelligence Unit Lead, Chief Compliance Officer, Financial Crime Data Scientist, SAR Filing Officer",
+      scope: "Ingestion of transactions, KYC/CDD, sanctions/PEP data, and corporate ownership structures via Kafka event stream; knowledge graph construction across 12 entity node types (Person, Account, Transaction, Company, Address, Device/IP, Financial Institution, PEP, Sanctioned Entity, Asset, Alert/SAR, Country/Jurisdiction); GNN model training (GraphSAGE + GAT) for account-level risk scoring; detection of 5 laundering typologies (smurfing, fan-out layering, round-tripping, scatter-gather, shell company chains); ranked alert output with risk tiers (Critical 80–100, High 60–80, Medium 30–60, Low 0–30); layered investigator views (macro heatmap, embedding clusters via UMAP, ego network, alert queue, pattern filter); LLM narrative layer (roadmap) for automated SAR drafting via Claude API; 3-phase roadmap from POC to production.",
+      approach: "A four-layer AML intelligence platform operating downstream of existing TM systems — no replacement of current controls, human-in-the-loop throughout, designed for regulatory auditability. Data Layer (Kafka-streamed ingestion of transactions, KYC/CDD, sanctions/PEP feeds, and corporate structures), Knowledge Graph Layer (12 node types, ISO 20022 message support, node-level risk scores), Network Model Layer (GraphSAGE + GAT GNN account classification, Louvain/SCAN community detection, link prediction, path analysis), and Output Layer (ranked SAR alerts, interactive network maps, entity risk scores, typology matching, and roadmap LLM-generated narratives). Approach: Ingest → Model → Train → Score → Investigate → Narrate (roadmap) → Govern."
+    },
+    specializedAgents: [
+      "GraphSAGE Agent – Aggregates 1-hop and 2-hop neighbourhood transaction features per account",
+      "GAT (Graph Attention) Agent – Learns which account connections carry the highest risk signal using 4 attention heads",
+      "Community Detection Module – Louvain/SCAN algorithms identify laundering clusters and money mule rings",
+      "Link Prediction Module – Surfaces hidden relationships between entities not directly connected",
+      "Path Analysis Module – Traces layering chains and mule routing across multi-hop transaction paths",
+      "Embedding Visualiser (UMAP) – Projects 512-dimension GNN embeddings to 2D for investigator cluster exploration",
+      "Alert Ranking Engine – Scores all accounts simultaneously; outputs a tiered risk queue (Critical/High/Medium/Low)",
+      "LLM SAR Narrative Agent (roadmap) – Connects GNN alert output to Claude API to auto-generate formal SAR narratives",
+      "Temporal GNN Module (roadmap) – EvolveGCN/TGN for detecting dormant-to-active behavioural anomalies over time",
+      "Federated Learning Layer (roadmap) – Cross-institution model training on private data to detect inter-bank laundering networks"
+    ],
+    benefits: [
+      "Detection quality: 76% ROC-AUC, 70% recall on an untuned POC — 9 of 10 top alerts are genuine",
+      "Precision improvement: 49% precision vs ~5% for typical rule-based systems — 10× better signal",
+      "Investigator efficiency: reduces the review queue to 960 critical accounts from 5,000 total",
+      "Speed: full model trained in 144 seconds on a standard CPU — no GPU required",
+      "SAR drafting (roadmap): LLM layer cuts SAR narrative drafting from 2–3 hours to 5 minutes",
+      "Typology coverage: 5 criminal patterns detected simultaneously; extensible to new typologies",
+      "Network intelligence: detects cross-account laundering rings invisible to single-transaction rules"
+    ],
+    demonstration: [
+      "Step 1: The live POC dashboard runs the full pipeline on 100,000 synthetic transactions across 5,000 accounts",
+      "Step 2: The GNN trains in 144 seconds on a laptop CPU; 1,567 laundering accounts are scored",
+      "Step 3: The top alert queue shows 9 of 10 highest-scored accounts are genuine laundering cases",
+      "Step 4: The interactive knowledge graph lets investigators drill from macro heatmap → cluster view → ego network for any suspect account",
+      "Step 5: 5 typology patterns (smurfing, fan-out layering, round-tripping, scatter-gather, shell company chain) are visually traced",
+      "Step 6: The roadmap highlights GNN + Claude API SAR narrative integration as the highest-impact next step — reducing a 3-hour task to 5 minutes",
+      "POC metrics: 100,000 transactions processed · 5,000 accounts scored · 1,567 laundering accounts · 76% ROC-AUC · 70% recall · 58% F1 · 144s CPU training · 9/10 top-10 alert accuracy"
+    ]
   }
 };
 
@@ -1106,6 +1146,17 @@ export const CATEGORY_SOLUTIONS = {
         description: "",
         image: "rb02.png",
         link: "https://cognizantonline.sharepoint.com/:v:/r/sites/BFSILabCognizant/Shared%20Documents/BFSI%20Use%20cases/Detailed%20use%20cases/Feedback%20loop/Demo_4_2%201.mp4?csf=1&web=1&e=umUBgd&referrer=Outlook.Win32&referrerScenario=email-linkwithembed"
+      }
+    ]
+  },
+  "rc-transaction-screening": {
+    title: "Risk & Compliance",
+    solutions: [
+      {
+        title: "GNN-Based AML Transaction Monitoring",
+        description: "",
+        image: "rac02.png",
+        link: "https://cognizantonline.sharepoint.com/:v:/r/sites/BFSILabCognizant/Shared%20Documents/BFSI%20Use%20cases/Detailed%20use%20cases/Graph%20Neural%20Network%20based%20%20AML/GNN%20based%20Transaction%20monitoring-20260609_210802-Meeting%20Recording.mp4?csf=1&web=1&e=9xGUsN&referrer=Outlook.Win32&referrerScenario=email-linkwithembed"
       }
     ]
   }

@@ -92,7 +92,7 @@ const COLUMNS = [
       title: "Financial Crime Compliance",
       items: [
         { label: "Transaction Monitoring" },
-        { label: "Transaction Screening" },
+        { label: "Transaction Screening", slug: "rc-transaction-screening" },
         { label: "Client Name Screening" },
         { label: "Network Analysis" },
         { label: "Investigations" },
